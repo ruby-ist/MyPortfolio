@@ -18,13 +18,13 @@ export default {
             xPercent: 20,
             yPercent: -90,
             rotation: 90,
-            duration: 0.8,
+            duration: 1.2,
         });
         gsap.from('.frame#bg',{
             xPercent: 40,
             yPercent: -120,
             rotation: -120,
-            duration: 0.8,
+            duration: 1.2,
         });
     }
 }
