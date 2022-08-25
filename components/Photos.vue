@@ -11,11 +11,21 @@
 </template>
 
 <script>
+import {gsap} from "gsap";
 export default {
     mounted(){
-        // gsap.from('.frame#face',{
-        //     rotation: 90
-        // });
+        gsap.from('.frame#face',{
+            xPercent: 20,
+            yPercent: -90,
+            rotation: 90,
+            duration: 0.8,
+        });
+        gsap.from('.frame#bg',{
+            xPercent: 40,
+            yPercent: -120,
+            rotation: -120,
+            duration: 0.8,
+        });
     }
 }
 </script>

@@ -25,7 +25,6 @@ export default defineNuxtConfig({
             script: [
                 {src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"},
                 {src: "https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.js"},
-                {src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"}
             ]
         }
     },
