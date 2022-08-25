@@ -36,12 +36,12 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
 #navbar{
     height: 90px;
-    background: #F5F6F9;
     display: flex;
     align-items: center;
     position: fixed;
     top: 0;
     width: 100vw;
+    z-index: 1;
 
     .ui.secondary.menu{
         width: 100%;
