@@ -2,6 +2,7 @@
     <div id="main">
         <NavBar />
         <Profile />
+        <div class="empty"></div>
     </div>
 </template>
 
@@ -18,5 +19,11 @@ export default {
     background: #F5F6F9;
     font-family: 'Signika Negative', sans-serif;
     color: #393E46;
+
+    .empty{
+        width: 100%;
+        height: 500px;
+        background: #393E46;
+    }
 }
 </style>
