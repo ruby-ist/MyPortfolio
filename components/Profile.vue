@@ -403,7 +403,7 @@ export default {
             .mail-id{
                 position: absolute;
                 color: #40514E;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 font-family: 'Cutive Mono', monospace;
                 right: 50%;
                 bottom: 25rem;
