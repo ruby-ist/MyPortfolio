@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 
     app: {
         head: {
-            title: 'GeoBITs',
+            title: 'Srira',
             htmlAttrs: {
                 lang: 'en'
             },
