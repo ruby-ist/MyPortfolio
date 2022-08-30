@@ -12,15 +12,27 @@
 
 <script>
 import {gsap} from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default {
     mounted(){
+        gsap.registerPlugin(ScrollTrigger)
         gsap.from('.frame#face',{
+            scrollTrigger: {
+              trigger: '#photos',
+              toggleActions: 'restart none restart pause'
+            },
+            scale: 0.1,
             xPercent: 20,
             yPercent: -90,
             rotation: 90,
             duration: 1.2,
         });
         gsap.from('.frame#bg',{
+            scrollTrigger: {
+                trigger: '#photos',
+                toggleActions: 'restart none restart pause'
+            },
+            scale: 0.2,
             xPercent: 40,
             yPercent: -120,
             rotation: -120,

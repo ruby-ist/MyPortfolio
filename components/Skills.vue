@@ -37,22 +37,35 @@
 
 <script>
 import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger"
+
 export default {
     name: "skills",
     mounted(){
+        gsap.registerPlugin(ScrollTrigger);
         gsap.from('.skill-icon',{
+            scrollTrigger:{
+                trigger: '.skill-icons',
+                toggleActions: "restart none restart none"
+            },
             scale: 0.1,
             yPercent: 50,
             ease: "power1.inOut",
             duration: 1.2,
-            repeat: -1,
-            repeatDelay: 5,
             stagger: {
                 grid: [5,5],
-                from: 1,
-                amount: 1
+                from: "end",
+                amount: -1
             }
-        })
+        });
+
+        gsap.from('.skill-info',{
+            scrollTrigger:{
+                trigger: '.skill-icons',
+                toggleActions: "restart none reverse none"
+            },
+            xPercent: -30,
+        });
     }
 }
 </script>
