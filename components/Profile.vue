@@ -268,7 +268,6 @@
 import Typed from "typed.js";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
-import {TextPlugin} from "gsap/TextPlugin";
 
 export default {
     data() {
@@ -277,11 +276,13 @@ export default {
         }
     },
     mounted() {
-        gsap.registerPlugin(TextPlugin, ScrollTrigger);
+        gsap.registerPlugin(ScrollTrigger);
+
         gsap.set('.mail-id', {
             rotate: 90,
             transformOrigin: 'right'
         });
+
         gsap.from('.icons i', {
             scrollTrigger: {
                 trigger: ".icons",
@@ -302,29 +303,23 @@ export default {
             repeatDelay: 1
         });
 
-        gsap.to('#role', {
-            duration: 1,
-            text: "Frontend",
-            ease: "none"
-        });
+        let typed = new Typed('#role', {
+            strings: ['Front-end', 'Back-end', 'Full-stack', 'Web'],
+            startDelay: 300,
+            typeSpeed: 50,
+            backSpeed: 50,
+            backDelay: 1000,
 
-        // let typed = new Typed('#role', {
-        //     strings: ['Front-end', 'Back-end', 'Full-stack', 'Web'],
-        //     startDelay: 300,
-        //     typeSpeed: 50,
-        //     backSpeed: 50,
-        //     backDelay: 1000,
-        //
-        //     preStringTyped: (arrayPos) => {
-        //         $('.job span').css('color', this.colors[arrayPos]);
-        //     },
-        //
-        //     onComplete: () => {
-        //         setTimeout( () => {
-        //             $('.typed-cursor').hide()
-        //         }, 500);
-        //     }
-        // });
+            preStringTyped: (arrayPos) => {
+                $('.job span').css('color', this.colors[arrayPos]);
+            },
+
+            onComplete: () => {
+                setTimeout( () => {
+                    $('.typed-cursor').hide()
+                }, 500);
+            }
+        });
     }
 }
 </script>

@@ -5,31 +5,12 @@
         </div>
         <div class="skills">
             <div class="skill-icons">
-                <img class="skill-icon" alt="" src="~/assets/images/ruby.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/rails.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/vue.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/nuxt.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/rest.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/sinatra.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/turbo.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/stimulus.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/semantic-ui.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/scss.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/jquery.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/svg.svg"/>
-                <img style="width: 90px; margin: 18px 3px;" class="skill-icon" alt="" src="~/assets/images/gsap.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/illustrator.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/figma.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/mysql.svg"/>
-                <img style="width: 64px;" class="skill-icon" alt="" src="~/assets/images/postgres.svg"/>
-                <img style="width: 36px;" class="skill-icon" alt="" src="~/assets/images/render.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/heroku.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/docker.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/c.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/c++.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/swift.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/javascript.svg"/>
-                <img class="skill-icon" alt="" src="~/assets/images/python.svg"/>
+                <img v-for="(skill, index) in skills"
+                     :id="skill"
+                     class="skill-icon"
+                     :alt="skill"
+                     :src="imagePath(skill)"
+                      @click="animate(index)"/>
             </div>
         </div>
     </section>
@@ -40,7 +21,63 @@ import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 
 export default {
-    name: "skills",
+    data(){
+      return {
+          skills: [
+              'ruby',
+              'rails',
+              'vue',
+              'nuxt',
+              'rest',
+              'sinatra',
+              'turbo',
+              'stimulus',
+              'semantic-ui',
+              'scss',
+              'jquery',
+              'svg',
+              'gsap',
+              'illustrator',
+              'figma',
+              'mysql',
+              'postgres',
+              'render',
+              'heroku',
+              'docker',
+              'c',
+              'c++',
+              'swift',
+              'javascript',
+              'python'
+          ]
+      }
+    },
+    methods: {
+        animate(index){
+            gsap.fromTo('.skill-icon',{
+                scale: 0.1,
+                duration: 1,
+                stagger: {
+                    grid: [5,5],
+                    from: index,
+                    amount: 1
+                }
+            },{
+                scale: 1,
+                ease: "back",
+                duration: 1,
+                stagger: {
+                    grid: [5,5],
+                    from: index,
+                    amount: 1
+                }
+            });
+        },
+
+        imagePath(name){
+            return `/assets/images/${name}.svg`
+        }
+    },
     mounted(){
         gsap.registerPlugin(ScrollTrigger);
         gsap.from('.skill-icon',{
@@ -96,10 +133,23 @@ export default {
     }
 
     .skill-icon {
-        height: 3.5vw;
-        width: 3.5vw;
+        height: 3vw;
+        width: 3vw;
         margin: 23px;
         cursor: pointer;
+    }
+
+    #gsap{
+        width: 90px;
+        margin: 18px 3px;
+    }
+
+    #postgres{
+        width: 64px;
+    }
+
+    #render{
+        width: 36px;
     }
 }
 </style>
