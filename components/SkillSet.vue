@@ -28,8 +28,8 @@ export default defineNuxtComponent({
         const dock: HTMLElement = this.$refs.dock;
         const firstIcon: HTMLElement = icons[0];
 
-        let min = 55; // 40 + margin
-        let max = 100;
+        let min = 91;
+        let max = 120;
         let bound = min * Math.PI;
 
         gsap.set(icons, {
@@ -39,12 +39,15 @@ export default defineNuxtComponent({
 
         gsap.set(dock, {
             position: "relative",
-            height: 100
+            height: 81
         });
 
         dock.addEventListener("mousemove", (event: MouseEvent) => {
             let offset = dock.getBoundingClientRect().left + firstIcon.offsetLeft;
             updateIcons(event.clientX - offset);
+            gsap.to(dock, {
+                height: 125,
+            })
         });
 
         dock.addEventListener("mouseleave", () => {
@@ -53,12 +56,14 @@ export default defineNuxtComponent({
                 scale: 1,
                 x: 0
             });
+            gsap.to(dock, {
+                transformOrigin: "center",
+                height: 81
+            })
         });
 
         function updateIcons(pointer) {
-
             for (let i = 0; i < icons.length; i++) {
-
                 let icon = icons[i];
                 let distance = (i * min + min / 2) - pointer;
                 let x = 0;
@@ -68,7 +73,6 @@ export default defineNuxtComponent({
                     let rad = distance / min * 0.5;
                     scale = 1 + (max / min - 1) * Math.cos(rad);
                     x = 2 * (max - min) * Math.sin(rad);
-
                 } else {
                     x = (-bound < distance ? 2 : -2) * (max - min);
                 }
@@ -86,24 +90,21 @@ export default defineNuxtComponent({
 
 <style scoped lang="scss">
 .skill-icons {
-    width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .skill-icon {
     height: 45px;
     width: 45px;
-    margin: 23px;
+    margin: 18px;
     cursor: pointer;
 }
 
 #gsap {
     width: 90px;
-    margin: 18px 3px;
-}
-
-#postgres {
-    width: 64px;
+    margin: 18px 1px;
 }
 
 #render {

@@ -21,11 +21,11 @@ type dataGroup = {
 export default defineNuxtComponent({
     data: (): dataGroup => ({
         skillSets: [
-            ['ruby', 'rails', 'vue', 'nuxt', 'rest'],
+            ['ruby', 'rails', 'rspec', 'vue', 'nuxt'],
             ['sinatra', 'turbo', 'stimulus', 'semantic-ui', 'scss'],
             ['jquery', 'svg', 'gsap', 'illustrator', 'figma'],
-            ['mysql', 'postgres', 'render', 'heroku', 'docker'],
-            ['c', 'c++', 'swift', 'javascript', 'python']
+            ['mysql', 'rest', 'render', 'heroku', 'docker'],
+            ['c', 'c++', 'typescript', 'javascript', 'python'],
         ]
     }),
     mounted() {
@@ -63,7 +63,7 @@ export default defineNuxtComponent({
     background: #393E46;
     padding: 15% 10% 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     .skill-info {
         display: flex;
@@ -72,10 +72,6 @@ export default defineNuxtComponent({
         font-size: 2.5rem;
         line-height: 3rem;
         color: #ddeced;
-    }
-
-    .skills {
-        width: 45%;
     }
 }
 </style>
