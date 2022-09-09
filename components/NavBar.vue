@@ -12,30 +12,35 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
+import {defineNuxtComponent} from '#app'
 import {gsap} from "gsap";
-export default {
-    data(){
-        return{
-            oldScroll: 0
-        }
-    },
-    mounted(){
+
+type dataGroup = {
+    oldScroll: Number
+}
+
+export default defineNuxtComponent({
+    data: (): dataGroup => ({
+        oldScroll: 0
+    }),
+    mounted() {
         let that = this;
-        window.onscroll = function(e) {
-            if(this.scrollY > that.oldScroll)
+        window.onscroll = (e) => {
+            if (this.scrollY > that.oldScroll)
                 gsap.to('#navbar', {yPercent: -100, ease: 'sine', duration: 0.5})
             else
                 gsap.to('#navbar', {yPercent: 0, ease: 'sine', duration: 0.5})
             that.oldScroll = this.scrollY;
         }
     }
-}
+})
 </script>
 
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
-#navbar{
+
+#navbar {
     height: 90px;
     display: flex;
     align-items: center;
@@ -44,18 +49,18 @@ export default {
     width: 100vw;
     z-index: 1;
 
-    .ui.secondary.menu{
+    .ui.secondary.menu {
         width: 100%;
         padding: 0 6rem 0 3rem;
 
-        .right.menu{
-            .item{
+        .right.menu {
+            .item {
                 font-size: 1.2rem;
             }
         }
     }
 
-    .ui.header{
+    .ui.header {
         color: #1CD96E;
         font-family: 'Geo', sans-serif;
         font-size: 3.2rem;

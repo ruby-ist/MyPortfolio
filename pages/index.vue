@@ -7,8 +7,9 @@
 </template>
 
 <script>
-export default {
-}
+import { defineNuxtComponent } from '#app'
+export default defineNuxtComponent({
+})
 </script>
 
 <style scoped lang="scss">

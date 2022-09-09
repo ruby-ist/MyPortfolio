@@ -10,10 +10,12 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
+import {defineNuxtComponent} from "#app"
 import {gsap} from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-export default {
+
+export default defineNuxtComponent({
     mounted(){
         gsap.registerPlugin(ScrollTrigger)
         gsap.from('.frame#face',{
@@ -39,7 +41,7 @@ export default {
             duration: 1.2,
         });
     }
-}
+})
 </script>
 
 <style scoped lang="scss">

@@ -9,102 +9,104 @@
                      :id="skill"
                      class="skill-icon"
                      :alt="skill"
-                     :src="imagePath(skill)"
-                      @click="animate(index)"/>
+                     :src="imagePath(skill)"/>
             </div>
         </div>
     </section>
 </template>
 
-<script>
+<script lang="ts">
+import {defineNuxtComponent} from "#app"
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 
-export default {
-    data(){
-      return {
-          skills: [
-              'ruby',
-              'rails',
-              'vue',
-              'nuxt',
-              'rest',
-              'sinatra',
-              'turbo',
-              'stimulus',
-              'semantic-ui',
-              'scss',
-              'jquery',
-              'svg',
-              'gsap',
-              'illustrator',
-              'figma',
-              'mysql',
-              'postgres',
-              'render',
-              'heroku',
-              'docker',
-              'c',
-              'c++',
-              'swift',
-              'javascript',
-              'python'
-          ]
-      }
-    },
-    methods: {
-        animate(index){
-            gsap.fromTo('.skill-icon',{
-                scale: 0.1,
-                duration: 1,
-                stagger: {
-                    grid: [5,5],
-                    from: index,
-                    amount: 1
-                }
-            },{
-                scale: 1,
-                ease: "back",
-                duration: 1,
-                stagger: {
-                    grid: [5,5],
-                    from: index,
-                    amount: 1
-                }
-            });
-        },
+type dataGroup = {
+    skills: String[]
+}
 
-        imagePath(name){
+export default defineNuxtComponent({
+    data: (): dataGroup => ({
+        skills: [
+            'ruby',
+            'rails',
+            'vue',
+            'nuxt',
+            'rest',
+            'sinatra',
+            'turbo',
+            'stimulus',
+            'semantic-ui',
+            'scss',
+            'jquery',
+            'svg',
+            'gsap',
+            'illustrator',
+            'figma',
+            'mysql',
+            'postgres',
+            'render',
+            'heroku',
+            'docker',
+            'c',
+            'c++',
+            'swift',
+            'javascript',
+            'python'
+        ]
+    }),
+    methods: {
+        // animate(index){
+        //     gsap.fromTo('.skill-icon',{
+        //         scale: 0.1,
+        //         duration: 0.5,
+        //         stagger: {
+        //             grid: [5,5],
+        //             from: index,
+        //             amount: 0.5
+        //         }
+        //     },{
+        //         scale: 1,
+        //         ease: "back",
+        //         duration: 0.5,
+        //         stagger: {
+        //             grid: [5,5],
+        //             from: index,
+        //             amount: 0.5
+        //         }
+        //     });
+        // },
+
+        imagePath(name: String): String {
             return `/assets/images/${name}.svg`
         }
     },
-    mounted(){
+    mounted() {
         gsap.registerPlugin(ScrollTrigger);
-        gsap.from('.skill-icon',{
-            scrollTrigger:{
+        gsap.from('.skill-icon', {
+            scrollTrigger: {
                 trigger: '.skill-icons',
                 toggleActions: "restart none restart none"
             },
             scale: 0.1,
             yPercent: 50,
             ease: "power1.inOut",
-            duration: 1.2,
+            duration: 0.5,
             stagger: {
-                grid: [5,5],
+                grid: [5, 5],
                 from: "end",
                 amount: -1
             }
         });
 
-        gsap.from('.skill-info',{
-            scrollTrigger:{
+        gsap.from('.skill-info', {
+            scrollTrigger: {
                 trigger: '.skill-icons',
                 toggleActions: "restart none reverse none"
             },
             xPercent: -30,
         });
     }
-}
+})
 </script>
 
 <style scoped lang="scss">
@@ -115,7 +117,7 @@ export default {
     display: flex;
     justify-content: space-between;
 
-    .skill-info{
+    .skill-info {
         display: flex;
         align-items: center;
         width: 30%;
@@ -124,7 +126,7 @@ export default {
         color: #ddeced;
     }
 
-    .skills{
+    .skills {
         width: 45%;
     }
 
@@ -139,16 +141,16 @@ export default {
         cursor: pointer;
     }
 
-    #gsap{
+    #gsap {
         width: 90px;
         margin: 18px 3px;
     }
 
-    #postgres{
+    #postgres {
         width: 64px;
     }
 
-    #render{
+    #render {
         width: 36px;
     }
 }
