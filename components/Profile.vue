@@ -3,6 +3,7 @@
         <div class="greetings">Hi, I'm</div>
         <div class="name">Sriram V</div>
         <div class="job"><span id="role"></span> Developer</div>
+        <img id="chair" alt="chair" src="~/assets/images/chair.svg"/>
 
         <Photos/>
 
@@ -103,111 +104,11 @@ export default defineNuxtComponent({
         color: #6BCB77;
     }
 
-    #walle {
+    #chair{
         position: absolute;
-        height: 200px;
-        width: 200px;
-        bottom: 0;
-        right: 20vw;
-
-        .cls-1, .cls-24, .cls-4 {
-            fill: none;
-        }
-
-        .cls-2 {
-            fill: #a2b2b3;
-        }
-
-        .cls-16, .cls-20, .cls-3 {
-            fill: #636767;
-        }
-
-        .cls-24, .cls-4 {
-            stroke: #636767;
-            stroke-miterlimit: 10;
-            stroke-width: 0.5px;
-        }
-
-        .cls-22, .cls-5 {
-            fill: #394848;
-        }
-
-        .cls-6 {
-            fill: #ddeced;
-        }
-
-        .cls-21, .cls-7 {
-            fill: #0c1112;
-        }
-
-        .cls-8 {
-            clip-path: url(#clip-path);
-        }
-
-        .cls-9 {
-            fill: #fff;
-        }
-
-        .cls-10 {
-            clip-path: url(#clip-path-2);
-        }
-
-        .cls-11 {
-            fill: #f49123;
-        }
-
-        .cls-12 {
-            clip-path: url(#clip-path-3);
-        }
-
-        .cls-13 {
-            fill: #c6690c;
-        }
-
-        .cls-14 {
-            clip-path: url(#clip-path-4);
-        }
-
-        .cls-15 {
-            fill: #424e4f;
-        }
-
-        .cls-16, .cls-20, .cls-21, .cls-22, .cls-24 {
-            isolation: isolate;
-        }
-
-        .cls-16, .cls-21 {
-            opacity: 0.41;
-        }
-
-        .cls-17 {
-            fill: #f2791e;
-        }
-
-        .cls-18 {
-            fill: #bedb45;
-        }
-
-        .cls-19 {
-            fill: #f76f6f;
-        }
-
-        .cls-20 {
-            opacity: 0.34;
-        }
-
-        .cls-22 {
-            opacity: 0.78;
-        }
-
-        .cls-23 {
-            clip-path: url(#clip-path-5);
-        }
-
-        .cls-24 {
-            stroke-linecap: round;
-            opacity: 0.46;
-        }
+        width: 250px;
+        bottom: -2%;
+        left: 18%;
     }
 
     .vertical-line {
