@@ -17,14 +17,8 @@
             <div class="showcase">
                 <div class="ui grid">
                     <div class="nine wide column">
-                        <div class="content-info">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat
-                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
+                        <GeobitsContent />
+                        <GeobitsContent />
                     </div>
                     <div class="seven wide column">
                         <div class="ui card">
@@ -51,11 +45,25 @@
                 </div>
             </div>
         </section>
+        <div class="boxes">
+            <div id="geobits">
+                <div id="empty"></div>
+                <div class="box" id="box_1"></div>
+                <div class="box" id="box_2"></div>
+                <div class="box" id="box_3"></div>
+                <div class="box" id="box_4"></div>
+                <div class="box" id="box_1"></div>
+                <div class="box" id="box_2"></div>
+                <div class="box" id="box_3"></div>
+                <div class="box" id="box_4"></div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script lang="ts">
 import {defineNuxtComponent} from "#app";
+import "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
 
 export default defineNuxtComponent({
     mounted() {
@@ -84,22 +92,23 @@ export default defineNuxtComponent({
         padding-top: 120px;
         position: absolute;
         top: 0;
+        width: 100vw;
     }
 
     .showcase {
         display: grid !important;
         place-items: center;
         height: 80vh;
+
+        .ui.grid{
+            width: 100vw;
+        }
     }
 
     .column {
         display: grid !important;
         place-items: center;
         padding: 50px;
-    }
-
-    .content-info {
-        padding: 50px 150px;
     }
 
     #underground {
@@ -110,6 +119,18 @@ export default defineNuxtComponent({
 
     .ground {
         fill: #393e46;
+    }
+
+    .boxes div{
+        width: 100vw;
+    }
+
+    #empty{
+        height: 120vh;
+    }
+
+    .box{
+        height: 100vh;
     }
 }
 </style>

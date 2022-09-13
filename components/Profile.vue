@@ -68,7 +68,7 @@ export default defineNuxtComponent({
             },
 
             onComplete: () => {
-                setTimeout( () => {
+                setTimeout(() => {
                     $('.typed-cursor').hide()
                 }, 500);
             }
@@ -104,11 +104,15 @@ export default defineNuxtComponent({
         color: #6BCB77;
     }
 
-    #chair{
+    #chair {
         position: absolute;
         width: 250px;
         bottom: -1%;
         left: 18%;
+    }
+
+    .chair-piece {
+        fill: #393e46;
     }
 
     .vertical-line {
