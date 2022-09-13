@@ -107,7 +107,7 @@ export default defineNuxtComponent({
     #chair{
         position: absolute;
         width: 250px;
-        bottom: -2%;
+        bottom: -1%;
         left: 18%;
     }
 

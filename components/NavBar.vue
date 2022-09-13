@@ -26,12 +26,12 @@ export default defineNuxtComponent({
     }),
     mounted() {
         let that = this;
-        window.onscroll = (e) => {
-            if (this.scrollY > that.oldScroll)
-                gsap.to('#navbar', {yPercent: -100, ease: 'sine', duration: 0.5})
+        window.onscroll = () => {
+            if (window.scrollY > that.oldScroll)
+                gsap.to('#navbar', {yPercent: -100, ease: 'sine', duration: 0.5});
             else
-                gsap.to('#navbar', {yPercent: 0, ease: 'sine', duration: 0.5})
-            that.oldScroll = this.scrollY;
+                gsap.to('#navbar', {yPercent: 0, ease: 'sine', duration: 0.5});
+            that.oldScroll = window.scrollY;
         }
     }
 })
@@ -48,6 +48,7 @@ export default defineNuxtComponent({
     top: 0;
     width: 100vw;
     z-index: 1;
+    background: linear-gradient(#F5F6F911, transparent);
 
     .ui.secondary.menu {
         width: 100%;
