@@ -19,5 +19,6 @@ export default defineNuxtComponent({
     background: #F5F6F9;
     font-family: 'Signika Negative', sans-serif;
     color: #393E46;
+    min-height: 700vh;
 }
 </style>

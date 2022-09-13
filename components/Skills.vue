@@ -6,9 +6,6 @@
         <div class="skills">
             <SkillSet v-for="skills in skillSets" :skills="skills"/>
         </div>
-        <svg id="underground" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="1440" height="85.0001" viewBox="0 0 1440 85.0001">
-            <path class="ground" d="M1424.81006,61.4026H1440V0L0,.00013,0,75.2469l45.60686-7.47506L90.0767,75.2469,113.633,81.944l59.11794-2.83442,71.26546-7.69343,77.74414-1.21475L354.96375,71.821,375.019,75.2469l42.716,1.1121,43.721,2.4911,16.735,2.9683H580.987l13.706.7025h40.749L657.84912,85h59.09766L802.172,82.5209l41.589,2.4792L881.884,85l38.34448-8.32L1002.54,80.3453l36.19-4.5327,44.96-4.8284h88.13l39.29-2.4602,16.96-3.933h42.39l13.37-1.8072,21.28-1.5655,16.9-1.117,17.65,1.117,18.59,1.5655h12.29L1389.08,60.2305l8.76-1.0212Z"/>
-        </svg>
     </section>
 </template>
 
@@ -80,17 +77,6 @@ export default defineNuxtComponent({
         font-size: 2.5rem;
         line-height: 3rem;
         color: #ddeced;
-    }
-
-    #underground{
-        position: absolute;
-        bottom: 0;
-        transform: translateY(50%);
-        width: 100vw;
-    }
-
-    .ground {
-        fill: #393e46;
     }
 }
 </style>
