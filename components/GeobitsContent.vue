@@ -47,6 +47,7 @@ export default defineNuxtComponent({
                     start: () => "top -" + (window.innerHeight * i),
                     end: () => "+=" + window.innerHeight,
                     toggleActions: "play none reverse none",
+                    scrub: true,
                     invalidateOnRefresh: true,
                 }
             });

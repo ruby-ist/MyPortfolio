@@ -16,30 +16,18 @@
 
             <div class="showcase">
                 <div class="ui grid">
-                    <div class="nine wide column">
+                    <div class="eight wide column">
                         <GeobitsContent />
                         <GeobitsContent />
                     </div>
-                    <div class="seven wide column">
-                        <div class="ui card">
-                            <div class="image">
-                                <img src="/images/avatar2/large/kristy.png">
-                            </div>
-                            <div class="content">
-                                <a class="header">Kristy</a>
-                                <div class="meta">
-                                    <span class="date">Joined in 2013</span>
-                                </div>
-                                <div class="description">
-                                    Kristy is an art director living in New York.
-                                </div>
-                            </div>
-                            <div class="extra content">
-                                <a>
-                                    <i class="user icon"></i>
-                                    22 Friends
-                                </a>
-                            </div>
+                    <div class="eight wide column">
+                        <div class="mac-template">
+                            <img src="~/assets/mac-outline.svg" alt="mac" />
+                            <div id="mac-carousel"></div>
+                        </div>
+                        <div class="phone-template">
+                            <img src="~/assets/iphone-outline.svg" alt="phone" />
+                            <div id="iphone-carousel"></div>
                         </div>
                     </div>
                 </div>
@@ -102,6 +90,7 @@ export default defineNuxtComponent({
 
         .ui.grid{
             width: 100vw;
+            height: 100%;
         }
     }
 
@@ -115,6 +104,7 @@ export default defineNuxtComponent({
         position: absolute;
         top: 0;
         width: 100vw;
+        height: auto;
     }
 
     .ground {
@@ -131,6 +121,52 @@ export default defineNuxtComponent({
 
     .box{
         height: 100vh;
+    }
+
+    .eight.wide.column{
+        position: relative;
+    }
+
+    .mac-template{
+        position: absolute;
+        top: 18%;
+        left: 0;
+        img{
+            position: absolute;
+            width: 560px;
+            z-index: 3;
+        }
+
+        #mac-carousel{
+            width: 424px;
+            height: 269px;
+            background: #1CD96E;
+            position: absolute;
+            top: 24px;
+            left: 68px;
+            z-index: 2;
+        }
+    }
+
+    .phone-template{
+        position: absolute;
+        top: 28%;
+        left: 73%;
+        img{
+            position: absolute;
+            width: 180px;
+            z-index: 5;
+        }
+
+        #iphone-carousel{
+            width: 160px;
+            height: 335px;
+            background: #1CD96E;
+            position: absolute;
+            top: 21px;
+            left: 10px;
+            z-index: 4;
+        }
     }
 }
 </style>

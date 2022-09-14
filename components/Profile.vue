@@ -4,6 +4,7 @@
         <div class="name">Sriram V</div>
         <div class="job"><span id="role"></span> Developer</div>
         <img id="chair" alt="chair" src="~/assets/images/chair.svg"/>
+        <img id="lamp" alt="chair" src="~/assets/street-light.svg"/>
 
         <Photos/>
 
@@ -108,7 +109,14 @@ export default defineNuxtComponent({
         position: absolute;
         width: 250px;
         bottom: -1%;
-        left: 18%;
+        left: 12%;
+    }
+
+    #lamp {
+        position: absolute;
+        width: 30px;
+        bottom: -1%;
+        right: 8%;
     }
 
     .chair-piece {

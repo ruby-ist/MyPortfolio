@@ -51,7 +51,8 @@ export default defineNuxtComponent({
                 trigger: '.skill-icons',
                 toggleActions: "restart none none none"
             },
-            xPercent: -30,
+            opacity: 0,
+            duration: 1,
         });
     }
 })
@@ -77,6 +78,10 @@ export default defineNuxtComponent({
         font-size: 2.5rem;
         line-height: 3rem;
         color: #ddeced;
+        position: absolute;
+        bottom: 130px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 </style>
