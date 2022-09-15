@@ -1,11 +1,15 @@
 <template>
     <section id="skill-sets">
-        <div class="skill-info">
-            My skill sets and tech stack.
-        </div>
         <div class="skills">
+            <div class="skill-info">
+                My skill sets and tech stack:
+            </div>
             <SkillSet v-for="skills in skillSets" :skills="skills"/>
         </div>
+        <ThreeTriangles />
+        <MemphisPattern />
+        <StripedCircle />
+        <SlantingStripes />
     </section>
 </template>
 
@@ -45,7 +49,6 @@ export default defineNuxtComponent({
                 amount: -1
             }
         });
-
         gsap.from('.skill-info', {
             scrollTrigger: {
                 trigger: '.skill-icons',
@@ -62,26 +65,25 @@ export default defineNuxtComponent({
 #skill-sets {
     position: relative;
     width: 100%;
-    background: #393E46;
+    background: #151516;
     padding: 15% 10%;
     display: flex;
     justify-content: space-around;
+    height: 150vh;
 
-    .skills{
+    .skills {
         height: 450px;
+        position: absolute;
+        top: 15%;
+        right: 5%;
     }
 
     .skill-info {
-        display: flex;
-        align-items: center;
-        width: 30%;
-        font-size: 2.5rem;
-        line-height: 3rem;
+        font-size: 1.3rem;
+        line-height: 1.3rem;
         color: #ddeced;
-        position: absolute;
-        bottom: 130px;
-        left: 50%;
-        transform: translateX(-50%);
+        padding-bottom: 30px;
+        font-family: monospace;
     }
 }
 </style>

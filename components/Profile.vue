@@ -4,7 +4,7 @@
         <div class="name">Sriram V</div>
         <div class="job"><span id="role"></span> Developer</div>
         <img id="chair" alt="chair" src="~/assets/images/chair.svg"/>
-        <img id="lamp" alt="chair" src="~/assets/street-light.svg"/>
+        <img id="lamp" alt="lamp" src="~/assets/street-light.svg"/>
 
         <Photos/>
 

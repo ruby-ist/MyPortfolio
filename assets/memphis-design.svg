@@ -1,0 +1,22 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148.68037 406.99589">
+  <defs>
+    <style>
+      .memphis-shapes {
+        fill: #f15b2b;
+      }
+
+      .memphis-lines {
+        fill: none;
+        stroke: #d2d3d4;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <rect class="memphis-shapes" x="31.80123" y="62.50194" width="34.54658" height="34.54658"/>
+  <line id="memphis-h2" class="memphis-lines" x1="49.07454" y1="218.41201" x2="49.07453" y2="97.04853"/>
+  <line id="memphis-h1" class="memphis-lines" x1="123.82977" y1="406.99589" x2="123.82975"/>
+  <line id="memphis-v1" class="memphis-lines" y1="120.12146" x2="148.68037" y2="120.12143"/>
+  <line id="memphis-v2" class="memphis-lines" x1="99.64153" y1="79.77522" x2="148.68037" y2="79.77519"/>
+  <circle class="memphis-shapes" cx="111.76033" cy="108.05926" r="4.13143"/>
+</svg>

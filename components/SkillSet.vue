@@ -28,25 +28,25 @@ export default defineNuxtComponent({
         const dock: HTMLElement = this.$refs.dock;
         const firstIcon: HTMLElement = icons[0];
 
-        let min = 91;
-        let max = 120;
+        let min = 62;
+        let max = 100;
         let bound = min * Math.PI;
 
         gsap.set(icons, {
             transformOrigin: "center",
-            height: 45
+            height: 62
         });
 
         gsap.set(dock, {
             position: "relative",
-            height: 81
+            height: 62
         });
 
         dock.addEventListener("mousemove", (event: MouseEvent) => {
             let offset = dock.getBoundingClientRect().left + firstIcon.offsetLeft;
             updateIcons(event.clientX - offset);
             gsap.to(dock, {
-                height: 125,
+                height: 105,
             })
         });
 
@@ -58,7 +58,7 @@ export default defineNuxtComponent({
             });
             gsap.to(dock, {
                 transformOrigin: "center",
-                height: 81
+                height: 62
             })
         });
 
@@ -96,18 +96,18 @@ export default defineNuxtComponent({
 }
 
 .skill-icon {
-    height: 45px;
-    width: 45px;
-    margin: 18px;
+    height: 32px;
+    width: 32px;
+    margin: 7.5px 15px;
     cursor: pointer;
 }
 
 #gsap {
-    width: 90px;
-    margin: 18px 1px;
+    width: 64px;
+    margin: 15px 0;
 }
 
 #render {
-    width: 36px;
+    width: 33px;
 }
 </style>

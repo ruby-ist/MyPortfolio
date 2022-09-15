@@ -108,7 +108,7 @@ export default defineNuxtComponent({
     }
 
     .ground {
-        fill: #393e46;
+        fill: #151516;
     }
 
     .boxes div{
