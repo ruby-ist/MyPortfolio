@@ -44,7 +44,7 @@ export default defineNuxtComponent({
 
         gsap.from('#stripes-circle', {
             scrollTrigger: {
-                trigger: '#stripes-circle',
+                trigger: '#dotted-rect',
                 toggleActions: "restart none restart none"
             },
             scaleX: 0,

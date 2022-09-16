@@ -47,7 +47,7 @@ export default defineNuxtComponent({
     position: fixed;
     top: 0;
     width: 100vw;
-    z-index: 1;
+    z-index: 3;
     background: linear-gradient(#F5F6F911, transparent);
 
     .ui.secondary.menu {

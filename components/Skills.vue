@@ -6,10 +6,13 @@
             </div>
             <SkillSet v-for="skills in skillSets" :skills="skills"/>
         </div>
+        <div class="skills-gradient"></div>
         <ThreeTriangles />
         <MemphisPattern />
         <StripedCircle />
         <SlantingStripes />
+        <DottedRectangle />
+        <TwoCircles />
     </section>
 </template>
 
@@ -40,7 +43,8 @@ export default defineNuxtComponent({
                 toggleActions: "restart none restart none"
             },
             scale: 0.1,
-            yPercent: 50,
+            yPercent: 25,
+            transformOrigin: 'center',
             ease: "power1.inOut",
             duration: 0.5,
             stagger: {
@@ -48,14 +52,6 @@ export default defineNuxtComponent({
                 from: "end",
                 amount: -1
             }
-        });
-        gsap.from('.skill-info', {
-            scrollTrigger: {
-                trigger: '.skill-icons',
-                toggleActions: "restart none none none"
-            },
-            opacity: 0,
-            duration: 1,
         });
     }
 })
@@ -76,6 +72,7 @@ export default defineNuxtComponent({
         position: absolute;
         top: 15%;
         right: 5%;
+        z-index: 2;
     }
 
     .skill-info {
@@ -84,6 +81,16 @@ export default defineNuxtComponent({
         color: #ddeced;
         padding-bottom: 30px;
         font-family: monospace;
+    }
+
+    .skills-gradient{
+        position: absolute;
+        z-index: 1;
+        height: 480px;
+        width: 480px;
+        top: 10%;
+        right: 0;
+        background: radial-gradient(#053218, #151516, #151516);
     }
 }
 </style>

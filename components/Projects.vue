@@ -129,42 +129,42 @@ export default defineNuxtComponent({
 
     .mac-template{
         position: absolute;
-        top: 18%;
-        left: 0;
+        top: 10%;
+        left: 27%;
         img{
             position: absolute;
-            width: 560px;
+            width: 500px;
             z-index: 3;
         }
 
         #mac-carousel{
-            width: 424px;
-            height: 269px;
-            background: #1CD96E;
+            width: 379px;
+            height: 240px;
+            //background: #1CD96E;
             position: absolute;
-            top: 24px;
-            left: 68px;
+            top: 21px;
+            left: 61px;
             z-index: 2;
         }
     }
 
     .phone-template{
         position: absolute;
-        top: 28%;
-        left: 73%;
+        top: 35%;
+        left: 2%;
         img{
             position: absolute;
-            width: 180px;
+            width: 150px;
             z-index: 5;
         }
 
         #iphone-carousel{
-            width: 160px;
-            height: 335px;
-            background: #1CD96E;
+            width: 133px;
+            height: 278px;
+            //background: #1CD96E;
             position: absolute;
-            top: 21px;
-            left: 10px;
+            top: 18px;
+            left: 8px;
             z-index: 4;
         }
     }
