@@ -77,7 +77,13 @@
                     <div class="eight wide column">
                         <div class="mac-template">
                             <img src="~/assets/mac-outline.svg" alt="mac"/>
-                            <div id="mac-carousel"></div>
+                            <div id="mac-carousel">
+                                <img class="mac-carousel-img first-img" src="~/assets/mac-carousel/geobits-1.png" />
+                                <img class="mac-carousel-img" src="~/assets/mac-carousel/geobits-2.png" />
+                                <img class="mac-carousel-img" src="~/assets/mac-carousel/geobits-3.png" />
+                                <img class="mac-carousel-img" src="~/assets/mac-carousel/geobits-4.png" />
+                                <img class="mac-carousel-img" src="~/assets/mac-carousel/geobits-5.png" />
+                            </div>
                         </div>
                         <div class="phone-template">
                             <img src="~/assets/iphone-outline.svg" alt="phone"/>
@@ -122,8 +128,10 @@ export default defineNuxtComponent({
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.set(".logo-img", {zIndex: (i, target, targets) => targets.length - i});
+        gsap.set("#mac-carousel img", {zIndex: (i, target, targets) => targets.length - i});
         gsap.set(".content-info", {zIndex: (i, target, targets) => targets.length - i});
         let texts: HTMLElement[] = gsap.utils.toArray(".content-info");
+        let images: HTMLElement[] = gsap.utils.toArray('.mac-carousel-img');
 
         texts.forEach((text, i) => {
             let tl = gsap.timeline({
@@ -131,28 +139,45 @@ export default defineNuxtComponent({
                     trigger: "#projects",
                     scroller: "body",
                     start: () => "top -" + (window.innerHeight * i),
-                    end: () => "+=" + window.innerHeight,
+                    // end: () => "+=" + window.innerHeight,
                     toggleActions: "play none reverse none",
-                    scrub: true,
+                    // scrub: true,
                     invalidateOnRefresh: true,
                 }
             });
-            tl
-                .fromTo(text, {
-                    rotateX: 90,
-                    transformOrigin: 'bottom',
-                    duration: 0.5
-                }, {
-                    rotateX: 0,
-                    duration: 0.5,
-                    opacity: 1
-                }).to(text, {
+            // tl.fromTo(text, {
+            //         rotateX: 90,
+            //         transformOrigin: 'bottom',
+            //         duration: 0.5
+            //     }, {
+            //         rotateX: 0,
+            //         duration: 0.5,
+            //         opacity: 1
+            //     })
+            tl.to(text, {
                 duration: 0.5,
                 opacity: 0,
-                rotateX: 90,
+                // rotateX: 90,
                 transformOrigin: "top"
-            }, 0.66)
-            ;
+            }, 0.66);
+        });
+
+        images.forEach((image, i) => {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#projects",
+                    scroller: "body",
+                    start: () => "top -" + (window.innerHeight*(i)),
+                    end: () => "+=" + window.innerHeight,
+                    toggleActions: "restart none reverse none",
+                    invalidateOnRefresh: true,
+                }
+            })
+            tl.to(image, {
+                // xPercent: -100,
+                opacity: 0,
+                duration: 0.5,
+            });
         });
     }
 });
@@ -209,7 +234,7 @@ export default defineNuxtComponent({
             height: 40px;
             width: auto;
             opacity: 0;
-            top: 10%;
+            top: 6%;
             left: 15%;
 
             &:first-child {
@@ -219,7 +244,7 @@ export default defineNuxtComponent({
 
         .frameworks-list{
             position: absolute;
-            top: 25%;
+            top: 18%;
             left: 15%;
             display: flex;
             align-items: center;
@@ -242,17 +267,21 @@ export default defineNuxtComponent({
 
         .site-url{
             position: absolute;
-            bottom: 25%;
-            right: 15%;
+            bottom: 20%;
+            right: -90%;
             font-size: 1.1rem;
         }
 
         .content-info {
             position: absolute;
-            padding: 0 15%;
-            opacity: 0;
-            top: 35%;
-            left: 0;
+            padding-right: 12%;
+            opacity: 1;
+            top: 39%;
+            background: #F5F6F9;
+            left: 15%;
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 2rem;
 
             &:first-child {
                 opacity: 1;
@@ -293,11 +322,18 @@ export default defineNuxtComponent({
         #mac-carousel {
             width: 379px;
             height: 240px;
-            //background: #1CD96E;
             position: absolute;
             top: 21px;
             left: 61px;
             z-index: 2;
+            display: flex;
+            flex-flow: row nowrap;
+            overflow: hidden;
+
+            img{
+                width: 379px;
+                height: 240px;
+            }
         }
     }
 
