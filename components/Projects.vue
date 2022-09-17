@@ -17,16 +17,70 @@
             <div class="showcase">
                 <div class="ui grid">
                     <div class="eight wide column">
-                        <GeobitsContent />
-                        <GeobitsContent />
+                        <div class="project-container">
+                            <div class="Websites-log">
+                                <img class="logo-img" src="~/assets/geobits.svg" alt="geoBits"/>
+                                <img class="logo-img" src="~/assets/pingcoders.svg" alt="pingCoders"/>
+                                <img class="logo-img" src="~/assets/rubyonwasm.svg" alt="rubyOnWASM"/>
+                                <img class="logo-img" src="~/assets/arcanechats.svg" alt="arcaneChats"/>
+                                <img class="logo-img" src="~/assets/narrateit.svg" alt="narrateIt"/>
+                            </div>
+                            <div class="frameworks-list">
+                                <span>Frameworks:</span>
+                                <div class="frameworks">
+                                    <img class="framework-icon" src="~/assets/images/rails.svg"/>
+                                    <img class="framework-icon" src="~/assets/images/vue.svg"/>
+                                    <img class="framework-icon" src="~/assets/images/nuxt.svg"/>
+                                </div>
+                            </div>
+                            <div class="site-url">
+                                <span>Url:</span>
+                                <a href="https://geobits.onrender.com">
+                                       https://geobits.onrender.com
+                                    <i class="external link icon"></i>
+                                </a>
+                            </div>
+                            <div class="content-info">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi
+                            </div>
+                            <div class="content-info">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                cupidatat
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                            <div class="content-info">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                cupidatat
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                            <div class="content-info">
+                                Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                cupidatat
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
                     </div>
                     <div class="eight wide column">
                         <div class="mac-template">
-                            <img src="~/assets/mac-outline.svg" alt="mac" />
+                            <img src="~/assets/mac-outline.svg" alt="mac"/>
                             <div id="mac-carousel"></div>
                         </div>
                         <div class="phone-template">
-                            <img src="~/assets/iphone-outline.svg" alt="phone" />
+                            <img src="~/assets/iphone-outline.svg" alt="phone"/>
                             <div id="iphone-carousel"></div>
                         </div>
                     </div>
@@ -51,7 +105,8 @@
 
 <script lang="ts">
 import {defineNuxtComponent} from "#app";
-import "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 export default defineNuxtComponent({
     mounted() {
@@ -62,6 +117,42 @@ export default defineNuxtComponent({
             if ($('#skill-sets')[0].getBoundingClientRect().bottom > 0) {
                 this.$refs.projects.style.position = "absolute";
             }
+        });
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.set(".logo-img", {zIndex: (i, target, targets) => targets.length - i});
+        gsap.set(".content-info", {zIndex: (i, target, targets) => targets.length - i});
+        let texts: HTMLElement[] = gsap.utils.toArray(".content-info");
+
+        texts.forEach((text, i) => {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#projects",
+                    scroller: "body",
+                    start: () => "top -" + (window.innerHeight * i),
+                    end: () => "+=" + window.innerHeight,
+                    toggleActions: "play none reverse none",
+                    scrub: true,
+                    invalidateOnRefresh: true,
+                }
+            });
+            tl
+                .fromTo(text, {
+                    rotateX: 90,
+                    transformOrigin: 'bottom',
+                    duration: 0.5
+                }, {
+                    rotateX: 0,
+                    duration: 0.5,
+                    opacity: 1
+                }).to(text, {
+                duration: 0.5,
+                opacity: 0,
+                rotateX: 90,
+                transformOrigin: "top"
+            }, 0.66)
+            ;
         });
     }
 });
@@ -76,7 +167,7 @@ export default defineNuxtComponent({
         justify-content: center;
     }
 
-    #projects{
+    #projects {
         padding-top: 120px;
         position: absolute;
         top: 0;
@@ -88,7 +179,7 @@ export default defineNuxtComponent({
         place-items: center;
         height: 80vh;
 
-        .ui.grid{
+        .ui.grid {
             width: 100vw;
             height: 100%;
         }
@@ -107,37 +198,99 @@ export default defineNuxtComponent({
         height: auto;
     }
 
+    .project-container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 100px 50px;
+
+        .logo-img {
+            position: absolute;
+            height: 40px;
+            width: auto;
+            opacity: 0;
+            top: 10%;
+            left: 15%;
+
+            &:first-child {
+                opacity: 1;
+            }
+        }
+
+        .frameworks-list{
+            position: absolute;
+            top: 25%;
+            left: 15%;
+            display: flex;
+            align-items: center;
+
+            span{
+                font-size: 1.2rem;
+            }
+
+            .frameworks{
+                display: inline-flex;
+                flex-flow: row nowrap;
+                margin-left: 20px;
+            }
+
+            .framework-icon{
+                height: 25px;
+                margin: 0 5px;
+            }
+        }
+
+        .site-url{
+            position: absolute;
+            bottom: 25%;
+            right: 15%;
+            font-size: 1.1rem;
+        }
+
+        .content-info {
+            position: absolute;
+            padding: 0 15%;
+            opacity: 0;
+            top: 35%;
+            left: 0;
+
+            &:first-child {
+                opacity: 1;
+            }
+        }
+    }
+
     .ground {
         fill: #151516;
     }
 
-    .boxes div{
+    .boxes div {
         width: 100vw;
     }
 
-    #empty{
+    #empty {
         height: 120vh;
     }
 
-    .box{
+    .box {
         height: 100vh;
     }
 
-    .eight.wide.column{
+    .eight.wide.column {
         position: relative;
     }
 
-    .mac-template{
+    .mac-template {
         position: absolute;
         top: 10%;
         left: 27%;
-        img{
+        img {
             position: absolute;
             width: 500px;
             z-index: 3;
         }
 
-        #mac-carousel{
+        #mac-carousel {
             width: 379px;
             height: 240px;
             //background: #1CD96E;
@@ -148,17 +301,18 @@ export default defineNuxtComponent({
         }
     }
 
-    .phone-template{
+    .phone-template {
         position: absolute;
         top: 35%;
         left: 2%;
-        img{
+
+        img {
             position: absolute;
             width: 150px;
             z-index: 5;
         }
 
-        #iphone-carousel{
+        #iphone-carousel {
             width: 133px;
             height: 278px;
             //background: #1CD96E;
