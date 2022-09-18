@@ -36,59 +36,16 @@
                             <div class="site-url">
                                 <span>Url:</span>
                                 <a href="https://geobits.onrender.com">
-                                       https://geobits.onrender.com
+                                    https://geobits.onrender.com
                                     <i class="external link icon"></i>
                                 </a>
                             </div>
-                            <div class="content-info">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco
-                                laboris nisi
-                            </div>
-                            <div class="content-info">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                in
-                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                            <div class="content-info">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut
-                                labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                            <div class="content-info">
-                                Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
+                            <ContentCarousel />
                         </div>
                     </div>
                     <div class="eight wide column">
-                        <div class="mac-template">
-                            <img src="~/assets/mac-outline.svg" alt="mac"/>
-                            <div id="mac-carousel">
-                                <img class="mac-carousel-img first-img" src="~/assets/mac-carousel/geobits-1.png" />
-                                <img class="mac-carousel-img" src="~/assets/mac-carousel/geobits-2.png" />
-                                <img class="mac-carousel-img" src="~/assets/mac-carousel/geobits-3.png" />
-                                <img class="mac-carousel-img" src="~/assets/mac-carousel/geobits-4.png" />
-                                <img class="mac-carousel-img" src="~/assets/mac-carousel/geobits-5.png" />
-                            </div>
-                        </div>
-                        <div class="phone-template">
-                            <img src="~/assets/iphone-outline.svg" alt="phone"/>
-                            <div id="iphone-carousel"></div>
-                        </div>
+                        <MacCarousel />
+                        <IphoneCarousel />
                     </div>
                 </div>
             </div>
@@ -100,10 +57,7 @@
                 <div class="box" id="box_2"></div>
                 <div class="box" id="box_3"></div>
                 <div class="box" id="box_4"></div>
-                <div class="box" id="box_1"></div>
-                <div class="box" id="box_2"></div>
-                <div class="box" id="box_3"></div>
-                <div class="box" id="box_4"></div>
+                <div class="box" id="box_5"></div>
             </div>
         </div>
     </div>
@@ -112,7 +66,6 @@
 <script lang="ts">
 import {defineNuxtComponent} from "#app";
 import {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 export default defineNuxtComponent({
     mounted() {
@@ -125,62 +78,10 @@ export default defineNuxtComponent({
             }
         });
 
-        gsap.registerPlugin(ScrollTrigger);
-
         gsap.set(".logo-img", {zIndex: (i, target, targets) => targets.length - i});
-        gsap.set("#mac-carousel img", {zIndex: (i, target, targets) => targets.length - i});
-        gsap.set(".content-info", {zIndex: (i, target, targets) => targets.length - i});
-        let texts: HTMLElement[] = gsap.utils.toArray(".content-info");
-        let images: HTMLElement[] = gsap.utils.toArray('.mac-carousel-img');
-
-        texts.forEach((text, i) => {
-            let tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: "#projects",
-                    scroller: "body",
-                    start: () => "top -" + (window.innerHeight * i),
-                    // end: () => "+=" + window.innerHeight,
-                    toggleActions: "play none reverse none",
-                    // scrub: true,
-                    invalidateOnRefresh: true,
-                }
-            });
-            // tl.fromTo(text, {
-            //         rotateX: 90,
-            //         transformOrigin: 'bottom',
-            //         duration: 0.5
-            //     }, {
-            //         rotateX: 0,
-            //         duration: 0.5,
-            //         opacity: 1
-            //     })
-            tl.to(text, {
-                duration: 0.5,
-                opacity: 0,
-                // rotateX: 90,
-                transformOrigin: "top"
-            }, 0.66);
-        });
-
-        images.forEach((image, i) => {
-            let tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: "#projects",
-                    scroller: "body",
-                    start: () => "top -" + (window.innerHeight*(i)),
-                    end: () => "+=" + window.innerHeight,
-                    toggleActions: "restart none reverse none",
-                    invalidateOnRefresh: true,
-                }
-            })
-            tl.to(image, {
-                // xPercent: -100,
-                opacity: 0,
-                duration: 0.5,
-            });
-        });
     }
-});
+})
+;
 </script>
 
 <style scoped lang="scss">
@@ -223,7 +124,7 @@ export default defineNuxtComponent({
         height: auto;
     }
 
-    .project-container{
+    .project-container {
         position: relative;
         width: 100%;
         height: 100%;
@@ -234,7 +135,7 @@ export default defineNuxtComponent({
             height: 40px;
             width: auto;
             opacity: 0;
-            top: 6%;
+            top: 10%;
             left: 15%;
 
             &:first-child {
@@ -242,50 +143,34 @@ export default defineNuxtComponent({
             }
         }
 
-        .frameworks-list{
+        .frameworks-list {
             position: absolute;
-            top: 18%;
+            top: 20%;
             left: 15%;
             display: flex;
             align-items: center;
 
-            span{
+            span {
                 font-size: 1.2rem;
             }
 
-            .frameworks{
+            .frameworks {
                 display: inline-flex;
                 flex-flow: row nowrap;
                 margin-left: 20px;
             }
 
-            .framework-icon{
+            .framework-icon {
                 height: 25px;
                 margin: 0 5px;
             }
         }
 
-        .site-url{
+        .site-url {
             position: absolute;
             bottom: 20%;
             right: -90%;
             font-size: 1.1rem;
-        }
-
-        .content-info {
-            position: absolute;
-            padding-right: 12%;
-            opacity: 1;
-            top: 39%;
-            background: #F5F6F9;
-            left: 15%;
-            font-size: 1.3rem;
-            font-weight: 500;
-            line-height: 2rem;
-
-            &:first-child {
-                opacity: 1;
-            }
         }
     }
 
@@ -307,56 +192,6 @@ export default defineNuxtComponent({
 
     .eight.wide.column {
         position: relative;
-    }
-
-    .mac-template {
-        position: absolute;
-        top: 10%;
-        left: 27%;
-        img {
-            position: absolute;
-            width: 500px;
-            z-index: 3;
-        }
-
-        #mac-carousel {
-            width: 379px;
-            height: 240px;
-            position: absolute;
-            top: 21px;
-            left: 61px;
-            z-index: 2;
-            display: flex;
-            flex-flow: row nowrap;
-            overflow: hidden;
-
-            img{
-                width: 379px;
-                height: 240px;
-            }
-        }
-    }
-
-    .phone-template {
-        position: absolute;
-        top: 35%;
-        left: 2%;
-
-        img {
-            position: absolute;
-            width: 150px;
-            z-index: 5;
-        }
-
-        #iphone-carousel {
-            width: 133px;
-            height: 278px;
-            //background: #1CD96E;
-            position: absolute;
-            top: 18px;
-            left: 8px;
-            z-index: 4;
-        }
     }
 }
 </style>
