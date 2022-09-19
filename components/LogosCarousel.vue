@@ -32,10 +32,10 @@ export default defineNuxtComponent({
             })
             tl.to(logo, {
                 opacity: 0,
-                duration: 0.25,
+                duration: 0.5,
             }).to(logos[i+1], {
                 opacity: 1,
-                duration: 0.25,
+                duration: 0.5,
             });
         });
     }

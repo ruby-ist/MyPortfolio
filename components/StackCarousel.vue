@@ -72,7 +72,7 @@ export default defineNuxtComponent({
                 opacity: 0,
                 scaleX: 0,
                 transformOrigin: "left",
-                duration: 0.25,
+                duration: 0.5,
                 ease: 'slow'
             }).fromTo(stacks[i+1],{
                 scaleX: 0,
@@ -80,7 +80,7 @@ export default defineNuxtComponent({
                 scaleX: 1,
                 transformOrigin: "left",
                 opacity: 1,
-                duration: 0.25,
+                duration: 0.5,
                 ease: 'slow'
             });
         });

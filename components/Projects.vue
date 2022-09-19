@@ -15,13 +15,7 @@
                         <div class="project-container">
                             <LogosCarousel />
                             <StackCarousel />
-                            <div class="site-url">
-                                <span>Url:</span>
-                                <a href="https://geobits.onrender.com">
-                                    https://geobits.onrender.com
-                                    <i class="external link icon"></i>
-                                </a>
-                            </div>
+                            <UrlChanger />
                             <ContentCarousel />
                         </div>
                     </div>
@@ -105,13 +99,6 @@ export default defineNuxtComponent({
         width: 100%;
         height: 100%;
         padding: 100px 50px;
-
-        .site-url {
-            position: absolute;
-            bottom: 20%;
-            right: -90%;
-            font-size: 1.1rem;
-        }
     }
 
     .boxes div {
