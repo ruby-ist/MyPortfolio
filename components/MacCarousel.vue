@@ -46,7 +46,7 @@ export default defineNuxtComponent({
                 scrollTrigger: {
                     trigger: "#projects",
                     scroller: "body",
-                    start: () => "top -" + (window.innerHeight * (i + 1)),
+                    start: () => "top -" + (window.innerHeight * (i + 0.8)),
                     end: () => "+=" + window.innerHeight,
                     toggleActions: "play complete complete reset",
                     invalidateOnRefresh: true,
