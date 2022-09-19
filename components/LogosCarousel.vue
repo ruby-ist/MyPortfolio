@@ -1,0 +1,59 @@
+<template>
+    <div class="Websites-log">
+        <img class="logo-img" src="~/assets/geobits.svg" alt="geoBits"/>
+        <img class="logo-img" src="~/assets/pingcoders.svg" alt="pingCoders"/>
+        <img class="logo-img" src="~/assets/rubyonwasm.svg" alt="rubyOnWASM"/>
+        <img class="logo-img" src="~/assets/narrateit.svg" alt="narrateIt"/>
+        <img class="logo-img" src="~/assets/flames.svg" alt="narrateIt"/>
+    </div>
+</template>
+
+<script lang="ts">
+import {defineNuxtComponent} from "#app";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+export default defineNuxtComponent({
+    mounted(){
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.set(".logo-img", {zIndex: (i, target, targets) => targets.length - i});
+        let logos: HTMLElement[] = gsap.utils.toArray('.logo-img');
+        logos.forEach((logo, i, logos) => {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#projects",
+                    scroller: "body",
+                    start: () => "top -" + (window.innerHeight * (5 * (i + 1) - 1)),
+                    end: () => "+=" + window.innerHeight * 5,
+                    toggleActions: "play complete complete reset",
+                    invalidateOnRefresh: true,
+                }
+            })
+            tl.to(logo, {
+                opacity: 0,
+                duration: 0.25,
+            }).to(logos[i+1], {
+                opacity: 1,
+                duration: 0.25,
+            });
+        });
+    }
+});
+</script>
+
+<style scoped lang="scss">
+.logo-img {
+    position: absolute;
+    height: 40px;
+    width: auto;
+    opacity: 0;
+    top: 8%;
+    left: 15%;
+    padding-right: 20%;
+
+    &:first-child {
+        opacity: 1;
+    }
+}
+</style>

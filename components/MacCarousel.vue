@@ -48,7 +48,7 @@ export default defineNuxtComponent({
                     scroller: "body",
                     start: () => "top -" + (window.innerHeight * (i + 1)),
                     end: () => "+=" + window.innerHeight,
-                    toggleActions: "play complete reverse reset",
+                    toggleActions: "play complete complete reset",
                     invalidateOnRefresh: true,
                 }
             })

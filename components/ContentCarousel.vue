@@ -1,7 +1,7 @@
 <template>
     <div class="content-carousel">
         <div class="gradient-layer"></div>
-        <div v-for="i in [...Array(5).keys()]">
+        <div v-for="i in [...Array(5).keys()]" :id="contentId[i]">
             <div class="content-info">
                 GeoBITS is an online map made for navigating around and finding classes inside the
                 Bannari Amman Institute of Technology college campus. The special thing about this
@@ -55,7 +55,14 @@ import {defineNuxtComponent} from "#app";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
+type dataGroup = {
+    contentId: String[]
+}
+
 export default defineNuxtComponent({
+    data: (): dataGroup => ({
+        contentId: ["geobits", "pingcoders", "rubyonwasm", "narrate-it", "flames"]
+    }),
     mounted() {
         gsap.registerPlugin(ScrollTrigger);
         let texts: HTMLElement[] = gsap.utils.toArray(".content-info");
