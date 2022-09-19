@@ -53,11 +53,7 @@
         <div class="boxes">
             <div id="geobits">
                 <div id="empty"></div>
-                <div class="box" id="box_1"></div>
-                <div class="box" id="box_2"></div>
-                <div class="box" id="box_3"></div>
-                <div class="box" id="box_4"></div>
-                <div class="box" id="box_5"></div>
+                <div class="box" v-for="i in [...Array(25).keys()]"></div>
             </div>
         </div>
     </div>
@@ -135,7 +131,7 @@ export default defineNuxtComponent({
             height: 40px;
             width: auto;
             opacity: 0;
-            top: 10%;
+            top: 8%;
             left: 15%;
 
             &:first-child {
@@ -145,7 +141,7 @@ export default defineNuxtComponent({
 
         .frameworks-list {
             position: absolute;
-            top: 20%;
+            top: 18%;
             left: 15%;
             display: flex;
             align-items: center;

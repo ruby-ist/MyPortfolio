@@ -2,10 +2,31 @@
     <div class="phone-template">
         <img src="~/assets/iphone-outline.svg" alt="phone"/>
         <div id="iphone-carousel">
-            <img class="iphone-carousel-img first-img" src="~/assets/iphone-carousel/geobits-1.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/geobits-1.png"/>
             <img class="iphone-carousel-img" src="~/assets/iphone-carousel/geobits-2.png"/>
             <img class="iphone-carousel-img" src="~/assets/iphone-carousel/geobits-3.png"/>
             <img class="iphone-carousel-img" src="~/assets/iphone-carousel/geobits-4.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/geobits-5.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/pingcoders-1.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/pingcoders-2.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/pingcoders-3.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/pingcoders-4.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/pingcoders-5.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/rubyonwasm-1.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/rubyonwasm-2.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/rubyonwasm-3.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/rubyonwasm-4.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/rubyonwasm-5.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/narrateit-1.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/narrateit-2.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/narrateit-3.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/narrateit-4.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/narrateit-5.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/flames-1.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/flames-2.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/flames-3.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/flames-4.png"/>
+            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/flames-5.png"/>
         </div>
     </div>
 </template>
@@ -32,8 +53,6 @@ export default defineNuxtComponent({
                 }
             })
             tl.to(image, {
-                scaleX: 0,
-                transformOrigin: 'left',
                 opacity: 0,
                 duration: 0.5,
             });
@@ -45,29 +64,29 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 .phone-template {
     position: absolute;
-    top: 35%;
-    left: 2%;
+    top: 30%;
+    left: 0;
 
     img {
         position: absolute;
-        width: 150px;
+        width: 190px;
         z-index: 5;
     }
 
     #iphone-carousel {
-        width: 135px;
-        height: 279px;
+        width: 171px;
+        height: 354px;
         position: absolute;
-        top: 18px;
-        left: 8px;
+        top: 21px;
+        left: 10px;
         z-index: 4;
         display: flex;
         flex-flow: row nowrap;
         overflow: hidden;
 
         img {
-            width: 135px;
-            height: 279px;
+            width: 100%;
+            height: 100%;
         }
     }
 }
