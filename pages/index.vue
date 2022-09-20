@@ -4,6 +4,7 @@
         <Profile />
         <Skills />
         <Projects />
+        <Footer />
     </div>
 </template>
 
@@ -20,5 +21,6 @@ export default defineNuxtComponent({
     font-family: 'Signika Negative', sans-serif;
     color: #393E46;
     min-height: 700vh;
+    overflow-x: hidden;
 }
 </style>

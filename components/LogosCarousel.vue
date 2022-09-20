@@ -1,6 +1,6 @@
 <template>
     <div class="Websites-log">
-        <img class="logo-img" src="~/assets/geobits.svg" alt="geoBits"/>
+        <GeobitsLogo class="logo-img"/>
         <img class="logo-img" src="~/assets/pingcoders.svg" alt="pingCoders"/>
         <img class="logo-img" src="~/assets/rubyonwasm.svg" alt="rubyOnWASM"/>
         <img class="logo-img" src="~/assets/narrateit.svg" alt="narrateIt"/>

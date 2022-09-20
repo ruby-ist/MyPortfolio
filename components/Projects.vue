@@ -1,12 +1,12 @@
 <template>
     <div class="backstage">
         <section id="projects" ref="projects">
-            <div class="ui center secondary menu">
-                <a class="active item">GeoBITs</a>
-                <a class="item">Pingcoders</a>
-                <a class="item">RubyOnWasm</a>
-                <a class="item">Narrate-it</a>
-                <a class="item">Flames</a>
+            <div class="ui center secondary menu projects-menu">
+                <a class="item" @click="scrollToProject(0)">GeoBITs</a>
+                <a class="item" @click="scrollToProject(1)">Pingcoders</a>
+                <a class="item" @click="scrollToProject(2)">RubyOnWasm</a>
+                <a class="item" @click="scrollToProject(3)">Narrate-it</a>
+                <a class="item" @click="scrollToProject(4)">Flames</a>
             </div>
 
             <div class="showcase">
@@ -26,8 +26,8 @@
                 </div>
             </div>
         </section>
-        <div class="boxes">
-            <div id="geobits-box" v-for="i in [...Array(5).keys()]">
+        <div class="boxes" ref="boxes">
+            <div class="box-section" v-for="i in [...Array(5).keys()]" :data-index="i">
                 <div class="box" v-for="i in [...Array(5).keys()]"></div>
             </div>
         </div>
@@ -38,13 +38,29 @@
 import {defineNuxtComponent} from "#app";
 
 export default defineNuxtComponent({
+    methods: {
+        scrollToProject(num: number){
+            document.documentElement.scrollTop = $('.boxes').offset().top + (window.innerHeight * 5) * num + ((5-num) * 100);
+        }
+    },
     mounted() {
+        let previousSection: HTMLElement = document.querySelector('#skill-sets');
         document.addEventListener('scroll', () => {
-            if (this.$refs.projects.getBoundingClientRect().top < 0) {
+            if (this.$refs.projects.getBoundingClientRect().top < 0)
                 this.$refs.projects.style.position = "fixed";
-            }
-            if ($('#skill-sets')[0].getBoundingClientRect().bottom > 0) {
+            if (previousSection.getBoundingClientRect().bottom > 0) {
                 this.$refs.projects.style.position = "absolute";
+                this.$refs.projects.style.top = 0;
+                this.$refs.projects.style.bottom = "initial";
+            }
+            if (this.$refs.boxes.getBoundingClientRect().bottom <= window.innerHeight){
+                this.$refs.projects.style.position = "absolute";
+                this.$refs.projects.style.top = "initial";
+                this.$refs.projects.style.bottom = 0;
+            }
+            if(previousSection.getBoundingClientRect().bottom < 0 &&
+                this.$refs.boxes.getBoundingClientRect().bottom > window.innerHeight) {
+                this.$refs.projects.style.position = "fixed";
             }
         });
 
@@ -52,6 +68,22 @@ export default defineNuxtComponent({
         boxes.forEach((box) => {
             box.style.height = String(window.innerHeight) + 'px';
         })
+
+        let observer: IntersectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    let current = $('.projects-menu .active.item');
+                    if(current !== undefined)
+                        current.removeClass('active');
+                    let items = $('.projects-menu .item');
+                    let index = parseInt((entry.target as HTMLElement).dataset.index);
+                    items[index].classList.add('active');
+                }
+            });
+        });
+
+        let sections: NodeListOf<HTMLElement> = document.querySelectorAll('.box-section')
+        sections.forEach((i) => { observer.observe(i) });
     }
 })
 ;
