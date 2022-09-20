@@ -57,7 +57,17 @@ export default defineNuxtComponent({
 
         gsap.set(".stack-group", {zIndex: (i, target, targets) => targets.length - i});
         let stacks: HTMLElement[] = gsap.utils.toArray('.stack-group');
-        stacks.forEach((stack, i, stacks) => {
+
+        stacks.forEach((stack: HTMLElement, i: number) => {
+
+            let icons: HTMLCollection = stack.children;
+            let nextIcons: HTMLCollection;
+
+            if(stacks[i+1]){
+                nextIcons = stacks[i+1].children;
+                gsap.set(nextIcons, {scale: 0});
+            }
+
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#projects",
@@ -67,21 +77,24 @@ export default defineNuxtComponent({
                     toggleActions: "play complete complete reset",
                     invalidateOnRefresh: true,
                 }
-            })
-            tl.to(stack, {
+            });
+            tl.to(icons, {
                 opacity: 0,
-                scaleX: 0,
-                transformOrigin: "left",
-                duration: 0.5,
+                scale: 0,
+                transformOrigin: "center",
+                stagger: -0.1,
+                duration: 0.25,
                 ease: 'slow'
-            }).fromTo(stacks[i+1],{
-                scaleX: 0,
-            }, {
-                scaleX: 1,
-                transformOrigin: "left",
+            }).to(stacks[i+1], {
                 opacity: 1,
-                duration: 0.5,
-                ease: 'slow'
+                duration: 0,
+            }).to(nextIcons,{
+                scale: 1,
+                transformOrigin: "center",
+                opacity: 1,
+                stagger: 0.1,
+                duration: 0.25,
+                ease: 'slow',
             });
         });
     }

@@ -37,18 +37,16 @@ export default defineNuxtComponent({
                     trigger: "#projects",
                     scroller: "body",
                     toggleActions: "play complete none reset",
-                    start: () => "top -" + (window.innerHeight * ((5 * i) - 1)),
+                    start: () => "-100% -" +  (window.innerHeight * 5 * i),
                     end: () => "+=" + window.innerHeight * 5,
                     onEnter: () => { $('#url-link').attr('href', url); },
                     onEnterBack: () => {
-                        $('#url-link').attr('href', url);;
-                        $('#url-holder').text(url);
-                    }
+                        $('#url-link').attr('href', url);
+                        gsap.set('#url-holder', {text: {value: url}})
+                    },
                 },
-                duration: 1,
-                text: {
-                    value: url,
-                }
+                duration: 1.2,
+                text: { value: url },
             });
         });
     }
