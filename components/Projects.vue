@@ -67,7 +67,7 @@ export default defineNuxtComponent({
         let boxes: NodeListOf<HTMLElement> = document.querySelectorAll('.box');
         boxes.forEach((box) => {
             box.style.height = String(window.innerHeight) + 'px';
-        })
+        });
 
         let observer: IntersectionObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -82,7 +82,7 @@ export default defineNuxtComponent({
             });
         });
 
-        let sections: NodeListOf<HTMLElement> = document.querySelectorAll('.box-section')
+        let sections: NodeListOf<HTMLElement> = document.querySelectorAll('.box-section');
         sections.forEach((i) => { observer.observe(i) });
     }
 })
@@ -135,6 +135,10 @@ export default defineNuxtComponent({
 
     .boxes div {
         width: 100vw;
+    }
+
+    .boxes{
+        margin-bottom: 400px;
     }
 }
 </style>

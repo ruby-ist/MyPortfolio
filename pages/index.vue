@@ -4,6 +4,7 @@
         <Profile />
         <Skills />
         <Projects />
+        <Featured />
         <Footer />
     </div>
 </template>

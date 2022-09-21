@@ -38,7 +38,7 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 #dotted-rect{
     position: absolute;
-    bottom: 0;
+    bottom: 5%;
     left: 3%;
 
     .dotted-rect-bg{
