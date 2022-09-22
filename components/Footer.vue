@@ -1,6 +1,9 @@
 <template>
     <footer id="footer">
-        <img id="train" alt="train" src="~/assets/train-landscape.svg" />
+        <img id="train" alt="train" src="~/assets/ski-mountain.svg" />
+        <div class="credit">
+            Designed and developed by © Sriram V 2022
+        </div>
     </footer>
 </template>
 
@@ -16,14 +19,20 @@ export default defineNuxtComponent({
 #footer{
     height: 21vh;
     width: 100vw;
-    background: #F9F6F7;
+    background: #7090BD;
     position: relative;
+    display: grid;
+    place-items: center;
 
     #train{
         position: absolute;
         top: 0;
         left: 0;
-        transform: translateY(-100%);
+        transform: translateY(-99%);
+    }
+
+    .credit{
+        font-size: 1.2rem;
     }
 }
 </style>
