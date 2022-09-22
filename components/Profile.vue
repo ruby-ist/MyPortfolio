@@ -3,7 +3,7 @@
         <div class="greetings">Hi, I'm</div>
         <div class="name">Sriram V</div>
         <div class="job"><span id="role"></span> Developer</div>
-        <img id="chair" alt="chair" src="~/assets/images/chair.svg"/>
+        <img id="chair" alt="chair" src="~/assets/chair.svg"/>
         <img id="lamp" alt="lamp" src="~/assets/street-light.svg"/>
 
         <Photos/>

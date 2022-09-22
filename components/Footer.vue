@@ -1,18 +1,29 @@
 <template>
     <footer id="footer">
+        <img id="train" alt="train" src="~/assets/train-landscape.svg" />
     </footer>
 </template>
 
-<script>
-export default {
-    name: "Footer"
-}
+<script lang="ts">
+import {defineNuxtComponent} from "#app";
+
+export default defineNuxtComponent({
+
+});
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 #footer{
-    height: 40vh;
+    height: 21vh;
     width: 100vw;
-    background: linear-gradient(#1CD96E, #6BCB77);
+    background: #F9F6F7;
+    position: relative;
+
+    #train{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+    }
 }
 </style>

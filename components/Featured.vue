@@ -1,6 +1,6 @@
 <template>
     <section id="featured">
-        <img id="train" src="~/assets/train.svg" />
+        <img id="mountain" src="~/assets/mountain.svg" />
     </section>
 </template>
 
@@ -14,13 +14,11 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 #featured{
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background: #FEECE9;
     position: relative;
 
-    #train{
-        width: 100vw;
-        height: auto;
+    #mountain{
         position: absolute;
         top: 0;
         left: 0;
