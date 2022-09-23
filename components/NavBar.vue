@@ -1,7 +1,7 @@
 <template>
     <div id="navbar">
         <div class="ui secondary right menu">
-            <div class="ui huge item header">Srira.me</div>
+            <img id="main-logo" src="~/assets/srira-logo.svg" alt="srira" />
             <div class="right menu">
                 <a class="item">About</a>
                 <a class="item">Skills</a>
@@ -41,7 +41,7 @@ export default defineNuxtComponent({
 @import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
 
 #navbar {
-    height: 90px;
+    height: 100px;
     display: flex;
     align-items: center;
     position: fixed;
@@ -52,7 +52,7 @@ export default defineNuxtComponent({
 
     .ui.secondary.menu {
         width: 100%;
-        padding: 0 6rem 0 3rem;
+        padding: 0 6rem 0 5rem;
 
         .right.menu {
             .item {
@@ -61,10 +61,9 @@ export default defineNuxtComponent({
         }
     }
 
-    .ui.header {
-        color: #1CD96E;
-        font-family: 'Geo', sans-serif;
-        font-size: 3.2rem;
+    #main-logo{
+        width: 88px;
+        margin-top: 30px;
     }
 }
 </style>
