@@ -1,15 +1,15 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259.4163 289.86095">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265.4163 289.86095">
   <defs>
     <style>
       .cls-1, .cls-3 {
-        fill: #4992fe;
+        fill: #4586FF;
       }
 
-      .cls-1, .cls-2, .cls-3 {
-<!--        stroke: #231f20;-->
-<!--        stroke-miterlimit: 10;-->
-<!--&lt;!&ndash;        stroke-width: 0.25px;&ndash;&gt;-->
-      }
+<!--      .cls-1, .cls-2, .cls-3 {-->
+<!--&lt;!&ndash;        stroke: #231f20;&ndash;&gt;-->
+<!--&lt;!&ndash;        stroke-miterlimit: 10;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        stroke-width: 0.25px;&ndash;&gt;&ndash;&gt;-->
+<!--      }-->
 
       .cls-2 {
         fill: none;
@@ -20,6 +20,10 @@
         font-family: ComicSansMS-Bold, Comic Sans MS;
         font-weight: 500;
       }
+
+      .black{
+        fill: #32424A;
+      }
     </style>
   </defs>
   <g>
@@ -27,5 +31,5 @@
     <path class="cls-2" d="M350.72554,361.46385a79.6657,79.6657,0,0,0,4.85351-18.93552" transform="translate(-334.94894 -172.04927)"/>
     <path class="cls-2" d="M361.19741,333.0041a44.82873,44.82873,0,0,1,.48136,8.70115,45.53377,45.53377,0,0,1-1.47614,9.66292,46.04281,46.04281,0,0,1-2.86373,7.86639" transform="translate(-334.94894 -172.04927)"/>
   </g>
-  <text class="cls-3" transform="translate(41.47871 112.92316)">rira.dev</text>
+  <text class="cls-3" transform="translate(41.47871 112.92316)">rira</text><text class="cls-3 black" transform="translate(150.47871 112.92316)">.dev</text>
 </svg>

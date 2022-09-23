@@ -1,6 +1,6 @@
 <template>
     <div class="phone-template">
-        <img src="~/assets/iphone-outline.svg" alt="phone"/>
+        <img src="~/assets/background/iphone-outline.svg" alt="phone"/>
         <div id="iphone-carousel">
             <img class="iphone-carousel-img" src="~/assets/iphone-carousel/geobits-1.png"/>
             <img class="iphone-carousel-img" src="~/assets/iphone-carousel/geobits-2.png"/>

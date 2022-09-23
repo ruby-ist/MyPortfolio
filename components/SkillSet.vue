@@ -20,7 +20,7 @@ export default defineNuxtComponent({
     },
     methods: {
         imagePath(name: String): String {
-            return `/assets/images/${name}.svg`
+            return `/assets/icons/${name}.svg`
         }
     },
     mounted() {

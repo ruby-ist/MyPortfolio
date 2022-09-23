@@ -1,6 +1,6 @@
 <template>
     <div class="mac-template">
-        <img src="~/assets/mac-outline.svg" alt="mac"/>
+        <img src="~/assets/background/mac-outline.svg" alt="mac"/>
         <div id="mac-carousel">
             <img class="mac-carousel-img" src="~/assets/mac-carousel/geobits-1.png"/>
             <img class="mac-carousel-img" src="~/assets/mac-carousel/geobits-2.png"/>

@@ -1,6 +1,6 @@
 <template>
     <footer id="footer">
-        <img id="train" alt="train" src="~/assets/ski-mountain.svg" />
+        <img id="train" alt="train" src="~/assets/background/ski-mountain.svg" />
         <div class="credit">
             Designed and developed by © Sriram V 2022
         </div>

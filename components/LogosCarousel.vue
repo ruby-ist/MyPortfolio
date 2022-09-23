@@ -1,10 +1,10 @@
 <template>
     <div class="Websites-log">
         <GeobitsLogo class="logo-img"/>
-        <img class="logo-img" src="~/assets/pingcoders.svg" alt="pingCoders"/>
-        <img class="logo-img" src="~/assets/rubyonwasm.svg" alt="rubyOnWASM"/>
-        <img class="logo-img" src="~/assets/narrateit.svg" alt="narrateIt"/>
-        <img class="logo-img" src="~/assets/flames.svg" alt="narrateIt"/>
+        <img class="logo-img" src="~/assets/logos/pingcoders.svg" alt="pingCoders"/>
+        <img class="logo-img" src="~/assets/logos/rubyonwasm.svg" alt="rubyOnWASM"/>
+        <img class="logo-img" src="~/assets/logos/narrateit.svg" alt="narrateIt"/>
+        <img class="logo-img" src="~/assets/logos/flames.svg" alt="narrateIt"/>
     </div>
 </template>
 

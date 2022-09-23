@@ -52,7 +52,7 @@ export default defineNuxtComponent({
 
     .ui.secondary.menu {
         width: 100%;
-        padding: 0 6rem 0 5rem;
+        padding: 0 6rem 0 6rem;
 
         .right.menu {
             .item {
@@ -62,8 +62,8 @@ export default defineNuxtComponent({
     }
 
     #main-logo{
-        width: 88px;
-        margin-top: 30px;
+        width: 98px;
+        margin-top: 40px;
     }
 }
 </style>

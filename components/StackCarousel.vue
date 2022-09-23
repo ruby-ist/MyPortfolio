@@ -3,44 +3,44 @@
         <span>Tech stack:</span>
         <div class="frameworks">
             <div class="stack-group">
-                <img class="framework-icon" src="~/assets/images/ruby.svg"/>
-                <img class="framework-icon" src="~/assets/images/rails.svg"/>
-                <img class="framework-icon" src="~/assets/images/vue.svg"/>
-                <img class="framework-icon" src="~/assets/images/nuxt.svg"/>
-                <img class="framework-icon" src="~/assets/images/gsap-dark.svg"/>
-                <img class="framework-icon" src="~/assets/images/semantic-ui.svg"/>
-                <img class="framework-icon" src="~/assets/images/jquery.svg"/>
-                <img class="framework-icon" src="~/assets/images/rest.svg"/>
+                <img class="framework-icon" src="~/assets/icons/ruby.svg"/>
+                <img class="framework-icon" src="~/assets/icons/rails.svg"/>
+                <img class="framework-icon" src="~/assets/icons/vue.svg"/>
+                <img class="framework-icon" src="~/assets/icons/nuxt.svg"/>
+                <img class="framework-icon" src="~/assets/icons/gsap-dark.svg"/>
+                <img class="framework-icon" src="~/assets/icons/semantic-ui.svg"/>
+                <img class="framework-icon" src="~/assets/icons/jquery.svg"/>
+                <img class="framework-icon" src="~/assets/icons/rest.svg"/>
             </div>
             <div class="stack-group">
-                <img class="framework-icon" src="~/assets/images/rails.svg"/>
-                <img class="framework-icon" src="~/assets/images/rest.svg"/>
-                <img class="framework-icon" src="~/assets/images/turbo.svg"/>
-                <img class="framework-icon" src="~/assets/images/stimulus.svg"/>
-                <img class="framework-icon" src="~/assets/images/semantic-ui.svg"/>
-                <img class="framework-icon" src="~/assets/images/jquery.svg"/>
+                <img class="framework-icon" src="~/assets/icons/rails.svg"/>
+                <img class="framework-icon" src="~/assets/icons/rest.svg"/>
+                <img class="framework-icon" src="~/assets/icons/turbo.svg"/>
+                <img class="framework-icon" src="~/assets/icons/stimulus.svg"/>
+                <img class="framework-icon" src="~/assets/icons/semantic-ui.svg"/>
+                <img class="framework-icon" src="~/assets/icons/jquery.svg"/>
             </div>
             <div class="stack-group">
-                <img class="framework-icon" src="~/assets/images/wasm.svg"/>
-                <img class="framework-icon" src="~/assets/images/javascript.svg"/>
-                <img class="framework-icon" src="~/assets/images/html.svg"/>
-                <img class="framework-icon" src="~/assets/images/css.svg"/>
-                <img id="gsap-dark" class="framework-icon" src="~/assets/images/gsap-dark.svg"/>
-                <img id="jekyll" class="framework-icon" src="~/assets/images/jekyll.svg"/>
+                <img class="framework-icon" src="~/assets/icons/wasm.svg"/>
+                <img class="framework-icon" src="~/assets/icons/javascript.svg"/>
+                <img class="framework-icon" src="~/assets/icons/html.svg"/>
+                <img class="framework-icon" src="~/assets/icons/css.svg"/>
+                <img id="gsap-dark" class="framework-icon" src="~/assets/icons/gsap-dark.svg"/>
+                <img id="jekyll" class="framework-icon" src="~/assets/icons/jekyll.svg"/>
             </div>
             <div class="stack-group">
-                <img class="framework-icon" src="~/assets/images/rails.svg"/>
-                <img class="framework-icon" src="~/assets/images/turbo.svg"/>
-                <img class="framework-icon" src="~/assets/images/semantic-ui.svg"/>
-                <img class="framework-icon" src="~/assets/images/jquery.svg"/>
-                <img class="framework-icon" src="~/assets/images/scss.svg"/>
+                <img class="framework-icon" src="~/assets/icons/rails.svg"/>
+                <img class="framework-icon" src="~/assets/icons/turbo.svg"/>
+                <img class="framework-icon" src="~/assets/icons/semantic-ui.svg"/>
+                <img class="framework-icon" src="~/assets/icons/jquery.svg"/>
+                <img class="framework-icon" src="~/assets/icons/scss.svg"/>
             </div>
             <div class="stack-group">
-                <img class="framework-icon" src="~/assets/images/ruby.svg"/>
-                <img class="framework-icon" src="~/assets/images/sinatra.svg"/>
-                <img class="framework-icon" src="~/assets/images/html.svg"/>
-                <img class="framework-icon" src="~/assets/images/css.svg"/>
-                <img class="framework-icon" src="~/assets/images/jquery.svg"/>
+                <img class="framework-icon" src="~/assets/icons/ruby.svg"/>
+                <img class="framework-icon" src="~/assets/icons/sinatra.svg"/>
+                <img class="framework-icon" src="~/assets/icons/html.svg"/>
+                <img class="framework-icon" src="~/assets/icons/css.svg"/>
+                <img class="framework-icon" src="~/assets/icons/jquery.svg"/>
             </div>
         </div>
     </div>
