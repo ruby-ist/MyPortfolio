@@ -13,8 +13,9 @@
         <SlantingStripes />
         <DottedRectangle />
         <TwoCircles />
-        <svg id="underground" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 941.83997 91.39996">
-            <polygon class="ground" points="941.84 0 941.84 91.4 675.62 53.91 607.6 61.84 208.63 61.84 0 87.9 0 0 941.84 0"/>
+        <svg id="underground" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 941.8 91.4" preserveAspectRatio="none">
+            <rect class="background" width="941.8" height="91.4"/>
+            <polygon class="ground" points="941.8,0 941.8,91.4 675.6,53.9 607.6,61.8 208.6,61.8 0,87.9 0,0 "/>
         </svg>
     </section>
 </template>
@@ -68,8 +69,7 @@ export default defineNuxtComponent({
     padding: 15% 10%;
     display: flex;
     justify-content: space-around;
-    height: 180vh;
-    margin-bottom: 85px;
+    height: 200vh;
 
     .skills {
         height: 450px;
@@ -99,14 +99,17 @@ export default defineNuxtComponent({
 
     #underground {
         position: absolute;
-        bottom: 1%;
-        transform: translateY(100%);
+        bottom: 0;
         width: 100vw;
         height: auto;
     }
 
     .ground {
         fill: #151516;
+    }
+
+    .background{
+        fill: #F5F6F9;
     }
 }
 </style>

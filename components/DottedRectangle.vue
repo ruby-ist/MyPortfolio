@@ -19,7 +19,8 @@ export default defineNuxtComponent({
         gsap.from('.dot', {
             scrollTrigger: {
                 trigger: "#dotted-rect",
-                toggleActions: "restart none restart none"
+                toggleActions: "restart none restart none",
+                start: "-180% bottom",
             },
             stagger: {
                 grid: [11, 5],
@@ -38,7 +39,7 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 #dotted-rect{
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     left: 3%;
 
     .dotted-rect-bg{

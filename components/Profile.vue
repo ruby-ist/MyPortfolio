@@ -10,15 +10,15 @@
 
         <div class="vertical-line" id="social-media-line">
             <div class="icons">
-                <i class="linkedin icon"></i>
-                <i class="github icon"></i>
-                <i class="whatsapp icon"></i>
-                <i class="instagram icon"></i>
+                <a href="https://www.linkedin.com/in/srira-venkat/"><i class="linkedin link icon"></i></a>
+                <a href="https://github.com/ruby-ist"><i class="github link icon"></i></a>
+                <a href="https://wa.me/918344000240"><i class="whatsapp link icon"></i></a>
+                <a href="https://www.instagram.com/_srira.me/"><i class="instagram link icon"></i></a>
             </div>
         </div>
         <div class="vertical-line" id="email-line">
             <div class="mail-id">
-                srira.venkat@gmail.com
+                <a href="mailto:srira.venkat@gmail.com">srira.venkat@gmail.com</a>
             </div>
         </div>
 
@@ -154,13 +154,36 @@ export default defineNuxtComponent({
 
             .mail-id {
                 position: absolute;
-                color: #40514E;
                 font-size: 1.5rem;
                 font-family: 'Cutive Mono', monospace;
                 right: 50%;
                 bottom: 25rem;
+
+                a{
+                    color: #40514E;
+                }
             }
         }
+    }
+
+    .link.icon{
+        opacity: 1 !important;
+    }
+
+    .linkedin:hover{
+        color: #0a66c2 !important;
+    }
+
+    .github:hover{
+        color: #161b22 !important;;
+    }
+
+    .whatsapp:hover{
+        color: #42c452 !important;
+    }
+
+    .instagram:hover{
+        color: #f200b8 !important;
     }
 }
 </style>

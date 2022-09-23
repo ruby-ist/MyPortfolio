@@ -11,7 +11,6 @@
 import {defineNuxtComponent} from "#app";
 
 export default defineNuxtComponent({
-
 });
 </script>
 

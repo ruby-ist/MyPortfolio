@@ -56,8 +56,9 @@ export default defineNuxtComponent({
 
         gsap.from('#slanted-stripes', {
             scrollTrigger: {
-                trigger: '#stripes-circle',
-                toggleActions: "restart none restart none"
+                trigger: '#two-circle',
+                toggleActions: "restart none restart none",
+                start: "180px bottom",
             },
             scaleX: 0,
             opacity: 0,
@@ -71,7 +72,7 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 #slanting-stripe {
     position: absolute;
-    bottom: 2%;
+    bottom: 14%;
     right: 7%;
     width: 250px;
 

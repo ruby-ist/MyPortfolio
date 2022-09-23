@@ -17,7 +17,8 @@ export default defineNuxtComponent({
         gsap.from('.filled-circle', {
             scrollTrigger: {
                 trigger: '#two-circle',
-                toggleActions: "restart none restart none"
+                toggleActions: "restart none restart none",
+                start: "-300px bottom",
             },
             xPercent: -10,
             yPercent: 10,
@@ -29,7 +30,8 @@ export default defineNuxtComponent({
         gsap.from('.stroked-circle', {
             scrollTrigger: {
                 trigger: '#two-circle',
-                toggleActions: "restart none restart none"
+                toggleActions: "restart none restart none",
+                start: "-300px bottom",
             },
             xPercent: 10,
             yPercent: -10,
@@ -44,7 +46,7 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 #two-circle{
     position: absolute;
-    bottom: 25%;
+    bottom: 32%;
     right: -5%;
 
     .filled-circle{
