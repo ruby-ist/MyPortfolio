@@ -120,11 +120,6 @@
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                This app is created with Sinatra, Ruby's micro framework for web development and a minimal
-                Ui with vanilla javascript and css.
-            </div>
-            <div class="content-info"></div>
-            <div class="content-info">
                 It's just a game of predicting relationship status from two names. The result might be one of
                 Friend, Love, Affection, Marriage, Enemy & Sibling.
             </div>
@@ -132,6 +127,11 @@
             <div class="content-info">
                 The result also comes with a quote which is selected randomly from the group of quotes for that
                 result in the backend.
+            </div>
+            <div class="content-info"></div>
+            <div class="content-info">
+                This app is created with Sinatra, Ruby's micro framework for web development and a minimal
+                Ui with vanilla javascript and css.
             </div>
             <div class="content-info"></div>
             <div class="content-info">

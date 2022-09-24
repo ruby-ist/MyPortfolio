@@ -49,7 +49,7 @@ export default defineNuxtComponent({
             {
                 scrollTrigger: {
                     trigger: '#dijkstra_trace',
-                    toggleActions: 'restart none reverse none',
+                    toggleActions: 'restart none none none',
                     start: "-150% top",
                 },
                 opacity: 1,
@@ -65,7 +65,7 @@ export default defineNuxtComponent({
             {
                 scrollTrigger: {
                     trigger: '#dijkstra_trace',
-                    toggleActions: 'restart none reverse none',
+                    toggleActions: 'restart none none none',
                     start: "-150% top",
                 },
                 opacity: 1,
@@ -83,7 +83,7 @@ export default defineNuxtComponent({
             {
                 scrollTrigger: {
                     trigger: '#dijkstra_trace',
-                    toggleActions: 'restart none reverse none',
+                    toggleActions: 'restart none none none',
                     start: "-150% top",
                 },
                 opacity: 1,
@@ -96,7 +96,7 @@ export default defineNuxtComponent({
         gsap.from('.package-info', {
                 scrollTrigger: {
                     trigger: '#dijkstra_trace',
-                    toggleActions: 'restart none reverse none',
+                    toggleActions: 'restart none none none',
                     start: "-150% top",
                 },
                 xPercent: -40,
@@ -106,7 +106,7 @@ export default defineNuxtComponent({
         gsap.from('#rubygems', {
                 scrollTrigger: {
                     trigger: '#dijkstra_trace',
-                    toggleActions: 'restart none reverse none',
+                    toggleActions: 'restart none none none',
                     start: "-150% top",
                 },
                 opacity: 0,

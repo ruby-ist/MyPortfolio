@@ -28,7 +28,7 @@
         </section>
         <div class="boxes" ref="boxes">
             <div class="box-section" v-for="i in [...Array(5).keys()]" :data-index="i">
-                <div class="box" v-for="i in [...Array(5).keys()]"></div>
+                <div class="box" v-for="j in [...Array(5).keys()]" :data-index="i"></div>
             </div>
         </div>
     </div>
@@ -38,6 +38,10 @@
 import {defineNuxtComponent} from "#app";
 
 export default defineNuxtComponent({
+    data: () => ({
+        lastScroll: 0,
+        currentScroll: 0,
+    }),
     methods: {
         scrollToProject(num: number){
             document.documentElement.scrollTop = $('.boxes').offset().top + (window.innerHeight * 5) * num + ((5-num) * 100);
@@ -45,7 +49,10 @@ export default defineNuxtComponent({
     },
     mounted() {
         let previousSection: HTMLElement = document.querySelector('#skill-sets');
+        let that = this;
         document.addEventListener('scroll', () => {
+            that.lastScroll = that.currentScroll;
+            that.currentScroll = document.documentElement.scrollTop;
             if (this.$refs.projects.getBoundingClientRect().top < 0)
                 this.$refs.projects.style.position = "fixed";
             if (previousSection.getBoundingClientRect().bottom > 0) {
@@ -71,7 +78,20 @@ export default defineNuxtComponent({
 
         let observer: IntersectionObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && that.lastScroll > that.currentScroll) {
+                    let current = $('.projects-menu .active.item');
+                    if(current !== undefined)
+                        current.removeClass('active');
+                    let items = $('.projects-menu .item');
+                    let index = parseInt((entry.target as HTMLElement).dataset.index);
+                    items[index].classList.add('active');
+                }
+            });
+        });
+
+        let anotherObserver: IntersectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting && that.lastScroll <= that.currentScroll) {
                     let current = $('.projects-menu .active.item');
                     if(current !== undefined)
                         current.removeClass('active');
@@ -84,6 +104,8 @@ export default defineNuxtComponent({
 
         let sections: NodeListOf<HTMLElement> = document.querySelectorAll('.box-section');
         sections.forEach((i) => { observer.observe(i) });
+        let secondBoxes: NodeListOf<HTMLElement> = document.querySelectorAll('.box:nth-child(2)');
+        secondBoxes.forEach((i) => { anotherObserver.observe(i) });
     }
 })
 ;
@@ -139,6 +161,11 @@ export default defineNuxtComponent({
 
     .boxes{
         margin-bottom: 400px;
+    }
+
+    .projects-menu{
+        position: relative;
+        z-index: 4;
     }
 }
 </style>
