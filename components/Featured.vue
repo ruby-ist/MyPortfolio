@@ -7,8 +7,11 @@
             <div class="ui indigo header">A ruby gem package</div>
             <div id="rubygems"></div>
             <div class="package-info">
-                A simple Dijkstra algorithm implementation to find the shortest path between any two points in the
-                undirected graph.
+                Dijkstra trace is an ruby gem to find the shortest path between two places in the graph using
+                the same algorithm's implementation. The user would need first need to create an object for the
+                graph and can add edges of that graph object. The edge name can be a number, character or
+                strings. After adding the edges, the shortest path between any two edges can be easily calculated
+                with a function.
             </div>
         </div>
 
@@ -21,8 +24,11 @@
             <div class="arcane-img" id="arcanechats-3"></div>
 
             <div class="project-info">
-                A simple Dijkstra algorithm implementation to find the shortest path between any two points in the
-                undirected graph.
+                ArcaneChats is a minimal chatting app I've created to figure out how the backend structure should
+                be designed for an messaging facility. The app is initially created with Web socket supporting
+                feature but since I could not find a suitable hosting service for an redis database, I hosted an app
+                with ajax calls for message updates. Since the app is created only as an hobby, only mobile view is
+                developed.
             </div>
         </div>
     </section>
@@ -184,7 +190,7 @@ export default defineNuxtComponent({
                 toggleActions: 'restart none reverse none',
                 start: "-150% top",
             },
-            yPercent: -50,
+            yPercent: 50,
             duration: 1
         })
 
@@ -246,13 +252,16 @@ export default defineNuxtComponent({
 
         .package-info {
             position: absolute;
-            padding: 50px;
-            border-radius: 2px;
+            padding: 25px 40px;
+            text-align: justify;
+            font-size: 1.1rem;
+            border-radius: 5px;
             left: 8%;
-            top: 32%;
+            top: 28%;
             background: #ffd6ce;
             color: #d86149;
             width: 40%;
+            line-height: 1.7rem;
         }
     }
 
@@ -315,6 +324,18 @@ export default defineNuxtComponent({
             background-size: cover;
             right: -8%;
             top: 41%;
+        }
+
+        .project-info{
+            position: absolute;
+            text-align: justify;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            left: 0;
+            top: 15%;
+            width: 35%;
+            color: #da0037;
+            line-height: 1.7rem;
         }
     }
 }
