@@ -64,32 +64,27 @@
         </div>
         <div id="rubyonwasm-content">
             <div class="content-info">
-                GeoBITS is an online map made for navigating and finding classes inside the
-                Bannari Amman Institute of Technology college campus. The special thing about this
-                project, it is made without using any pre-existing Map APIs.
+                RubyOnWasm is a static online Ruby language interpreter. It runs the code completely on
+                browser using WebAssembly without any backend server.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                This map has navigation feature, the routes are displayed dynamically with help of
-                svg animations and the dijkstra algorithm to find the shortest path in the map. There is
-                also two modes of paths, vehicle and pedestrian paths.
+                The recent version of Ruby 3.2.0 has come with WASI based WebAssembly support. This enables
+                a CRuby binary to be available on Web browser, Serverless Edge environment, and other
+                WebAssembly/WASI embedders.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                It has both light mode and dark mode, and have details about each classes and
-                labs in every building in the campus. You could also has pin and share an location, or find
-                the route for any pinned location.
+                The website have syntax highlighting, running, copying the code and some extra features.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                The map has two different layers, satellite and svg. The SVG layer map are drawn with
-                Illustrator marking each and every building, playgrounds, path ways and roads.
+                Since it runs completely on browser, it runs any code within a second. It also has shortcut
+                keys to run the code.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                You can also view your current location inside the campus, GeoBITs matches your device's latitude
-                and longitude along with the map's corners lat and long, and shows the location of your device, which
-                will be keep updating itself while navigating around the campus.
+                The website can be shared natively using the new WebShare API.
             </div>
             <div class="content-info"></div>
         </div>
