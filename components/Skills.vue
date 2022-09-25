@@ -6,6 +6,17 @@
             </div>
             <SkillSet v-for="skills in skillSets" :skills="skills"/>
         </div>
+        <div class="about-header">ABOUT<br/><br/>ME</div>
+        <div class="about-info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Cursus eget nunc scelerisque viverra mauris in aliquam. Iaculis eu non diam phasellus
+            vestibulum lorem sed. Amet justo donec enim diam vulputate ut pharetra. Morbi leo urna molestie at elementum
+            eu facilisis sed odio. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. In dictum
+            non consectetur a erat nam at lectus. Adipiscing at in tellus integer feugiat. Aliquet eget sit amet tellus
+            cras adipiscing. Erat pellentesque adipiscing commodo elit. Consectetur a erat nam at lectus urna duis
+            convallis convallis. Nunc scelerisque viverra mauris in aliquam sem fringilla
+            Aliquet eget sit amet tellus cras adipiscing.
+            </div>
         <div class="skills-gradient"></div>
         <ThreeTriangles />
         <MemphisPattern />
@@ -57,6 +68,28 @@ export default defineNuxtComponent({
                 amount: -1
             }
         });
+
+        gsap.from('.about-header', {
+            scrollTrigger: {
+                trigger: '.about-header',
+                toggleActions: 'restart none none none',
+                start: "top 90%"
+            },
+            scaleY: 0,
+            opacity: 0,
+            transformOrigin: 'top',
+            duration: 1
+        })
+
+        gsap.from('.about-info', {
+            scrollTrigger: {
+                trigger: '.about-info',
+                toggleActions: 'restart none none none',
+                start: "top 90%"
+            },
+            opacity: 0,
+            duration: 1.5
+        })
     }
 })
 </script>
@@ -110,6 +143,31 @@ export default defineNuxtComponent({
 
     .background{
         fill: #F5F6F9;
+    }
+
+    .about-header{
+        color: #F5F6F9;
+        position: absolute;
+        font-size: 1.4rem;
+        width: 1.4rem;
+        line-break: anywhere;
+        text-align: center;
+        line-height: 30px;
+        left: 14.5%;
+        top: 24%;
+        font-family: monospace;
+    }
+
+    .about-info{
+        color: #42c452;
+        position: absolute;
+        font-size: 1.4rem;
+        width: 42%;
+        line-height: 35px;
+        left: 22%;
+        top: 28%;
+        font-family: monospace;
+        text-align: justify;
     }
 }
 </style>
