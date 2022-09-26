@@ -74,7 +74,7 @@ export default defineNuxtComponent({
     position: absolute;
     bottom: 14%;
     right: 7%;
-    width: 250px;
+    width: 16%;
 
     .slant-bg {
         fill: #7e72af;
@@ -82,6 +82,15 @@ export default defineNuxtComponent({
 
     .slanted-stripe {
         fill: #e6e7e8;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #slanting-stripe {
+        width: 32%;
+        right: initial;
+        left: 15%;
+        bottom: 8%;
     }
 }
 </style>

@@ -110,4 +110,20 @@ export default defineNuxtComponent({
 #render {
     width: 33px;
 }
+
+@media only screen and (max-width: 480px){
+    .skill-icon {
+        height: 28px;
+        width: 28px;
+    }
+
+    #gsap {
+        width: 56px;
+        margin: 15px 0;
+    }
+
+    #render {
+        width: 28px;
+    }
+}
 </style>

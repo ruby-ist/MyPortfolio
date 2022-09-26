@@ -68,4 +68,10 @@ export default defineNuxtComponent({
         fill: #bcbec0;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    #stripes-circle{
+        display: none;
+    }
+}
 </style>

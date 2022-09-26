@@ -4,9 +4,10 @@
             <div class="skill-info">
                 My skill sets and tech stack:
             </div>
+            <div class="skills-gradient"></div>
             <SkillSet v-for="skills in skillSets" :skills="skills"/>
         </div>
-        <div class="about-header">ABOUT<br/><br/>ME</div>
+        <div class="about-header">ABOUT <br/><br />ME</div>
         <div class="about-info">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Cursus eget nunc scelerisque viverra mauris in aliquam. Iaculis eu non diam phasellus
@@ -17,7 +18,6 @@
             convallis convallis. Nunc scelerisque viverra mauris in aliquam sem fringilla
             Aliquet eget sit amet tellus cras adipiscing.
             </div>
-        <div class="skills-gradient"></div>
         <ThreeTriangles />
         <MemphisPattern />
         <StripedCircle />
@@ -122,12 +122,11 @@ export default defineNuxtComponent({
 
     .skills-gradient{
         position: absolute;
-        z-index: 1;
-        height: 480px;
-        width: 480px;
-        top: 10%;
-        right: 0;
-        background: radial-gradient(#053218, #151516, #151516);
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        background: radial-gradient(#053218, transparent, transparent);
     }
 
     #underground {
@@ -168,6 +167,51 @@ export default defineNuxtComponent({
         top: 28%;
         font-family: monospace;
         text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #skill-sets{
+        height: 1400px;
+
+        .skill-info {
+            font-size: 1.1rem;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        .skills {
+            top: 8%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+        }
+
+        .skills-gradient{
+            top: -5%;
+        }
+
+        .about-header{
+            text-align: left;
+            width: initial;
+            line-break: normal;
+            left: 14.5%;
+            top: 40%;
+            font-family: monospace;
+
+            br{
+                display: none;
+            }
+        }
+
+        .about-info{
+            font-size: 1rem;
+            width: 75%;
+            top: 44%;
+            left: 50%;
+            transform: translateX(-50%);
+            line-height: 25px;
+        }
     }
 }
 </style>

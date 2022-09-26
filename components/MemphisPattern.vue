@@ -69,7 +69,7 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 #memphis {
     position: absolute;
-    width: 240px;
+    width: 17%;
     top: 0;
     left: 3%;
 
@@ -82,6 +82,12 @@ export default defineNuxtComponent({
         stroke: #393E46;
         stroke-miterlimit: 10;
         stroke-width: 2px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #memphis{
+        display: none;
     }
 }
 </style>

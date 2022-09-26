@@ -42,7 +42,7 @@ export default defineNuxtComponent({
     position: absolute;
     top: 15%;
     left: 40%;
-    width: 120px;
+    width: 9%;
 
     .green-triangle {
         fill: #00df2b;
@@ -50,6 +50,15 @@ export default defineNuxtComponent({
 
     .white-triangle {
         fill: #f1f2f2;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #triangles-svg{
+        left: initial;
+        top: 500px;
+        right: 10%;
+        width: 20%;
     }
 }
 </style>

@@ -65,4 +65,10 @@ export default defineNuxtComponent({
         }
     }
 }
+
+@media only screen and (max-width: 480px) {
+    #dotted-rect{
+        display: none;
+    }
+}
 </style>
