@@ -81,4 +81,10 @@ export default defineNuxtComponent({
         }
     }
 }
+
+@media only screen and (max-width: 480px) {
+    #photos{
+        display: none;
+    }
+}
 </style>

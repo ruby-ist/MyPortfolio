@@ -220,6 +220,7 @@ export default defineNuxtComponent({
         top: 0;
         left: 0;
         transform: translateY(-100%);
+        min-width: 100%;
     }
 
     .centered {

@@ -82,7 +82,7 @@ export default defineNuxtComponent({
 @import url('https://fonts.googleapis.com/css2?family=Sen&family=Ubuntu:wght@500&family=Cutive+Mono&display=swap');
 
 #profile {
-    padding: 320px 320px 560px;
+    padding: 20% 21% 36%;
     position: relative;
 
     .greetings {
@@ -184,6 +184,61 @@ export default defineNuxtComponent({
 
     .instagram:hover{
         color: #f200b8 !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #profile{
+        height: 88vh;
+        padding: 47% 15% 55%;
+
+        .vertical-line{
+            width: 3px;
+            &#email-line{
+                display: none;
+            }
+
+            &#social-media-line{
+                left: initial;
+                right: 10%;
+                height: 16rem;
+
+                .icons {
+                    bottom: 17rem;
+
+                    i {
+                        margin: 8px auto;
+                        font-size: xx-large;
+                    }
+                }
+            }
+        }
+
+        .greetings {
+            font-size: 1.8rem;
+        }
+
+        .name {
+            font-size: 3.7rem;
+            margin: 40px auto 35px;
+        }
+
+        .job {
+            font-size: 1.7rem;
+        }
+
+        #chair {
+            width: 150px;
+            bottom: -1%;
+            left: 18%;
+        }
+
+        #lamp {
+            width: 20px;
+            bottom: -1%;
+            right: initial;
+            left: 8%;
+        }
     }
 }
 </style>

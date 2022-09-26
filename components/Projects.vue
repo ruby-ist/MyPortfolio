@@ -72,7 +72,7 @@ export default defineNuxtComponent({
         });
 
         let boxes: NodeListOf<HTMLElement> = document.querySelectorAll('.box');
-        boxes.forEach((box) => {
+        boxes.forEach(async (box) => {
             box.style.height = String(window.innerHeight) + 'px';
         });
 
