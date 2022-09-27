@@ -172,8 +172,19 @@ export default defineNuxtComponent({
 @media only screen and (max-width: 480px) {
     .backstage{
 
+        .eight.wide.column{
+            position: initial;
+        }
+
+        .project-container{
+            position: absolute;
+            top: 0;
+        }
+
         #projects{
             padding-top: 60px;
+            height: 100vh;
+            position: relative;
         }
 
         .ui.secondary.menu{
@@ -183,9 +194,13 @@ export default defineNuxtComponent({
         .eight.wide.column{
             position: absolute;
         }
+        //
+        //#project-contents{
+        //    bottom: 24%;
+        //}
 
-        #project-contents{
-            bottom: 24%;
+        .boxes{
+            margin-bottom: 0;
         }
     }
 }

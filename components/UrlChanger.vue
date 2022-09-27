@@ -44,6 +44,7 @@ export default defineNuxtComponent({
                         $('#url-link').attr('href', url);
                         gsap.set('#url-holder', {text: {value: url}})
                     },
+                    invalidateOnRefresh: false
                 },
                 duration: 1.2,
                 text: { value: url },
@@ -74,7 +75,7 @@ export default defineNuxtComponent({
     .site-url{
         right: initial;
         left: 5%;
-        bottom: 55%;
+        top: 190%;
     }
 
 }

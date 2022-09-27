@@ -93,7 +93,7 @@ export default defineNuxtComponent({
 
 @media only screen and (max-width: 480px) {
     .mac-template{
-        top: 500%;
+        top: 550%;
         left: 2%;
 
         img{

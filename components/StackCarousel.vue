@@ -75,7 +75,7 @@ export default defineNuxtComponent({
                     start: () => "top -" + (window.innerHeight * (5 * (i + 1) - 1)),
                     end: () => "+=" + window.innerHeight * 5,
                     toggleActions: "play complete complete reset",
-                    invalidateOnRefresh: true,
+                    invalidateOnRefresh: false,
                 }
             });
             tl.to(icons, {
@@ -146,7 +146,7 @@ export default defineNuxtComponent({
 
 @media only screen and (max-width: 480px) {
     .frameworks-list{
-        top: -110%;
+        top: 40%;
         left: 5%;
 
         span{

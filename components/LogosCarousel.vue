@@ -27,6 +27,7 @@ export default defineNuxtComponent({
                     start: () => "top -" + (window.innerHeight * (5 * (i + 1) - 1)),
                     end: () => "+=" + window.innerHeight * 5,
                     toggleActions: "play complete complete reset",
+                    invalidateOnRefresh: false,
                 }
             })
             tl.to(logo, {
@@ -58,7 +59,7 @@ export default defineNuxtComponent({
 
 @media only screen and (max-width: 480px) {
     .logo-img{
-        top: -135%;
+        top: 15%;
         left: 5%;
         height: 30px;
     }
