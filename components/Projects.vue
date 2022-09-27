@@ -11,7 +11,7 @@
 
             <div class="showcase">
                 <div class="ui grid">
-                    <div class="eight wide column">
+                    <div id="project-contents" class="sixteen wide mobile eight wide computer column">
                         <div class="project-container">
                             <LogosCarousel />
                             <StackCarousel />
@@ -19,7 +19,7 @@
                             <ContentCarousel />
                         </div>
                     </div>
-                    <div class="eight wide column">
+                    <div class="sixteen wide mobile eight wide computer column">
                         <MacCarousel />
                         <IphoneCarousel />
                     </div>
@@ -104,7 +104,7 @@ export default defineNuxtComponent({
 
         let sections: NodeListOf<HTMLElement> = document.querySelectorAll('.box-section');
         sections.forEach((i) => { observer.observe(i) });
-        let secondBoxes: NodeListOf<HTMLElement> = document.querySelectorAll('.box:nth-child(2)');
+        let secondBoxes: NodeListOf<HTMLElement> = document.querySelectorAll('.box:nth-child(1)');
         secondBoxes.forEach((i) => { anotherObserver.observe(i) });
     }
 })
@@ -166,6 +166,27 @@ export default defineNuxtComponent({
     .projects-menu{
         position: relative;
         z-index: 4;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .backstage{
+
+        #projects{
+            padding-top: 60px;
+        }
+
+        .ui.secondary.menu{
+            display: none;
+        }
+
+        .eight.wide.column{
+            position: absolute;
+        }
+
+        #project-contents{
+            bottom: 24%;
+        }
     }
 }
 </style>

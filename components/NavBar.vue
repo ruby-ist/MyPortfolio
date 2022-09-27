@@ -70,11 +70,16 @@ export default defineNuxtComponent({
 @media only screen and (max-width: 480px) {
     #navbar{
         .ui.secondary.menu{
-            padding: 0 3rem 0 3rem;
+            padding: 0 2rem 0 2rem;
 
             .right.menu{
                 display: none;
             }
+        }
+
+        #main-logo{
+            width: 72px;
+            margin-top: 10px;
         }
     }
 }

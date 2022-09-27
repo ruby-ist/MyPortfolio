@@ -143,4 +143,28 @@ export default defineNuxtComponent({
         margin: 1px;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .frameworks-list{
+        top: -76%;
+        left: 5%;
+
+        span{
+            font-size: 1rem;
+        }
+
+        .stack-group{
+            width: 280px;
+        }
+
+        .frameworks{
+            margin-left: 5px;
+        }
+
+        .framework-icon{
+            height: 20px;
+            margin: 0 5px 7px;
+        }
+    }
+}
 </style>
