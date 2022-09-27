@@ -58,7 +58,7 @@ export default defineNuxtComponent({
 
 @media only screen and (max-width: 480px) {
     .logo-img{
-        top: -100%;
+        top: -135%;
         left: 5%;
         height: 30px;
     }

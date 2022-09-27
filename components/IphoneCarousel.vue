@@ -93,7 +93,7 @@ export default defineNuxtComponent({
 
 @media only screen and (max-width: 480px) {
     .phone-template{
-        top: 550%;
+        top: 600%;
         left: 75%;
 
         img{

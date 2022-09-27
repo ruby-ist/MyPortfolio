@@ -131,7 +131,7 @@ export default defineNuxtComponent({
 
     #underground {
         position: absolute;
-        bottom: 0;
+        bottom: -1%;
         width: 100vw;
         height: auto;
     }

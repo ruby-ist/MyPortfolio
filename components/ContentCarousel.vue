@@ -213,7 +213,7 @@ export default defineNuxtComponent({
         font-size: 1rem;
         width: 90%;
         height: 200px;
-        top: 60%;
+        top: 65%;
         left: 5%;
         line-height: initial;
     }

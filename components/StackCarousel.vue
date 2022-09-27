@@ -146,7 +146,7 @@ export default defineNuxtComponent({
 
 @media only screen and (max-width: 480px) {
     .frameworks-list{
-        top: -76%;
+        top: -110%;
         left: 5%;
 
         span{

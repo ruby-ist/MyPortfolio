@@ -69,4 +69,13 @@ export default defineNuxtComponent({
         cursor: pointer;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .site-url{
+        right: initial;
+        left: 5%;
+        bottom: 55%;
+    }
+
+}
 </style>
