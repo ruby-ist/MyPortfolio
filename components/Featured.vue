@@ -228,12 +228,13 @@ export default defineNuxtComponent({
         margin-bottom: 80px;
     }
 
+    .orange {
+        color: #d86149 !important;
+    }
+
     #dijkstra_trace {
         position: relative;
         height: 90vh;
-        .orange {
-            color: #d86149 !important;
-        }
 
         .indigo {
             color: #2F3A8F !important;
@@ -242,8 +243,8 @@ export default defineNuxtComponent({
 
         #rubygems {
             position: absolute;
-            width: 55%;
-            height: 60%;
+            width: 640px;
+            height: 450px;
             border-radius: 20px;
             background: url("/assets/dijkstra_trace.png") no-repeat top;
             background-size: cover;
@@ -289,8 +290,8 @@ export default defineNuxtComponent({
 
         #arcanechats-repo{
             position: absolute;
-            width: 50%;
-            height: 45%;
+            width: 600px;
+            height: 340px;
             border-radius: 20px;
             background: url("/assets/arcanechats-repo.png") no-repeat top;
             background-size: cover;
@@ -300,8 +301,8 @@ export default defineNuxtComponent({
 
         .arcane-img{
             position: absolute;
-            width: 15%;
-            height: 45%;
+            width: 180px;
+            height: 350px;
             border-radius: 5px;
         }
 
@@ -337,6 +338,60 @@ export default defineNuxtComponent({
             width: 35%;
             color: #da0037;
             line-height: 1.7rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #featured{
+        #dijkstra_trace{
+            #rubygems{
+                width: 100%;
+                height: 30%;
+                border-radius: 10px;
+                top: 18%;
+                left: 50%;
+                transform: translateX(-50%) !important;
+            }
+
+            .package-info{
+                padding: 15px 30px;
+                font-size: 1rem;
+                border-radius: 5px;
+                top: 52%;
+                width: 100%;
+                line-height: initial;
+                left: 50%;
+                transform: translateX(-50%) !important;
+            }
+        }
+
+        #arcanechats{
+            #arcanechats-repo{
+                display: none;
+            }
+
+            .arcane-img{
+                top: 18% !important;
+                width: 100px;
+                height: 194px;
+            }
+
+            #arcanechats-1{
+                left: 0;
+            }
+            #arcanechats-2{
+                right: 50%;
+                transform: translateX(50%) !important;
+            }
+            #arcanechats-3{
+                right: 0;
+            }
+            .project-info{
+                font-size: 1rem;
+                width: 100%;
+                top: 55%;
+            }
         }
     }
 }

@@ -27,7 +27,7 @@ export default defineNuxtComponent({
                     start: () => "top -" + (window.innerHeight * (5 * (i + 1) - 1)),
                     end: () => "+=" + window.innerHeight * 5,
                     toggleActions: "play complete complete reset",
-                    invalidateOnRefresh: false,
+                    invalidateOnRefresh: true,
                 }
             })
             tl.to(logo, {

@@ -346,4 +346,11 @@ export default defineNuxtComponent({
         color: #f3dfd0;
     }
 }
+@media only screen and (max-width: 480px) {
+    #footer {
+        .credit {
+            font-size: 0.9rem;
+        }
+    }
+}
 </style>
