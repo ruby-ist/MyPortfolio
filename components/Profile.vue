@@ -30,6 +30,7 @@ import {defineNuxtComponent} from "#app"
 import Typed from "typed.js";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
+import $ from 'jquery'
 
 type dataGroup = {
     colors: String[]

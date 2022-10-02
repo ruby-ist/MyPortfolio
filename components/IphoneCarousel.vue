@@ -2,31 +2,31 @@
     <div class="phone-template">
         <img src="~/assets/background/iphone-outline.svg" alt="phone"/>
         <div id="iphone-carousel">
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/geobits-1.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/geobits-2.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/geobits-3.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/geobits-4.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/geobits-5.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/pingcoders-1.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/pingcoders-2.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/pingcoders-3.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/pingcoders-4.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/pingcoders-5.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/rubyonwasm-1.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/rubyonwasm-2.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/rubyonwasm-3.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/rubyonwasm-4.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/rubyonwasm-5.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/narrateit-1.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/narrateit-2.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/narrateit-3.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/narrateit-4.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/narrateit-5.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/flames-1.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/flames-2.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/flames-3.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/flames-4.png"/>
-            <img class="iphone-carousel-img" src="~/assets/iphone-carousel/flames-5.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/geobits-1.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/geobits-2.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/geobits-3.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/geobits-4.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/geobits-5.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/pingcoders-1.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/pingcoders-2.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/pingcoders-3.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/pingcoders-4.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/pingcoders-5.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/rubyonwasm-1.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/rubyonwasm-2.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/rubyonwasm-3.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/rubyonwasm-4.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/rubyonwasm-5.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/narrateit-1.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/narrateit-2.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/narrateit-3.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/narrateit-4.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/narrateit-5.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/flames-1.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/flames-2.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/flames-3.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/flames-4.png"/>
+            <img class="iphone-carousel-img" src="/static/iphone-carousel/flames-5.png"/>
         </div>
     </div>
 </template>

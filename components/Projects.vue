@@ -1,6 +1,8 @@
 <template>
     <div class="backstage">
         <section id="projects" ref="projects">
+            <h4 class="ui header">My Projects</h4>
+
             <div class="ui center secondary menu projects-menu">
                 <a class="item" @click="scrollToProject(0)">GeoBITs</a>
                 <a class="item" @click="scrollToProject(1)">Pingcoders</a>
@@ -36,6 +38,7 @@
 
 <script lang="ts">
 import {defineNuxtComponent} from "#app";
+import $ from "jquery"
 
 export default defineNuxtComponent({
     data: () => ({
@@ -121,10 +124,15 @@ export default defineNuxtComponent({
     }
 
     #projects {
-        padding-top: 80px;
+        padding-top: 40px;
         position: absolute;
         top: 0;
         width: 100vw;
+
+        h4{
+            text-align: center;
+            margin-bottom: 30px;
+        }
     }
 
     .showcase {
@@ -194,10 +202,6 @@ export default defineNuxtComponent({
         .eight.wide.column{
             position: absolute;
         }
-        //
-        //#project-contents{
-        //    bottom: 24%;
-        //}
 
         .boxes{
             margin-bottom: 0;

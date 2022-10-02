@@ -100,7 +100,7 @@
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                Each user have their own profile page, if the user is admin, his profile is displayed with their
+                Each user have their own profile page, if the user is admin, his profile is displayed with
                 crown. The profile contains user's details and their recent posts.
             </div>
             <div class="content-info"></div>
