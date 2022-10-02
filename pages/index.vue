@@ -3,8 +3,8 @@
         <NavBar />
         <Profile />
         <Skills />
-        <Projects v-show="!isMobile"/>
-        <ProjectsMobile v-show="isMobile"/>
+        <Projects />
+        <ProjectsMobile />
         <Featured />
         <Footer />
     </div>
@@ -13,12 +13,6 @@
 <script lang="ts">
 import { defineNuxtComponent } from '#app'
 export default defineNuxtComponent({
-    data: () => ({
-        isMobile: false,
-    }),
-    mounted(){
-        this.isMobile = window.matchMedia('(max-width: 540px)').matches;
-    }
 })
 </script>
 

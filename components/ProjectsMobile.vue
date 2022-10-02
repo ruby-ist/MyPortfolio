@@ -2,7 +2,7 @@
     <section id="projects">
         <h3 class="ui header">My Projects</h3>
         <div class="logo">
-            <img :src="'/static/logos/' + projects[index]['logo']" alt="logo">
+            <img :src="'/logos/' + projects[index]['logo']" alt="logo">
         </div>
         <div class="frameworks-list">
             <span>Tech Stack:</span>
@@ -11,13 +11,13 @@
                     <img v-for="icon in projects[index]['stacks']"
                          alt="icon"
                          class="stack-icon"
-                         :src="'/static/icons/' + icon + '.svg'"/>
+                         :src="'/icons/' + icon + '.svg'"/>
                 </div>
             </div>
         </div>
         <div class="images">
-            <img class="mac-image" :src="'/static/mac-carousel/' + projects[index]['macImage']"/>
-            <img class="phone-image" :src="'/static/iphone-carousel/' + projects[index]['phoneImage']"/>
+            <img class="mac-image" :src="'/mac-carousel/' + projects[index]['macImage']"/>
+            <img class="phone-image" :src="'/iphone-carousel/' + projects[index]['phoneImage']"/>
         </div>
         <div class="url-holder">
             <span class="label">Url:</span>
@@ -31,11 +31,21 @@
         </div>
         <div class="menu">
             <div id="mini-menu" class="ui secondary menu">
-                <a class="active item" @click="switchTo(0)">G</a>
-                <a class="item" @click="switchTo(1)">G</a>
-                <a class="item" @click="switchTo(2)">G</a>
-                <a class="item" @click="switchTo(3)">G</a>
-                <a class="item" @click="switchTo(4)">G</a>
+                <a class="active item" @click="switchTo(0)">
+                    <img src="/logos/geobits-mini.svg" alt="mini" />
+                </a>
+                <a class="item" @click="switchTo(1)">
+                    <img src="/logos/pingcoders-mini.svg" alt="mini" />
+                </a>
+                <a class="item" @click="switchTo(2)">
+                    <img src="/logos/rubyonwasm-mini.svg" alt="mini" />
+                </a>
+                <a class="item" @click="switchTo(3)">
+                    <img src="/logos/narrateit-mini.svg" alt="mini" />
+                </a>
+                <a class="item" @click="switchTo(4)">
+                    <img src="/logos/flames-mini.svg" alt="mini" />
+                </a>
             </div>
         </div>
     </section>
@@ -138,6 +148,7 @@ export default defineNuxtComponent({
 
 <style scoped lang="scss">
 #projects {
+    display: none;
     padding: 8rem 3rem 200px;
 
     h3{
@@ -232,8 +243,19 @@ export default defineNuxtComponent({
 
             .item {
                 border-radius: 50%;
+
+                img{
+                    width: 25px;
+                    height: 25px;
+                }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #projects{
+        display: block;
     }
 }
 </style>

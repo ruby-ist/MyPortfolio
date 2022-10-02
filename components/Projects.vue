@@ -179,6 +179,7 @@ export default defineNuxtComponent({
 
 @media only screen and (max-width: 480px) {
     .backstage{
+        display: none;
 
         .eight.wide.column{
             position: initial;
