@@ -182,9 +182,9 @@ export default defineNuxtComponent({
     position: absolute;
     top: 30%;
     left: 15%;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    font-family: 'Athiti', sans-serif;
+    font-family: 'Sen', sans-serif;
     line-height: 2.5rem;
     height: 350px;
     width: 70%;
@@ -205,17 +205,6 @@ export default defineNuxtComponent({
         background: #F5F6F9;
         text-align: justify;
         padding: 15% 0;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .content-carousel{
-        font-size: 1rem;
-        width: 90%;
-        height: 200px;
-        top: 210%;
-        left: 5%;
-        line-height: initial;
     }
 }
 </style>

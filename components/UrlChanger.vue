@@ -55,12 +55,14 @@ export default defineNuxtComponent({
 </script>
 
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Special+Elite&display=swap');
 .site-url {
     position: absolute;
     bottom: 20%;
-    right: -90%;
+    right: -95%;
     font-size: 1.1rem;
     z-index: 7;
+    font-family: 'Anonymous Pro', monospace;
 
     span.label{
         margin-right: 5px;
@@ -69,14 +71,5 @@ export default defineNuxtComponent({
     #url-link{
         cursor: pointer;
     }
-}
-
-@media only screen and (max-width: 480px) {
-    .site-url{
-        right: initial;
-        left: 5%;
-        top: 190%;
-    }
-
 }
 </style>

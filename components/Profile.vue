@@ -144,7 +144,7 @@ export default defineNuxtComponent({
         position: absolute;
         bottom: 225px;
         right: 8%;
-        background: radial-gradient(#0094eb, #0094eb88, #0094eb44, transparent, transparent);
+        background: radial-gradient(#6fe9fe, #0094eb88, #0094eb44, transparent, transparent);
         opacity: 0;
         transition: opacity 0.5s;
     }

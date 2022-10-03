@@ -110,7 +110,8 @@ export default defineNuxtComponent({
     align-items: center;
 
     span {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        font-family: 'Alegreya Sans', sans-serif;
     }
 
     .stack-group{

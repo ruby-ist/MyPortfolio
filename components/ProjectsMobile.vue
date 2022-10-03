@@ -156,10 +156,13 @@ export default defineNuxtComponent({
 #projects {
     display: none;
     padding: 6rem 3rem 200px;
+    font-family: 'Sen', sans-serif;
 
     h3 {
         text-align: center;
         margin-bottom: 50px;
+        font-family: "Alegreya Sans", sans-serif;
+        color: #606470;
     }
 
     .ui.large.header {
@@ -250,7 +253,8 @@ export default defineNuxtComponent({
     }
 
     .url-holder {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+        font-family: 'Anonymous Pro', monospace;
         z-index: 7;
 
         span.label {

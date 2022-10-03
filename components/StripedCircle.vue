@@ -65,7 +65,7 @@ export default defineNuxtComponent({
     width: 100px;
 
     .circle-stripes {
-        fill: #bcbec0;
+        fill: #393E46;
     }
 }
 

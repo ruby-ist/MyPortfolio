@@ -77,11 +77,11 @@ export default defineNuxtComponent({
     width: 16%;
 
     .slant-bg {
-        fill: #7e72af;
+        fill: #d83633;
     }
 
     .slanted-stripe {
-        fill: #e6e7e8;
+        fill: #d7bac0;
     }
 }
 

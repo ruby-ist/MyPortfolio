@@ -40,16 +40,16 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 #triangles-svg {
     position: absolute;
-    top: 15%;
-    left: 40%;
+    top: 12%;
+    left: 50%;
     width: 9%;
 
     .green-triangle {
-        fill: #00df2b;
+        fill: #009967;
     }
 
     .white-triangle {
-        fill: #f1f2f2;
+        fill: #F6F6F6;
     }
 }
 

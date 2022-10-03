@@ -95,6 +95,8 @@ export default defineNuxtComponent({
 </script>
 
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 #skill-sets {
     position: relative;
     width: 100%;
@@ -117,7 +119,8 @@ export default defineNuxtComponent({
         line-height: 1.3rem;
         color: #ddeced;
         padding-bottom: 30px;
-        font-family: monospace;
+        font-family: 'Anonymous Pro', sans-serif;
+        text-align: center;
     }
 
     .skills-gradient{
@@ -145,7 +148,7 @@ export default defineNuxtComponent({
     }
 
     .about-header{
-        color: #F5F6F9;
+        color: #f15b2b;
         position: absolute;
         font-size: 1.4rem;
         width: 1.4rem;
@@ -153,19 +156,19 @@ export default defineNuxtComponent({
         text-align: center;
         line-height: 30px;
         left: 14.5%;
-        top: 24%;
-        font-family: monospace;
+        top: 20%;
+        font-family: 'Special Elite', cursive;
     }
 
     .about-info{
-        color: #42c452;
+        color: #009967;
         position: absolute;
         font-size: 1.4rem;
         width: 42%;
         line-height: 35px;
         left: 22%;
         top: 28%;
-        font-family: monospace;
+        font-family: 'sen', sans-serif;
         text-align: justify;
     }
 }
@@ -197,7 +200,6 @@ export default defineNuxtComponent({
             line-break: normal;
             left: 14.5%;
             top: 40%;
-            font-family: monospace;
 
             br{
                 display: none;

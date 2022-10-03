@@ -51,32 +51,32 @@ export default defineNuxtComponent({
         position: absolute;
 
         &#face{
-            height: 400px;
-            width: 360px;
-            background: #60EFB8;
-            top: 15rem;
-            right: 20rem;
+            height: 28vw;
+            width: 25vw;
+            background: #1EE494;
+            top: 23%;
+            right: 18%;
             transform: rotateZ(10deg);
-            padding: 25px;
+            padding: 1.8vw;
 
             img{
-                height: 310px;
-                width: 310px;
+                height: 90%;
+                width: 100%;
             }
         }
 
         &#bg{
-            height: 267px;
-            width: 240px;
+            height: 21vw;
+            width: 18vw;
             background: #6ACAFC;
-            top: 12rem;
-            right: 33rem;
+            top: 18%;
+            right: 30%;
             transform: rotateZ(-15deg);
-            padding: 17px;
+            padding: 1.3vw;
 
             img{
-                height: 207px;
-                width: 207px;
+                height: 90%;
+                width: 100%;
             }
         }
     }

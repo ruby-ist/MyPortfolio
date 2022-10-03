@@ -90,22 +90,4 @@ export default defineNuxtComponent({
         }
     }
 }
-
-@media only screen and (max-width: 480px) {
-    .mac-template{
-        top: 550%;
-        left: 2%;
-
-        img{
-            width: 300px;
-        }
-
-        #mac-carousel{
-            width: 228px;
-            height: 144px;
-            top: 13px;
-            left: 36px;
-        }
-    }
-}
 </style>

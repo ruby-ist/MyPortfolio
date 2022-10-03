@@ -1,14 +1,14 @@
 <template>
     <div class="backstage">
         <section id="projects" ref="projects">
-            <h4 class="ui header">My Projects</h4>
+            <h3 class="ui header">My Projects</h3>
 
             <div class="ui center secondary menu projects-menu">
-                <a class="item" @click="scrollToProject(0)">GeoBITs</a>
-                <a class="item" @click="scrollToProject(1)">Pingcoders</a>
-                <a class="item" @click="scrollToProject(2)">RubyOnWasm</a>
-                <a class="item" @click="scrollToProject(3)">Narrate-it</a>
-                <a class="item" @click="scrollToProject(4)">Flames</a>
+                <a class="item" @click="scrollToProject(0)" style="--special-color: #116cff">GeoBITs</a>
+                <a class="item" @click="scrollToProject(1)" style="--special-color: #4992fe">Pingcoders</a>
+                <a class="item" @click="scrollToProject(2)" style="--special-color: #f92024">RubyOnWasm</a>
+                <a class="item" @click="scrollToProject(3)" style="--special-color: #637ee2">Narrate-it</a>
+                <a class="item" @click="scrollToProject(4)" style="--special-color: #e78347">Flames</a>
             </div>
 
             <div class="showcase">
@@ -129,9 +129,11 @@ export default defineNuxtComponent({
         top: 0;
         width: 100vw;
 
-        h4{
+        h3{
             text-align: center;
             margin-bottom: 30px;
+            font-family: "Alegreya Sans", sans-serif;
+            color: #606470;
         }
     }
 
@@ -174,39 +176,21 @@ export default defineNuxtComponent({
     .projects-menu{
         position: relative;
         z-index: 4;
+
+        .item{
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 1.1rem;
+        }
+
+       .active.item{
+           color: var(--special-color) !important;
+       }
     }
 }
 
 @media only screen and (max-width: 480px) {
     .backstage{
         display: none;
-
-        .eight.wide.column{
-            position: initial;
-        }
-
-        .project-container{
-            position: absolute;
-            top: 0;
-        }
-
-        #projects{
-            padding-top: 60px;
-            height: 100vh;
-            position: relative;
-        }
-
-        .ui.secondary.menu{
-            display: none;
-        }
-
-        .eight.wide.column{
-            position: absolute;
-        }
-
-        .boxes{
-            margin-bottom: 0;
-        }
     }
 }
 </style>
