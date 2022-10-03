@@ -4,20 +4,15 @@
         <div class="logo">
             <img :src="'/logos/' + projects[index]['logo']" alt="logo">
         </div>
-        <div class="frameworks-list">
-            <span>Tech Stack:</span>
-            <div class="frameworks">
-                <div class="stack-group">
-                    <img v-for="icon in projects[index]['stacks']"
-                         alt="icon"
-                         class="stack-icon"
-                         :src="'/icons/' + icon + '.svg'"/>
-                </div>
-            </div>
-        </div>
         <div class="images">
-            <img class="mac-image" :src="'/mac-carousel/' + projects[index]['macImage']"/>
-            <img class="phone-image" :src="'/iphone-carousel/' + projects[index]['phoneImage']"/>
+            <div id="mac">
+                <img id="mac-template" src="~/assets/background/mac-outline.svg" alt="mac"/>
+                <img class="mac-image" :src="'/mac-carousel/' + projects[index]['macImage']" alt="preview 1"/>
+            </div>
+            <div id="iphone">
+                <img id="phone-template" src="~/assets/background/iphone-outline.svg" alt="phone"/>
+                <img class="phone-image" :src="'/iphone-carousel/' + projects[index]['phoneImage']" alt="preview 2"/>
+            </div>
         </div>
         <div class="url-holder">
             <span class="label">Url:</span>
@@ -29,22 +24,33 @@
         <div class="content">
             {{ projects[index]['content'] }}
         </div>
+        <div class="frameworks-list">
+            <span>Tech Stack:</span>
+            <div class="frameworks">
+                <div class="stack-group">
+                    <img v-for="icon in projects[index]['stacks']"
+                         alt="icon"
+                         class="stack-icon"
+                         :src="'/icons/' + icon + '.svg'"/>
+                </div>
+            </div>
+        </div>
         <div class="menu">
             <div id="mini-menu" class="ui secondary menu">
                 <a class="active item" @click="switchTo(0)">
-                    <img src="/logos/geobits-mini.svg" alt="mini" />
+                    <img src="/logos/geobits-mini.svg" alt="mini"/>
                 </a>
                 <a class="item" @click="switchTo(1)">
-                    <img src="/logos/pingcoders-mini.svg" alt="mini" />
+                    <img src="/logos/pingcoders-mini.svg" alt="mini"/>
                 </a>
                 <a class="item" @click="switchTo(2)">
-                    <img src="/logos/rubyonwasm-mini.svg" alt="mini" />
+                    <img src="/logos/rubyonwasm-mini.svg" alt="mini"/>
                 </a>
                 <a class="item" @click="switchTo(3)">
-                    <img src="/logos/narrateit-mini.svg" alt="mini" />
+                    <img src="/logos/narrateit-mini.svg" alt="mini"/>
                 </a>
                 <a class="item" @click="switchTo(4)">
-                    <img src="/logos/flames-mini.svg" alt="mini" />
+                    <img src="/logos/flames-mini.svg" alt="mini"/>
                 </a>
             </div>
         </div>
@@ -134,10 +140,10 @@ export default defineNuxtComponent({
         index: 0
     }),
     methods: {
-        switchTo(num){
+        switchTo(num) {
             this.index = num;
             let current = $('#mini-menu .active.item');
-            if(current !== undefined)
+            if (current !== undefined)
                 current.removeClass('active');
             let items = $('#mini-menu .item');
             items[num].classList.add('active');
@@ -149,16 +155,21 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 #projects {
     display: none;
-    padding: 8rem 3rem 200px;
+    padding: 6rem 3rem 200px;
 
-    h3{
+    h3 {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
+    }
+
+    .ui.large.header {
+        color: #116cff;
     }
 
     .logo {
+        margin-bottom: 20px;
         img {
-            width: 150px;
+            height: 30px;
         }
     }
 
@@ -193,23 +204,48 @@ export default defineNuxtComponent({
         height: 240px;
         position: relative;
 
-        img {
-            border-radius: 5px;
+        #mac, #iphone{
             position: absolute;
+        }
+
+        img {
+            position: absolute;
+        }
+
+        #phone-template {
+            width: 80px;
+            z-index: 5;
+        }
+
+        #mac-template {
+            width: 300px;
+            z-index: 3;
+        }
+
+        #mac{
+            left: -15%;
+            top: 10%;
         }
 
         .mac-image {
             width: 228px;
             height: 144px;
-            left: 0;
-            top: 10%;
+            top: 13px;
+            left: 36px;
+            z-index: 2;
+        }
+
+        #iphone{
+            top: 25%;
+            right: 15%;
         }
 
         .phone-image {
             width: 72px;
             height: 149px;
-            top: 25%;
-            right: -5%;
+            top: 9px;
+            left: 4px;
+            z-index: 4;
         }
     }
 
@@ -243,8 +279,9 @@ export default defineNuxtComponent({
 
             .item {
                 border-radius: 50%;
+                margin: 0 !important;
 
-                img{
+                img {
                     width: 25px;
                     height: 25px;
                 }
@@ -253,8 +290,8 @@ export default defineNuxtComponent({
     }
 }
 
-@media only screen and (max-width: 480px){
-    #projects{
+@media only screen and (max-width: 480px) {
+    #projects {
         display: block;
     }
 }

@@ -1,7 +1,7 @@
 <template>
     <section id="featured">
         <img id="mountain" src="~/assets/background/mountain.svg"/>
-        <div class="ui huge orange centered header">Mini Projects</div>
+        <div class="ui large orange centered header">Mini Projects</div>
         <div id="dijkstra_trace">
             <div class="ui large orange header">Dijkstra Trace</div>
             <div class="ui indigo header">A ruby gem package</div>
