@@ -1,13 +1,13 @@
 <template>
     <section id="skill-sets">
         <div class="skills">
-            <div class="skill-info">
+            <div id="skills" class="skill-info">
                 My skill sets and tech stack:
             </div>
             <div class="skills-gradient"></div>
             <SkillSet v-for="skills in skillSets" :skills="skills"/>
         </div>
-        <div class="about-header">ABOUT <br/><br />ME</div>
+        <div id="about" class="about-header">ABOUT <br/><br />ME</div>
         <div class="about-info">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Cursus eget nunc scelerisque viverra mauris in aliquam. Iaculis eu non diam phasellus

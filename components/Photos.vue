@@ -53,7 +53,7 @@ export default defineNuxtComponent({
         &#face{
             height: 400px;
             width: 360px;
-            background: lightgreen;
+            background: #60EFB8;
             top: 15rem;
             right: 20rem;
             transform: rotateZ(10deg);
@@ -68,7 +68,7 @@ export default defineNuxtComponent({
         &#bg{
             height: 267px;
             width: 240px;
-            background: lightskyblue;
+            background: #6ACAFC;
             top: 12rem;
             right: 33rem;
             transform: rotateZ(-15deg);

@@ -19,12 +19,12 @@ export default defineNuxtConfig({
                 {
                     rel: "stylesheet",
                     type: "text/css",
-                    href: "https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.css"
+                    href: "https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css"
                 },
             ],
             script: [
                 {src: "https://code.jquery.com/jquery-3.6.1.min.js"},
-                {src: "https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.js"},
+                {src: "https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"},
             ]
         }
     },
