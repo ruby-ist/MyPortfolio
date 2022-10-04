@@ -11,19 +11,24 @@
                 <a class="item" @click="scrollToProject(4)" style="--special-color: #e78347">Flames</a>
             </div>
 
+            <button class="ui basic grey huge circular icon button">
+                <i id="scrollIcon" class="grey down arrow link icon" @click="scrollFurther"></i>
+            </button>
+
+
             <div class="showcase">
                 <div class="ui grid">
                     <div id="project-contents" class="sixteen wide mobile eight wide computer column">
                         <div class="project-container">
-                            <LogosCarousel />
-                            <StackCarousel />
-                            <UrlChanger />
-                            <ContentCarousel />
+                            <LogosCarousel/>
+                            <StackCarousel/>
+                            <UrlChanger/>
+                            <ContentCarousel/>
                         </div>
                     </div>
                     <div class="sixteen wide mobile eight wide computer column">
-                        <MacCarousel />
-                        <IphoneCarousel />
+                        <MacCarousel/>
+                        <IphoneCarousel/>
                     </div>
                 </div>
             </div>
@@ -46,8 +51,17 @@ export default defineNuxtComponent({
         currentScroll: 0,
     }),
     methods: {
-        scrollToProject(num: number){
-            document.documentElement.scrollTop = $('.boxes').offset().top + (window.innerHeight * 5) * num + ((5-num) * 100);
+        scrollToProject(num: number) {
+            document.documentElement.scrollTop = $('.boxes').offset().top + (window.innerHeight * 5) * num + ((5 - num) * 100);
+        },
+
+        scrollFurther(event){
+            if(event.target.classList.contains('down')){
+                document.documentElement.scrollTop = $('#mountain').offset().top;
+            }
+            if(event.target.classList.contains('up')){
+                document.documentElement.scrollTop = $('#dotted-rect').offset().top;
+            }
         }
     },
     mounted() {
@@ -63,12 +77,12 @@ export default defineNuxtComponent({
                 this.$refs.projects.style.top = 0;
                 this.$refs.projects.style.bottom = "initial";
             }
-            if (this.$refs.boxes.getBoundingClientRect().bottom <= window.innerHeight){
+            if (this.$refs.boxes.getBoundingClientRect().bottom <= window.innerHeight) {
                 this.$refs.projects.style.position = "absolute";
                 this.$refs.projects.style.top = "initial";
                 this.$refs.projects.style.bottom = 0;
             }
-            if(previousSection.getBoundingClientRect().bottom < 0 &&
+            if (previousSection.getBoundingClientRect().bottom < 0 &&
                 this.$refs.boxes.getBoundingClientRect().bottom > window.innerHeight) {
                 this.$refs.projects.style.position = "fixed";
             }
@@ -83,7 +97,7 @@ export default defineNuxtComponent({
             entries.forEach((entry) => {
                 if (entry.isIntersecting && that.lastScroll > that.currentScroll) {
                     let current = $('.projects-menu .active.item');
-                    if(current !== undefined)
+                    if (current !== undefined)
                         current.removeClass('active');
                     let items = $('.projects-menu .item');
                     let index = parseInt((entry.target as HTMLElement).dataset.index);
@@ -96,7 +110,7 @@ export default defineNuxtComponent({
             entries.forEach((entry) => {
                 if (entry.isIntersecting && that.lastScroll <= that.currentScroll) {
                     let current = $('.projects-menu .active.item');
-                    if(current !== undefined)
+                    if (current !== undefined)
                         current.removeClass('active');
                     let items = $('.projects-menu .item');
                     let index = parseInt((entry.target as HTMLElement).dataset.index);
@@ -106,9 +120,13 @@ export default defineNuxtComponent({
         });
 
         let sections: NodeListOf<HTMLElement> = document.querySelectorAll('.box-section');
-        sections.forEach((i) => { observer.observe(i) });
+        sections.forEach((i) => {
+            observer.observe(i)
+        });
         let secondBoxes: NodeListOf<HTMLElement> = document.querySelectorAll('.box:nth-child(1)');
-        secondBoxes.forEach((i) => { anotherObserver.observe(i) });
+        secondBoxes.forEach((i) => {
+            anotherObserver.observe(i)
+        });
     }
 })
 ;
@@ -129,7 +147,7 @@ export default defineNuxtComponent({
         top: 0;
         width: 100vw;
 
-        h3{
+        h3 {
             text-align: center;
             margin-bottom: 30px;
             font-family: "Alegreya Sans", sans-serif;
@@ -169,28 +187,35 @@ export default defineNuxtComponent({
         width: 100vw;
     }
 
-    .boxes{
+    .boxes {
         margin-bottom: 400px;
     }
 
-    .projects-menu{
+    .ui.icon.button{
+        position: absolute;
+        top: 11%;
+        right: 5%;
+        z-index: 5;
+    }
+
+    .projects-menu {
         position: relative;
         z-index: 4;
 
-        .item{
+        .item {
             font-family: 'Alegreya Sans', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
-       .active.item{
-           color: var(--special-color) !important;
-       }
+        .active.item {
+            color: var(--special-color) !important;
+        }
     }
-}
+    }
 
-@media only screen and (max-width: 480px) {
-    .backstage{
-        display: none;
+    @media only screen and (max-width: 480px) {
+        .backstage {
+            display: none;
+        }
     }
-}
 </style>

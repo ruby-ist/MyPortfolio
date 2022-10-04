@@ -104,7 +104,7 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 .frameworks-list {
     position: absolute;
-    top: 18%;
+    top: 15%;
     left: 15%;
     display: flex;
     align-items: center;

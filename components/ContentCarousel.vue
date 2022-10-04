@@ -180,7 +180,7 @@ export default defineNuxtComponent({
 @import url('https://fonts.googleapis.com/css2?family=Athiti:wght@400;500;600&display=swap');
 .content-carousel {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 15%;
     font-size: 1.4rem;
     font-weight: 600;

@@ -22,7 +22,8 @@
 
 <script lang="ts">
 import {defineNuxtComponent} from '#app'
-import {gsap} from "gsap";
+import {gsap} from "gsap"
+import $ from 'jquery'
 
 type dataGroup = {
     oldScroll: Number
@@ -35,10 +36,17 @@ export default defineNuxtComponent({
     mounted() {
         let that = this;
         window.onscroll = () => {
-            if (window.scrollY > that.oldScroll && window.scrollY > 0)
+            let button = $('#scrollIcon');
+            if (window.scrollY > that.oldScroll && window.scrollY > 0) {
                 gsap.to('#navbar', {yPercent: -100, ease: 'sine', duration: 0.5});
-            else
+                button.removeClass('up');
+                button.addClass('down');
+            }
+            else {
                 gsap.to('#navbar', {yPercent: 0, ease: 'sine', duration: 0.5});
+                button.removeClass('down');
+                button.addClass('up');
+            }
             that.oldScroll = window.scrollY;
         }
     }
