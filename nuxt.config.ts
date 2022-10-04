@@ -30,16 +30,6 @@ export default defineNuxtConfig({
                     href: "https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Anonymous+Pro&family=Comic+Neue:wght@700&family=Cutive+Mono&family=Sen&family=Signika+Negative:wght@400;500;600&family=Special+Elite&family=Ubuntu:wght@500&display=swap"
                 },
                 {
-                    rel: "preload",
-                    href: "https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/themes/default/assets/fonts/brand-icons.woff2",
-                    as: "font"
-                },
-                {
-                    rel: "preload",
-                    href: "https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/themes/default/assets/fonts/icons.woff2",
-                    as: "font"
-                },
-                {
                     rel: "stylesheet",
                     type: "text/css",
                     href: "https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css"
