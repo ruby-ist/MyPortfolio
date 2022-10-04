@@ -59,6 +59,7 @@
 
 <script lang="ts">
 import {defineNuxtComponent} from "#app";
+import $ from 'jquery'
 
 type Project = {
     logo: String

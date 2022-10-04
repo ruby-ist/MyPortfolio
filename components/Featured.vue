@@ -275,7 +275,7 @@ export default defineNuxtComponent({
             width: 640px;
             height: 450px;
             border-radius: 20px;
-            background: url("/assets/dijkstra_trace.png") no-repeat top;
+            background: url("/dijkstra_trace.webp") no-repeat top;
             background-size: cover;
             right: 0;
             top: 16%;
@@ -329,7 +329,7 @@ export default defineNuxtComponent({
             width: 600px;
             height: 340px;
             border-radius: 20px;
-            background: url("/assets/arcanechats-repo.png") no-repeat top;
+            background: url("/arcanechats-repo.webp") no-repeat top;
             background-size: cover;
             right: 10%;
             top: 20%;
@@ -344,21 +344,21 @@ export default defineNuxtComponent({
 
 
         #arcanechats-1{
-            background: url("/assets/arcanechats-1.jpeg") no-repeat top;
+            background: url("/arcanechats-1.webp") no-repeat top;
             background-size: cover;
             left: 30%;
             top: 40%;
         }
 
         #arcanechats-2{
-            background: url("/assets/arcanechats-2.jpeg") no-repeat top;
+            background: url("/arcanechats-2.webp") no-repeat top;
             background-size: cover;
             right: 2%;
             top: 7%;
         }
 
         #arcanechats-3{
-            background: url("/assets/arcanechats-3.jpeg") no-repeat top;
+            background: url("/arcanechats-3.webp") no-repeat top;
             background-size: cover;
             right: -8%;
             top: 41%;

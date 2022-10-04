@@ -14,7 +14,9 @@
 import { defineNuxtComponent } from '#app'
 export default defineNuxtComponent({
     mounted(){
-        window.onresize = function(){ location.reload(); }
+        if(screen.width > 480){
+            window.onresize = function(){ location.reload(); }
+        }
     }
 })
 </script>

@@ -2,31 +2,31 @@
     <div class="mac-template">
         <img src="~/assets/background/mac-outline.svg" alt="mac"/>
         <div id="mac-carousel">
-            <img class="mac-carousel-img" src="/mac-carousel/geobits-1.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/geobits-2.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/geobits-3.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/geobits-4.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/geobits-5.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/pingcoders-1.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/pingcoders-2.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/pingcoders-3.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/pingcoders-4.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/pingcoders-5.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/rubyonwasm-1.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/rubyonwasm-2.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/rubyonwasm-3.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/rubyonwasm-4.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/rubyonwasm-5.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/narrateit-1.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/narrateit-2.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/narrateit-3.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/narrateit-4.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/narrateit-5.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/flames-1.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/flames-2.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/flames-3.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/flames-4.png"/>
-            <img class="mac-carousel-img" src="/mac-carousel/flames-5.png"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/geobits-1.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/geobits-2.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/geobits-3.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/geobits-4.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/geobits-5.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/pingcoders-1.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/pingcoders-2.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/pingcoders-3.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/pingcoders-4.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/pingcoders-5.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/rubyonwasm-1.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/rubyonwasm-2.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/rubyonwasm-3.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/rubyonwasm-4.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/rubyonwasm-5.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/narrateit-1.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/narrateit-2.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/narrateit-3.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/narrateit-4.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/narrateit-5.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/flames-1.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/flames-2.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/flames-3.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/flames-4.webp"/>
+            <img alt="preview" class="mac-carousel-img" src="/mac-carousel/flames-5.webp"/>
         </div>
     </div>
 </template>

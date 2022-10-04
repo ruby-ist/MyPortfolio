@@ -1,11 +1,11 @@
 <template>
     <div id="photos">
         <div class="frame" id="bg">
-            <img class="image" alt="face" src="~/assets/anime_bg.jpg" />
+            <img class="image" alt="face" src="/anime_bg.webp" />
         </div>
 
         <div class="frame" id="face">
-            <img class="image" alt="face" src="~/assets/face.png" />
+            <img class="image" alt="face" src="/face.webp" />
         </div>
     </div>
 </template>
