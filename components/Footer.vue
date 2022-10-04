@@ -103,6 +103,12 @@
                 <path class="cls-43" d="M616.26829,540.85463c.90248-.11957,1.83378.18621,2.71916-.18416.12931.12652.138.29621-.05086.29574A8.05339,8.05339,0,0,1,616.26829,540.85463Z" transform="translate(-141.2424 -457.77384)"/>
             </g>
         </svg>
+        <div class="contact-icons">
+            <a href="https://www.instagram.com/_srira.me/"><i class="big instagram link icon"></i></a>
+            <a href="https://wa.me/918344000240"><i class="big whatsapp link icon"></i></a>
+            <a href="https://t.me/sriram2520"><i class="big telegram plane link icon"></i></a>
+            <a href="https://www.linkedin.com/in/srira-venkat/"><i class="big linkedin in link icon"></i></a>
+        </div>
         <div class="credit">
             Designed and developed by © Sriram V 2022
         </div>
@@ -149,8 +155,11 @@ export default defineNuxtComponent({
     width: 100vw;
     background: #7090BD;
     position: relative;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 40px;
 
     #train{
         position: absolute;
@@ -344,6 +353,14 @@ export default defineNuxtComponent({
     .credit{
         font-size: 1.2rem;
         color: #f3dfd0;
+        margin-top: 20px;
+    }
+
+    .contact-icons{
+        i{
+            color: #f3dfd0;
+            margin: auto 0.5rem;
+        }
     }
 }
 @media only screen and (max-width: 480px) {

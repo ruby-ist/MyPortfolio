@@ -1,10 +1,14 @@
 <template>
     <section id="featured">
         <img id="mountain" src="~/assets/background/mountain.svg"/>
-        <div class="ui large orange centered header">Mini Projects</div>
+        <div class="ui huge orange centered header">Mini Projects</div>
         <div id="dijkstra_trace">
-            <div class="ui large orange header">Dijkstra Trace</div>
+            <div class="ui huge orange header">Dijkstra Trace</div>
             <div class="ui indigo header">A ruby gem package</div>
+            <div id="dijkstra_icons" class="orange other-icons">
+                <a href="https://github.com/ruby-ist/dijkstra_trace/packages/1558735"><i class="big github link icon"></i></a>
+                <a href="https://github.com/ruby-ist/ArcaneChats"><i class="big sketch link icon"></i></a>
+            </div>
             <div id="rubygems"></div>
             <div class="package-info">
                 Dijkstra trace is an ruby gem to find the shortest path between two places in the graph using
@@ -16,7 +20,7 @@
         </div>
 
         <div id="arcanechats">
-            <div class="ui large red header">ArcaneChats</div>
+            <div class="ui huge red header">ArcaneChats</div>
             <div class="ui grey header">Chatting App</div>
             <div id="arcanechats-repo"></div>
             <div class="arcane-img" id="arcanechats-1"></div>
@@ -29,6 +33,10 @@
                 feature but since I could not find a suitable hosting service for an redis database, I hosted an app
                 with ajax calls for message updates. Since the app is created only as an hobby, only mobile view is
                 developed.
+                <div class="grey other-icons">
+                    <a href="https://rubygems.org/gems/dijkstra_trace"><i class="large github link icon"></i></a>
+                    <a href="https://arcanechats.herokuapp.com"><i class="large linkify link icon"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -57,7 +65,7 @@ export default defineNuxtComponent({
             }
         )
 
-        gsap.fromTo('.large.orange.header',
+        gsap.fromTo('.huge.orange.header',
             {
                 opacity: 0,
                 scaleX: 0,
@@ -114,7 +122,17 @@ export default defineNuxtComponent({
                 duration: 1
         })
 
-        gsap.fromTo('.large.red.header',
+        gsap.from('#dijkstra_icons', {
+            scrollTrigger: {
+                trigger: '#dijkstra_trace',
+                toggleActions: 'restart none none none',
+                start: "-150% top",
+            },
+            yPercent: -100,
+            duration: 1
+        })
+
+        gsap.fromTo('.huge.red.header',
             {
                 opacity: 0,
                 scaleX: 0,
@@ -232,13 +250,24 @@ export default defineNuxtComponent({
         color: #d86149 !important;
     }
 
+    .other-icons{
+        i{
+            margin: 20px 10px 0 0;
+        }
+    }
+
     #dijkstra_trace {
         position: relative;
         height: 90vh;
 
         .indigo {
             color: #2F3A8F !important;
-            font-family: monospace;
+            font-family: 'Anonymous Pro', monospace;
+            margin-top: 0;
+        }
+
+        a {
+            color: #d86149 !important;
         }
 
         #rubygems {
@@ -264,6 +293,7 @@ export default defineNuxtComponent({
             color: #d86149;
             width: 40%;
             line-height: 1.7rem;
+            font-family: 'Sen', sans-serif;
         }
     }
 
@@ -277,7 +307,12 @@ export default defineNuxtComponent({
 
         .grey {
             color: #30475e !important;
-            font-family: monospace;
+            font-family: 'Anonymous Pro', monospace;
+            margin-top: 0;
+        }
+
+        a {
+            color: #30475e !important;
         }
 
         .project-info{
@@ -286,6 +321,7 @@ export default defineNuxtComponent({
             text-align: justify;
             top: 20%;
             font-size: 1.2rem;
+            font-family: 'Sen', sans-serif;
         }
 
         #arcanechats-repo{
@@ -338,7 +374,12 @@ export default defineNuxtComponent({
             width: 35%;
             color: #da0037;
             line-height: 1.7rem;
+            padding-bottom: 10px;
         }
+    }
+
+    .huge.header{
+        font-family: 'Alegreya Sans', sans-serif;
     }
 }
 

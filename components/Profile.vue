@@ -191,6 +191,10 @@ export default defineNuxtComponent({
 
                 a{
                     color: #40514E;
+
+                    &:hover{
+                        color: #0094eb;
+                    }
                 }
             }
         }

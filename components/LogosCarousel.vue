@@ -81,6 +81,7 @@ export default defineNuxtComponent({
     top: 5%;
     left: 15%;
     padding-right: 20%;
+    background: #f5f6f9;
 
     &:first-child {
         opacity: 1;
