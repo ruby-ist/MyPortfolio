@@ -68,7 +68,6 @@ export default defineNuxtComponent({
 </script>
 
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Special+Elite&display=swap');
 .site-url {
     position: absolute;
     bottom: 20%;

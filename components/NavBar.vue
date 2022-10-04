@@ -54,8 +54,6 @@ export default defineNuxtComponent({
 </script>
 
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Alegreya+Sans&display=swap');
-
 #navbar {
     height: 100px;
     display: flex;

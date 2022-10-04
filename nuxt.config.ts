@@ -17,35 +17,26 @@ export default defineNuxtConfig({
             ],
             link: [
                 {
+                    rel: "preconnect",
+                    href: "https://fonts.googleapis.com"
+                },
+                {
+                    rel: "preconnect",
+                    href: "https://fonts.gstatic.com",
+                    crossorigin: true
+                },
+                {
+                    rel: "stylesheet",
+                    href: "https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Anonymous+Pro&family=Comic+Neue:wght@700&family=Cutive+Mono&family=Sen&family=Signika+Negative:wght@400;500;600&family=Special+Elite&family=Ubuntu:wght@500&display=swap"
+                },
+                {
                     rel: "stylesheet",
                     type: "text/css",
                     href: "https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css"
                 },
             ],
-            script: [
-                {src: "https://code.jquery.com/jquery-3.6.1.min.js"},
-                {src: "https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"},
-            ]
         }
     },
-
-    modules: [
-        // '@nuxt/http'
-    ],
-
-    buildModules: [
-        // '@nuxtjs/composition-api/module',
-        // '@pinia/nuxt'
-    ],
-
-    // http: {
-    //     proxy: true
-    // },
-    //
-    // server: {
-    //     port: 3000,
-    //     host: '0.0.0.0'
-    // },
 
     components: true
 })

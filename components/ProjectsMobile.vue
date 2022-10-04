@@ -80,8 +80,8 @@ export default defineNuxtComponent({
             {
                 logo: "geobits.svg",
                 stacks: ['ruby', 'rails', 'vue', 'nuxt', 'gsap-dark', 'semantic-ui', 'jquery', 'rest'],
-                macImage: 'geobits-2.png',
-                phoneImage: 'geobits-5.png',
+                macImage: 'geobits-2.webp',
+                phoneImage: 'geobits-5.webp',
                 url: "https://geobits.onrender.com",
                 content: `GeoBITS is an online map made for navigating and finding classes inside the
             Bannari Amman Institute of Technology college campus. The special thing about this
@@ -92,8 +92,8 @@ export default defineNuxtComponent({
             {
                 logo: "pingcoders.svg",
                 stacks: ['rails', 'rest', 'turbo', 'stimulus', 'semantic-ui', 'jquery'],
-                macImage: 'pingcoders-2.png',
-                phoneImage: 'pingcoders-4.png',
+                macImage: 'pingcoders-2.webp',
+                phoneImage: 'pingcoders-4.webp',
                 url: "https://pingcoders.herokuapp.com",
                 content: `Pingcoders is an inter college programmer profile showcase and community. The app has two
                 different OAuths, google and github and only the user with college mail id can create an account.
@@ -104,8 +104,8 @@ export default defineNuxtComponent({
             {
                 logo: "rubyonwasm.svg",
                 stacks: ['wasm', 'javascript', 'html', 'css', 'gsap-dark', 'jekyll'],
-                macImage: 'rubyonwasm-3.png',
-                phoneImage: 'rubyonwasm-5.png',
+                macImage: 'rubyonwasm-3.webp',
+                phoneImage: 'rubyonwasm-5.webp',
                 url: "https://rubyonwasm.onrender.com",
                 content: `RubyOnWasm is a static online Ruby language interpreter. It runs the code completely on
                 browser using WebAssembly without any backend server. The recent version of Ruby 3.2.0 has come with
@@ -116,8 +116,8 @@ export default defineNuxtComponent({
             {
                 logo: "narrateit.svg",
                 stacks: ['rails', 'turbo', 'semantic-ui', 'jquery', 'scss'],
-                macImage: 'narrateit-2.png',
-                phoneImage: 'narrateit-4.png',
+                macImage: 'narrateit-2.webp',
+                phoneImage: 'narrateit-4.webp',
                 url: "https://narrate-it.herokuapp.com",
                 content: `Narrate-it is an blogging website, the first web app I developed with Rails framework. It
                 was create as a part of the odin project tutorial. The user can use markdown format to edit the
@@ -128,8 +128,8 @@ export default defineNuxtComponent({
             {
                 logo: "flames.svg",
                 stacks: ['ruby', 'sinatra', 'html', 'css', 'jquery'],
-                macImage: 'flames-3.png',
-                phoneImage: 'flames-2.png',
+                macImage: 'flames-3.webp',
+                phoneImage: 'flames-2.webp',
                 url: "https://burningheart.herokuapp.com",
                 content: `Flames is a find-a-match kinda app, created as fun project that turned out well.
                 It's just a game of predicting relationship status from two names. The result might be one of

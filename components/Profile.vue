@@ -94,8 +94,6 @@ export default defineNuxtComponent({
 </script>
 
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Sen&family=Ubuntu:wght@500&family=Cutive+Mono&display=swap');
-
 #profile {
     padding: 20% 21% 36%;
     position: relative;

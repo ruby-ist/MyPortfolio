@@ -1,6 +1,6 @@
 <template>
     <section id="featured">
-        <img id="mountain" src="~/assets/background/mountain.svg"/>
+        <img alt="mountain" id="mountain" src="~/assets/background/mountain.svg"/>
         <div class="ui huge orange centered header">Mini Projects</div>
         <div id="dijkstra_trace">
             <div class="ui huge orange header">Dijkstra Trace</div>
