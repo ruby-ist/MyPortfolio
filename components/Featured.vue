@@ -390,7 +390,7 @@ export default defineNuxtComponent({
                 width: 100%;
                 height: 30%;
                 border-radius: 10px;
-                top: 18%;
+                top: 23%;
                 left: 50%;
                 transform: translateX(-50%) !important;
             }
@@ -399,7 +399,7 @@ export default defineNuxtComponent({
                 padding: 15px 30px;
                 font-size: 1rem;
                 border-radius: 5px;
-                top: 52%;
+                top: 56%;
                 width: 100%;
                 line-height: initial;
                 left: 50%;

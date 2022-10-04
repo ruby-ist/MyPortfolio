@@ -17,6 +17,7 @@ export default defineNuxtComponent({
         if(screen.width > 480){
             window.onresize = function(){ location.reload(); }
         }
+        document.documentElement.scrollTop = 0;
     }
 })
 </script>

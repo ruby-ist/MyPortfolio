@@ -45,7 +45,7 @@ type dataGroup = {
 
 export default defineNuxtComponent({
     data: (): dataGroup => ({
-        colors: ['#42b883', '#e50500', '#4D96FF']
+        colors: ['#42b883', '#e50500', '#4586FF']
     }),
     methods: {
         lightOn(){
