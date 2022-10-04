@@ -39,9 +39,9 @@
 </template>
 
 <script lang="ts">
-import {defineNuxtComponent} from "#app";
-import {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {defineNuxtComponent} from "#app"
+import {gsap} from "gsap"
+import {ScrollTrigger} from "gsap/ScrollTrigger"
 
 export default defineNuxtComponent({
     mounted(){

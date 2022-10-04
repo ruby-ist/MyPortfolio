@@ -92,41 +92,6 @@ export default defineNuxtComponent({
         boxes.forEach(async (box) => {
             box.style.height = String(window.innerHeight) + 'px';
         });
-
-        let observer: IntersectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting && that.lastScroll > that.currentScroll) {
-                    let current = $('.projects-menu .active.item');
-                    if (current !== undefined)
-                        current.removeClass('active');
-                    let items = $('.projects-menu .item');
-                    let index = parseInt((entry.target as HTMLElement).dataset.index);
-                    items[index].classList.add('active');
-                }
-            });
-        });
-
-        let anotherObserver: IntersectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting && that.lastScroll <= that.currentScroll) {
-                    let current = $('.projects-menu .active.item');
-                    if (current !== undefined)
-                        current.removeClass('active');
-                    let items = $('.projects-menu .item');
-                    let index = parseInt((entry.target as HTMLElement).dataset.index);
-                    items[index].classList.add('active');
-                }
-            });
-        });
-
-        let sections: NodeListOf<HTMLElement> = document.querySelectorAll('.box-section');
-        sections.forEach((i) => {
-            observer.observe(i)
-        });
-        let secondBoxes: NodeListOf<HTMLElement> = document.querySelectorAll('.box:nth-child(1)');
-        secondBoxes.forEach((i) => {
-            anotherObserver.observe(i)
-        });
     }
 })
 ;
@@ -189,6 +154,7 @@ export default defineNuxtComponent({
 
     .boxes {
         margin-bottom: 400px;
+        margin-top: 25vh;
     }
 
     .ui.icon.button{

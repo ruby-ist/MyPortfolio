@@ -13,6 +13,9 @@
 <script lang="ts">
 import { defineNuxtComponent } from '#app'
 export default defineNuxtComponent({
+    mounted(){
+        window.onresize = function(){ location.reload(); }
+    }
 })
 </script>
 

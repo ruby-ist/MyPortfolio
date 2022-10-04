@@ -13,6 +13,7 @@ import {defineNuxtComponent} from "#app";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {TextPlugin} from "gsap/TextPlugin";
+import $ from "jquery"
 
 type dataGroup = {
     URLArray: String[]
@@ -39,10 +40,22 @@ export default defineNuxtComponent({
                     toggleActions: "play complete none reset",
                     start: () => "-100% -" +  (window.innerHeight * 5 * i),
                     end: () => "+=" + window.innerHeight * 5,
-                    onEnter: () => { $('#url-link').attr('href', url); },
+                    onEnter: () => {
+                        $('#url-link').attr('href', url);
+                        let current = $('.projects-menu .active.item');
+                        if (current !== undefined)
+                            current.removeClass('active');
+                        let items = $('.projects-menu .item');
+                        items[i].classList.add('active');
+                    },
                     onEnterBack: () => {
                         $('#url-link').attr('href', url);
-                        gsap.set('#url-holder', {text: {value: url}})
+                        gsap.set('#url-holder', {text: {value: url}});
+                        let current = $('.projects-menu .active.item');
+                        if (current !== undefined)
+                            current.removeClass('active');
+                        let items = $('.projects-menu .item');
+                        items[i].classList.add('active');
                     },
                     invalidateOnRefresh: true
                 },

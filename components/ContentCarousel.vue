@@ -1,7 +1,8 @@
 <template>
     <div class="content-carousel">
         <div class="gradient-layer"></div>
-        <div id="geobits-contents">
+        <div id="actual-contents">
+        <div id="geobits-content">
             <div class="content-info">
                 GeoBITS is an online map made for navigating and finding classes inside the
                 Bannari Amman Institute of Technology college campus. The special thing about this
@@ -140,6 +141,7 @@
             </div>
             <div class="content-info"></div>
         </div>
+        </div>
     </div>
 </template>
 
@@ -183,7 +185,7 @@ export default defineNuxtComponent({
     top: 25%;
     left: 15%;
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 500;
     font-family: 'Sen', sans-serif;
     line-height: 2.5rem;
     height: 350px;
