@@ -63,7 +63,7 @@ export default defineNuxtComponent({
             let skills = document.querySelector('#skill-sets');
             let projects = document.querySelector('#underground');
             let dijkstra = document.querySelector('#mountain');
-            let arcane = document.querySelector('#arcanechats');
+            let arcane = document.querySelector('.package-info');
 
             if(skills.getBoundingClientRect().top < 0)
                 version = "skills-version";

@@ -227,7 +227,7 @@ export default defineNuxtComponent({
         }
 
         #mac{
-            left: -15%;
+            left: -10%;
             top: 10%;
         }
 
