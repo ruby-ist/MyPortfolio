@@ -301,6 +301,11 @@ export default defineNuxtComponent({
         }
     }
     #navbar.project-version{
+        .bg {
+            background: rgba(245, 246, 249, 0.36);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
         z-index: 7;
     }
     .dijkstra-version{
