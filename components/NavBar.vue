@@ -23,7 +23,17 @@
                 <a href="/#footer" class="item">Contact</a>
             </div>
             <div class="mobile-menu right menu">
-                <i class="big hamburger link icon"></i>
+                <div class="dimmed" @click="curveOff"></div>
+                <div class="curved-menu">
+                    <ul>
+                        <li><a href="/#about" class="item">About</a></li>
+                        <li><a href="/#skills" class="item">Skills</a></li>
+                        <li><a href="/#projects-mobile" class="item">Projects</a></li>
+                        <li><a href="/#footer" class="item">Contact</a></li>
+                    </ul>
+                </div>
+                <i class="big hamburger link icon" @click="curveOn"></i>
+                <i class="big times link icon" @click="curveOff"></i>
             </div>
         </div>
     </div>
@@ -36,15 +46,80 @@ import $ from 'jquery'
 
 type dataGroup = {
     oldScroll: Number
+    curved: Boolean
 }
 
 export default defineNuxtComponent({
     data: (): dataGroup => ({
-        oldScroll: 0
+        oldScroll: 0,
+        curved: false
     }),
+    methods: {
+        menuAnimation() {
+            return gsap.timeline({paused: true})
+                .set('.dimmed', {
+                    display: "block",
+                }).set('.curved-menu', {
+                    scale: 0,
+                    display: "block",
+                }).set('.times.icon', {
+                    scale: 0,
+                    rotate: -90,
+                    display: "block",
+                }).to('.curved-menu', {
+                    scale: 1,
+                    transformOrigin: 'top right',
+                    duration: 0.6
+                }).to('.hamburger.icon', {
+                    opacity: 0,
+                    rotate: 180,
+                    duration: 0.2,
+                },0).to('.times.icon', {
+                    scale: 1,
+                    rotate: 90,
+                    duration: 0.3
+                }, 0.15).set('.hamburger.icon', {
+                    display: "none"
+                });
+        },
+        menuAnimationClose(){
+            return gsap.timeline({paused: true})
+                .set('.dimmed', {
+                    display: "none",
+                }).set('.hamburger.icon', {
+                    opacity: 0,
+                    rotate: -180,
+                    display: "block",
+                }).to('.curved-menu', {
+                    scale: 0,
+                    transformOrigin: 'top right',
+                    duration: 0.6
+                }).to('.times.icon', {
+                    scale: 0,
+                    rotate: 90,
+                    duration: 0.2
+                }, 0).to('.hamburger.icon', {
+                    opacity: 1,
+                    rotate: 180,
+                    duration: 0.2,
+                },0.15).set('.times.icon', {
+                    display: "none"
+                });
+        },
+        curveOn() {
+            this.menuAnimation().play();
+            this.curved = true;
+        },
+        curveOff(){
+            this.menuAnimationClose().play();
+            this.curved = false;
+        }
+    },
     mounted() {
         let that = this;
         window.onscroll = () => {
+            if(that.curved)
+                that.curveOff();
             let button = $('#scrollIcon');
             if (window.scrollY > that.oldScroll && window.scrollY > 0) {
                 gsap.to('#navbar', {yPercent: -100, ease: 'sine', duration: 0.5});
@@ -65,13 +140,13 @@ export default defineNuxtComponent({
             let dijkstra = document.querySelector('#mountain');
             let arcane = document.querySelector('.package-info');
 
-            if(skills.getBoundingClientRect().top < 0)
+            if (skills.getBoundingClientRect().top < 0)
                 version = "skills-version";
-            if(projects.getBoundingClientRect().top <= 0)
+            if (projects.getBoundingClientRect().top <= 0)
                 version = "project-version";
-            if(dijkstra.getBoundingClientRect().top < 0)
+            if (dijkstra.getBoundingClientRect().top < 0)
                 version = "dijkstra-version";
-            if(arcane.getBoundingClientRect().top < 0)
+            if (arcane.getBoundingClientRect().top < 0)
                 version = "arcane-version";
 
             nav.removeClass();
@@ -98,6 +173,9 @@ export default defineNuxtComponent({
         position: absolute;
         top: 0;
         left: 0;
+        background: var(--bg-color);
+        backdrop-filter: var(--blur);
+        -webkit-backdrop-filter: var(--blur);
     }
 
     .ui.secondary.menu {
@@ -114,14 +192,24 @@ export default defineNuxtComponent({
         }
     }
 
-    .mobile-menu{
+    .mobile-menu {
         display: none;
+    }
+
+    #nav-menu {
+        .item {
+            color: var(--item-color);
+
+            &:hover {
+                color: var(--logo-primary);
+            }
+        }
     }
 
     #main-logo {
         width: 98px;
         margin: 12px 0;
-        z-index:11;
+        z-index: 11;
 
         .cls-2 {
             fill: none;
@@ -133,138 +221,62 @@ export default defineNuxtComponent({
             font-family: "Comic Neue", sans-serif;
             font-weight: 700;
         }
+
+        .cls-1, .cls-3 {
+            fill: var(--logo-primary);
+        }
+
+        .cls-4 {
+            fill: var(--logo-secondary);
+        }
     }
 }
 
 .profile-version {
-    .bg {
-        background: rgba(245, 246, 249, 0.36);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-    }
-    #nav-menu {
-        .item {
-            &:hover {
-                color: #4586FF;
-            }
-        }
-    }
-    #main-logo {
-        .cls-1, .cls-3 {
-            fill: #4586ff;
-        }
-
-        .cls-4 {
-            fill: #32424a;
-        }
-    }
+    --bg-color: rgba(245, 246, 249, 0.36);
+    --blur: blur(20px);
+    --logo-primary: #4586ff;
+    --logo-secondary: #32424a;
+    --item-color: #393E46;
 }
 
 .skills-version {
-    .bg {
-        background: rgba(21, 21, 22, 0.53);
-        backdrop-filter: blur(12.1px);
-        -webkit-backdrop-filter: blur(12.1px);
-    }
-    #nav-menu {
-        .item {
-            color: #009967;
-
-            &:hover {
-                color: #f15b2b;
-            }
-        }
-    }
-    #main-logo {
-        .cls-1, .cls-3 {
-            fill: #f15b2b;
-        }
-
-        .cls-4 {
-            fill: #393E46;
-        }
-    }
+    --bg-color: rgba(21, 21, 22, 0.53);
+    --blur: blur(12.1px);
+    --logo-primary: #f15b2b;
+    --logo-secondary: #393E46;
+    --item-color: #009967;
 }
 
 .project-version {
     z-index: initial;
-
-    #nav-menu {
-        .item {
-            &:hover {
-                color: #4586FF;
-            }
-        }
-    }
-
-    #main-logo {
-        .cls-1, .cls-3 {
-            fill: #4586ff;
-        }
-
-        .cls-4 {
-            fill: #32424a;
-        }
-    }
+    --bg-color: initial;
+    --blur: intial;
+    --logo-primary: #4586ff;
+    --logo-secondary: #32424a;
+    --item-color: #393E46;
 }
 
 .dijkstra-version {
-    .bg {
-        background: rgba(254, 236, 233, 0.53);
-        backdrop-filter: blur(8.7px);
-        -webkit-backdrop-filter: blur(8.7px);
-    }
-    #nav-menu {
-        .item {
-            color: #2F3A8F;
-
-            &:hover {
-                color: #f15b2b;
-            }
-        }
-    }
-    #main-logo {
-        .cls-1, .cls-3 {
-            fill: #f15b2b;
-        }
-
-        .cls-4 {
-            fill: #2F3A8F;
-        }
-    }
+    --bg-color: rgba(254, 236, 233, 0.53);
+    --blur: blur(8.7px);
+    --logo-primary: #f15b2b;
+    --logo-secondary: #2F3A8F;
+    --item-color: #2F3A8F;
 }
 
 .arcane-version {
-    .bg {
-        background: rgba(254, 236, 233, 0.53);
-        backdrop-filter: blur(8.7px);
-        -webkit-backdrop-filter: blur(8.7px);
-    }
-
-    #nav-menu {
-        .item {
-            color: #30475e;
-
-            &:hover {
-                color: #da0037;
-            }
-        }
-    }
-
-    #main-logo {
-        .cls-1, .cls-3 {
-            fill: #da0037;
-        }
-
-        .cls-4 {
-            fill: #30475e;
-        }
-    }
+    --bg-color: rgba(254, 236, 233, 0.53);
+    --blur: blur(8.7px);
+    --logo-primary: #da0037;
+    --logo-secondary: #30475e;
+    --item-color: #30475e;
 }
 
 @media only screen and (max-width: 480px) {
     #navbar {
         height: 70px;
+
         .ui.secondary.menu {
             padding: 0 2rem 0 2rem;
 
@@ -278,43 +290,84 @@ export default defineNuxtComponent({
             margin: 10px 0 0;
         }
 
-        .mobile-menu{
+        .mobile-menu {
             display: block;
+
+            div {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
         }
 
-        .hamburger.icon {
+        .curved-menu {
+            height: 80vw;
+            width: 70vw;
+            border-bottom-left-radius: 100%;
+            background: var(--logo-primary);
+            display: none;
+
+            ul{
+                list-style: none;
+                padding-left: 0;
+                position: absolute;
+                right: 60px;
+                top: 10%;
+            }
+
+            a{
+                color: var(--logo-secondary) !important;
+            }
+        }
+
+        .dimmed {
+            height: 120vh;
+            width: 100vw;
+            background: rgba(64, 81, 78, 0.24);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            display: none;
+        }
+
+        .big.link.icon {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             right: 20px;
+            color: var(--logo-secondary);
+        }
+
+        .times.icon {
+            display: none;
         }
     }
 
-    .profile-version{
-        .hamburger.icon{
+    .profile-version {
+        .hamburger.icon {
             color: #32424a;
         }
     }
-    .skills-version{
-        .hamburger.icon{
+    .skills-version {
+        .hamburger.icon {
             color: #009967;
         }
     }
-    #navbar.project-version{
+    #navbar.project-version {
         .bg {
             background: rgba(245, 246, 249, 0.36);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
+
         z-index: 7;
     }
-    .dijkstra-version{
-        .hamburger.icon{
+    .dijkstra-version {
+        .hamburger.icon {
             color: #2F3A8F;
         }
     }
-    .arcane-version{
-        .hamburger.icon{
+    .arcane-version {
+        .hamburger.icon {
             color: #30475e;
         }
     }

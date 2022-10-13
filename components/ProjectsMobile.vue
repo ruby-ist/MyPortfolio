@@ -1,5 +1,5 @@
 <template>
-    <section id="projects">
+    <section id="projects-mobile">
         <h3 class="ui header">My Projects</h3>
         <div class="logo">
             <img :src="'/logos/' + projects[index]['logo']" alt="logo">
@@ -154,7 +154,7 @@ export default defineNuxtComponent({
 </script>
 
 <style scoped lang="scss">
-#projects {
+#projects-mobile {
     display: none;
     padding: 6rem 3rem 200px;
     font-family: 'Sen', sans-serif;
@@ -296,7 +296,7 @@ export default defineNuxtComponent({
 }
 
 @media only screen and (max-width: 480px) {
-    #projects {
+    #projects-mobile {
         display: block;
     }
 }
