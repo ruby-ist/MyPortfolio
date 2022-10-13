@@ -90,7 +90,7 @@ export default defineNuxtComponent({
         width: 32%;
         right: initial;
         left: 15%;
-        bottom: 8%;
+        bottom: 5%;
     }
 }
 </style>

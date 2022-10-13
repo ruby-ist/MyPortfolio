@@ -45,7 +45,7 @@ export default defineNuxtComponent({
     width: 9%;
 
     .green-triangle {
-        fill: #009967;
+        fill: #007750;
     }
 
     .white-triangle {

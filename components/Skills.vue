@@ -9,15 +9,28 @@
         </div>
         <div id="about" class="about-header">ABOUT <br/><br />ME</div>
         <div class="about-info">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Cursus eget nunc scelerisque viverra mauris in aliquam. Iaculis eu non diam phasellus
-            vestibulum lorem sed. Amet justo donec enim diam vulputate ut pharetra. Morbi leo urna molestie at elementum
-            eu facilisis sed odio. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. In dictum
-            non consectetur a erat nam at lectus. Adipiscing at in tellus integer feugiat. Aliquet eget sit amet tellus
-            cras adipiscing. Erat pellentesque adipiscing commodo elit. Consectetur a erat nam at lectus urna duis
-            convallis convallis. Nunc scelerisque viverra mauris in aliquam sem fringilla
-            Aliquet eget sit amet tellus cras adipiscing.
+            <div>
+                My name is Sriram V. I design and build things for the Web. I am currently in the third year of my CSE
+                degree at Bannari Amman Institute of Technology, Tamil Nadu, India. I’ve always enjoyed problem solving
+                and am geek enough to code for fun. I went on to explore various programming languages and finally settled
+                on Ruby. Even though they say language doesn't matter, I loved Ruby enough to base my career on that. So
+                eventually I started learning Ruby on Rails, entering the world of web development.
             </div>
+            <div>
+                I dabbled in various things in Web development, from database design to SVG animations, and
+                inevitably, I learned a JavaScript framework, Vue JS. Aside from programming, I am a huge cinephile
+                and I used to fold origami as a hobby. I even had an Instagram page solely for that and designed some new
+                origami models myself.
+            </div>
+            <div>
+                Check out my pins if you are interested:
+                <a href="https://www.instagram.com/quiet.mate/?theme=dark"><i class="large instagram link icon"></i></a>
+                <a href="https://in.pinterest.com/sriram2520/pins/"><i class="large pinterest link icon"></i></a>
+            </div>
+            <div class="image-holder">
+                <img alt="figures" src="/origami/me-and-her.webp" />
+            </div>
+        </div>
         <ThreeTriangles />
         <MemphisPattern />
         <StripedCircle />
@@ -79,7 +92,7 @@ export default defineNuxtComponent({
             opacity: 0,
             transformOrigin: 'top',
             duration: 1
-        })
+        });
 
         gsap.from('.about-info', {
             scrollTrigger: {
@@ -89,7 +102,16 @@ export default defineNuxtComponent({
             },
             opacity: 0,
             duration: 1.5
-        })
+        });
+
+        gsap.from('.image-holder img', {
+            scrollTrigger: {
+                trigger: '.image-holder',
+                toggleActions: 'restart none restart none',
+            },
+            scale: 0,
+            duration: 1
+        });
     }
 })
 </script>
@@ -104,13 +126,13 @@ export default defineNuxtComponent({
     padding: 15% 10%;
     display: flex;
     justify-content: space-around;
-    height: 200vh;
+    height: 190vh;
 
     .skills {
         height: 450px;
         position: absolute;
         top: 15%;
-        right: 5%;
+        right: 7%;
         z-index: 2;
     }
 
@@ -161,15 +183,41 @@ export default defineNuxtComponent({
     }
 
     .about-info{
-        color: #009967;
+        color: #007750;
         position: absolute;
-        font-size: 1.4rem;
+        font-size: 1.25rem;
         width: 42%;
         line-height: 35px;
         left: 22%;
         top: 28%;
-        font-family: 'sen', sans-serif;
+        font-family: 'Sen', sans-serif;
         text-align: justify;
+
+        div{
+            margin-bottom: 18px;
+        }
+
+        .link.icon{
+            color: #393E46 !important;
+            opacity: 1 !important;
+        }
+
+        .image-holder{
+            height: 300px;
+            width: 100%;
+            position: relative;
+        }
+
+        img{
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            border: 2px solid #393E46;
+            border-radius: 10%;
+            top: 10%;
+            right: 0;
+            transform: rotate(-4deg);
+        }
     }
 }
 
@@ -213,6 +261,10 @@ export default defineNuxtComponent({
             left: 50%;
             transform: translateX(-50%);
             line-height: 25px;
+
+            .image-holder{
+                display: none;
+            }
         }
     }
 }

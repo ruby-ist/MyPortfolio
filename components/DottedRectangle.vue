@@ -40,7 +40,7 @@ export default defineNuxtComponent({
 #dotted-rect{
     position: absolute;
     bottom: 18%;
-    left: 6%;
+    left: 4%;
 
     .dotted-rect-bg{
         height: 320px;

@@ -17,8 +17,8 @@
                 <text class="cls-4" transform="translate(135.37712 112.68763)">.me</text>
             </svg>
             <div id="nav-menu" class="right menu">
+                <a href="/#profile" class="item">Profile</a>
                 <a href="/#about" class="item">About</a>
-                <a href="/#skills" class="item">Skills</a>
                 <a href="/#projects" class="item">Projects</a>
                 <a href="/#footer" class="item">Contact</a>
             </div>
@@ -26,8 +26,8 @@
                 <div class="dimmed" @click="curveOff"></div>
                 <div class="curved-menu">
                     <ul>
+                        <li><a href="/#profile" class="item">Profile</a></li>
                         <li><a href="/#about" class="item">About</a></li>
-                        <li><a href="/#skills" class="item">Skills</a></li>
                         <li><a href="/#projects-mobile" class="item">Projects</a></li>
                         <li><a href="/#footer" class="item">Contact</a></li>
                     </ul>
@@ -245,7 +245,7 @@ export default defineNuxtComponent({
     --blur: blur(12.1px);
     --logo-primary: #f15b2b;
     --logo-secondary: #393E46;
-    --item-color: #009967;
+    --item-color: #007750;
 }
 
 .project-version {
