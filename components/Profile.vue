@@ -2,7 +2,7 @@
     <div id="profile">
         <div class="greetings">Hi, I'm</div>
         <div class="name">Sriram V</div>
-        <div class="job"><span id="role"></span> Developer</div>
+        <div @click="typeIt" class="job"><span id="role"></span> Developer</div>
         <img id="chair" alt="chair" src="~/assets/background/chair.svg"/>
         <img id="lamp" alt="lamp" src="~/assets/background/street-light.svg"/>
         <div class="light"></div>
@@ -41,11 +41,13 @@ import $ from 'jquery'
 
 type dataGroup = {
     colors: String[]
+    started: false
 }
 
 export default defineNuxtComponent({
     data: (): dataGroup => ({
-        colors: ['#42b883', '#e50500', '#4586FF']
+        colors: ['#42b883', '#e50500', '#4586FF'],
+        started: false
     }),
     methods: {
         lightOn(){
@@ -53,6 +55,29 @@ export default defineNuxtComponent({
         },
         lightOff(){
             $('.light').css('opacity', '0');
+        },
+        typeIt(){
+            $('#role')[0].innerHTML = "";
+            if(!this.started){
+                this.started = true;
+                let typed = new Typed('#role', {
+                    strings: ['Front-end', 'Back-end', 'Web'],
+                    typeSpeed: 30,
+                    backSpeed: 30,
+                    backDelay: 800,
+
+                    preStringTyped: (arrayPos) => {
+                        $('.job span').css('color', this.colors[arrayPos]);
+                    },
+
+                    onComplete: () => {
+                        setTimeout(() => {
+                            $('.typed-cursor').hide();
+                            this.started = false;
+                        }, 500);
+                    }
+                });
+            }
         }
     },
     mounted() {
@@ -72,23 +97,7 @@ export default defineNuxtComponent({
             duration: 1,
             stagger: -0.25,
         });
-
-        let typed = new Typed('#role', {
-            strings: ['Front-end', 'Back-end', 'Web'],
-            typeSpeed: 30,
-            backSpeed: 30,
-            backDelay: 800,
-
-            preStringTyped: (arrayPos) => {
-                $('.job span').css('color', this.colors[arrayPos]);
-            },
-
-            onComplete: () => {
-                setTimeout(() => {
-                    $('.typed-cursor').hide()
-                }, 500);
-            }
-        });
+        this.typeIt();
     }
 })
 </script>
@@ -157,7 +166,7 @@ export default defineNuxtComponent({
         position: absolute;
 
         &#social-media-line {
-            height: 27rem;
+            height: 23rem;
             bottom: 0;
             left: 4.5rem;
 
@@ -165,7 +174,7 @@ export default defineNuxtComponent({
                 position: absolute;
                 transform: translateX(-50%);
                 left: 50%;
-                bottom: 28rem;
+                bottom: 24rem;
 
                 i {
                     color: #40514E;

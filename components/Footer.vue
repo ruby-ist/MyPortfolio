@@ -126,10 +126,9 @@ export default defineNuxtComponent({
 
         gsap.from('#train-1', {
             scrollTrigger: {
-                trigger: '#footer',
+                trigger: '#train',
                 toggleActions: 'restart none reverse none',
-                start: '-550% 80%',
-            },
+             },
             xPercent: 650,
             yPercent: -23,
             duration: 1.5,
@@ -137,9 +136,8 @@ export default defineNuxtComponent({
 
         gsap.from('#train-2', {
             scrollTrigger: {
-                trigger: '#footer',
+                trigger: '#train',
                 toggleActions: 'restart none reverse none',
-                start: '-550% 80%',
             },
             xPercent: 650,
             yPercent: -23,
