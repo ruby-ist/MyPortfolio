@@ -18,7 +18,7 @@
 
             <div class="showcase">
                 <div class="ui grid">
-                    <div id="project-contents" class="sixteen wide mobile eight wide computer column">
+                    <div id="project-contents" class="eight wide column">
                         <div class="project-container">
                             <LogosCarousel/>
                             <StackCarousel/>
@@ -26,7 +26,7 @@
                             <ContentCarousel/>
                         </div>
                     </div>
-                    <div class="sixteen wide mobile eight wide computer column">
+                    <div class="eight wide column">
                         <MacCarousel/>
                         <IphoneCarousel/>
                     </div>
@@ -55,11 +55,11 @@ export default defineNuxtComponent({
             document.documentElement.scrollTop = $('.boxes').offset().top + (window.innerHeight * 5) * num + ((5 - num) * 100);
         },
 
-        scrollFurther(event){
-            if(event.target.classList.contains('down')){
+        scrollFurther(event) {
+            if (event.target.classList.contains('down')) {
                 document.documentElement.scrollTop = $('#mountain').offset().top;
             }
-            if(event.target.classList.contains('up')){
+            if (event.target.classList.contains('up')) {
                 document.documentElement.scrollTop = $('#dotted-rect').offset().top;
             }
         }
@@ -157,7 +157,7 @@ export default defineNuxtComponent({
         margin-top: 25vh;
     }
 
-    .ui.icon.button{
+    .ui.icon.button {
         position: absolute;
         top: 11%;
         right: 5%;
@@ -177,11 +177,18 @@ export default defineNuxtComponent({
             color: var(--special-color) !important;
         }
     }
-    }
+}
 
-    @media only screen and (max-width: 480px) {
-        .backstage {
-            display: none;
+@media only screen and (max-width: 576px) {
+    .backstage {
+        display: none;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 992px){
+    .backstage{
+        .ui.icon.button{
+            top: 18%;
         }
     }
+}
 </style>

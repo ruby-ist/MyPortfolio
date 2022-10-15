@@ -90,4 +90,53 @@ export default defineNuxtComponent({
         }
     }
 }
+@media only screen and (min-width: 576px) and (max-width: 768px){
+    .mac-template{
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .mac-template{
+        top: 32%;
+        left: 8%;
+        img{
+            width: 360px;
+        }
+        #mac-carousel{
+            width: 273px;
+            height: 173px;
+            top: 15px;
+            left: 44px;
+        }
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .mac-template{
+        top: 20%;
+        img{
+            width: 360px;
+        }
+        #mac-carousel{
+            width: 273px;
+            height: 173px;
+            top: 15px;
+            left: 44px;
+        }
+    }
+}
+@media only screen and (min-width: 1680px){
+    .mac-template{
+        top: 15%;
+        left: 25%;
+        img{
+            width: 660px;
+        }
+        #mac-carousel{
+            width: 500px;
+            height: 317px;
+            top: 27px;
+            left: 80px;
+        }
+    }
+}
 </style>

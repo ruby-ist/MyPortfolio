@@ -209,4 +209,17 @@ export default defineNuxtComponent({
         padding: 15% 0;
     }
 }
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .content-carousel{
+        top: 22%;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .content-carousel{
+        top: 22%;
+        width: 85%;
+    }
+}
 </style>

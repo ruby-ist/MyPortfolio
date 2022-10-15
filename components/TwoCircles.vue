@@ -67,9 +67,15 @@ export default defineNuxtComponent({
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
     #two-circle{
         display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    #two-circle{
+        right: -20%;
     }
 }
 </style>

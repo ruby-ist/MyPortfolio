@@ -87,7 +87,6 @@ export default defineNuxtComponent({
         opacity: 1;
     }
 }
-
 #rubyonwasm{
     .cls-1 {
         fill: #cd0000;
@@ -144,6 +143,12 @@ export default defineNuxtComponent({
 
     .cls-15 {
         letter-spacing: -0.045em;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+    .logo-img{
+        top: 2%;
+        height: 32px;
     }
 }
 </style>

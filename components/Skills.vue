@@ -29,11 +29,11 @@
             </div>
             <div class="image-holder">
                 <img alt="figures" src="/origami/me-and-her.webp" />
+                <StripedCircle />
             </div>
         </div>
         <ThreeTriangles />
         <MemphisPattern />
-        <StripedCircle />
         <SlantingStripes />
         <DottedRectangle />
         <TwoCircles />
@@ -221,7 +221,7 @@ export default defineNuxtComponent({
     }
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 576px){
     #skill-sets{
         height: 1400px;
 
@@ -262,6 +262,21 @@ export default defineNuxtComponent({
             transform: translateX(-50%);
             line-height: 25px;
 
+            .image-holder{
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+    #skill-sets {
+        .skills {
+            top: 4%;
+        }
+        .about-info{
+            top: 32%;
+            width: 55%;
             .image-holder{
                 display: none;
             }

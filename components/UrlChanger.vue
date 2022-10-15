@@ -70,7 +70,7 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 .site-url {
     position: absolute;
-    bottom: 20%;
+    bottom: 18%;
     right: -95%;
     font-size: 1.1rem;
     z-index: 7;
@@ -82,6 +82,11 @@ export default defineNuxtComponent({
 
     #url-link{
         cursor: pointer;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 992px){
+    .site-url{
+        bottom: 15%;
     }
 }
 </style>

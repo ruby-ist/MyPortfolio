@@ -227,7 +227,7 @@ export default defineNuxtComponent({
         }
 
         #mac{
-            left: -10%;
+            right: 85vw;
             top: 10%;
         }
 
@@ -241,7 +241,7 @@ export default defineNuxtComponent({
 
         #iphone{
             top: 25%;
-            right: 15%;
+            left: 65vw;
         }
 
         .phone-image {
@@ -295,7 +295,7 @@ export default defineNuxtComponent({
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
     #projects-mobile {
         display: block;
     }

@@ -111,7 +111,7 @@ export default defineNuxtComponent({
     width: 33px;
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 576px){
     .skill-icon {
         height: 28px;
         width: 28px;

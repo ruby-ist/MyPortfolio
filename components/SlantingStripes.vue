@@ -85,7 +85,7 @@ export default defineNuxtComponent({
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
     #slanting-stripe {
         width: 32%;
         right: initial;

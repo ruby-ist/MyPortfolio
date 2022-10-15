@@ -90,4 +90,51 @@ export default defineNuxtComponent({
         }
     }
 }
+@media only screen and (min-width: 576px) and (max-width: 768px){
+    .phone-template{
+        top: 23%;
+        left: 32%;
+        img{
+            width: 150px;
+        }
+        #iphone-carousel{
+            width: 135px;
+            height: 280px;
+            left: 8px;
+            top: 16px;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .phone-template{
+        display: none;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .phone-template {
+        img {
+            width: 150px;
+        }
+        #iphone-carousel {
+            width: 135px;
+            height: 280px;
+            left: 8px;
+            top: 16px;
+        }
+    }
+}
+@media only screen and (min-width: 1680px) {
+    .phone-template{
+        img{
+            width: 250px;
+        }
+        #iphone-carousel{
+            width: 225px;
+            left: 13px;
+            height: 467px;
+            top: 27px;
+        }
+    }
+
+}
 </style>

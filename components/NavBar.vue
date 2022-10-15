@@ -269,11 +269,11 @@ export default defineNuxtComponent({
     --bg-color: rgba(254, 236, 233, 0.53);
     --blur: blur(8.7px);
     --logo-primary: #da0037;
-    --logo-secondary: #30475e;
+    --logo-secondary: #1f3144;
     --item-color: #30475e;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
     #navbar {
         height: 70px;
 
@@ -358,7 +358,6 @@ export default defineNuxtComponent({
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
-
         z-index: 7;
     }
     .dijkstra-version {
@@ -370,6 +369,34 @@ export default defineNuxtComponent({
         .hamburger.icon {
             color: #30475e;
         }
+    }
+}
+@media only screen and (min-width: 576px) and  (max-width: 768px){
+    #navbar{
+        height: 90px;
+        #main-logo {
+            margin: 7px 15px 0;
+        }
+        .curved-menu {
+            height: 55vw;
+            width: 45vw;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and  (max-width: 992px) {
+    #navbar{
+        height: 90px;
+        #main-logo {
+            margin-left: -30px;
+        }
+    }
+    #navbar.project-version{
+        .bg {
+            background: rgba(245, 246, 249, 0.36);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        z-index: 7;
     }
 }
 </style>

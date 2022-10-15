@@ -60,8 +60,8 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 #stripes-circle {
     position: absolute;
-    bottom: 32%;
-    right: 34%;
+    top: 0;
+    right: -5%;
     width: 80px;
 
     .circle-stripes {
@@ -69,7 +69,7 @@ export default defineNuxtComponent({
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
     #stripes-circle{
         display: none;
     }

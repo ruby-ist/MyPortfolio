@@ -258,7 +258,7 @@ export default defineNuxtComponent({
 
     #dijkstra_trace {
         position: relative;
-        height: 90vh;
+        min-height: 90vh;
 
         .indigo {
             color: #2F3A8F !important;
@@ -272,8 +272,8 @@ export default defineNuxtComponent({
 
         #rubygems {
             position: absolute;
-            width: 640px;
-            height: 450px;
+            width: 44vw;
+            height: 30vw;
             border-radius: 20px;
             background: url("/dijkstra_trace.webp") no-repeat top;
             background-size: cover;
@@ -298,7 +298,7 @@ export default defineNuxtComponent({
     }
 
     #arcanechats{
-        height: 90vh;
+        min-height: 90vh;
         position: relative;
 
         .red{
@@ -326,8 +326,8 @@ export default defineNuxtComponent({
 
         #arcanechats-repo{
             position: absolute;
-            width: 600px;
-            height: 340px;
+            width: 42vw;
+            height: 23vw;
             border-radius: 20px;
             background: url("/arcanechats-repo.webp") no-repeat top;
             background-size: cover;
@@ -337,8 +337,8 @@ export default defineNuxtComponent({
 
         .arcane-img{
             position: absolute;
-            width: 180px;
-            height: 350px;
+            width: 13vw;
+            height: 25vw;
             border-radius: 5px;
         }
 
@@ -346,8 +346,8 @@ export default defineNuxtComponent({
         #arcanechats-1{
             background: url("/arcanechats-1.webp") no-repeat top;
             background-size: cover;
-            left: 30%;
-            top: 40%;
+            right: 55%;
+            top: 42%;
         }
 
         #arcanechats-2{
@@ -383,7 +383,7 @@ export default defineNuxtComponent({
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
     #featured{
         #dijkstra_trace{
             #rubygems{
@@ -404,6 +404,7 @@ export default defineNuxtComponent({
                 line-height: initial;
                 left: 50%;
                 transform: translateX(-50%) !important;
+                background: transparent;
             }
         }
 
@@ -432,6 +433,76 @@ export default defineNuxtComponent({
                 font-size: 1rem;
                 width: 100%;
                 top: 55%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 992px){
+    #featured{
+        #dijkstra_trace{
+            #rubygems{
+                width: 60vw;
+                height: 40vw;
+                top: 23%;
+                left: 50%;
+                transform: translateX(-50%) !important;
+            }
+            .package-info{
+                width: 84vw;
+                font-size: 1rem;
+                top: initial;
+                bottom: 5%;
+                left: 50%;
+                transform: translateX(-50%) !important;
+                background: transparent;
+            }
+        }
+        #arcanechats{
+            #arcanechats-repo{
+                display: none;
+            }
+            #arcanechats-1{
+                top: initial;
+                left: initial;
+                right: 25%;
+                bottom: 8%;
+            }
+            #arcanechats-2{
+                top: initial;
+                right: 8%;
+                bottom: 18%;
+            }
+            #arcanechats-3{
+                top: initial;
+                right: -5%;
+                bottom: 28%;
+            }
+            .project-info{
+                font-size: 1rem;
+                width: 43vw;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    #featured{
+        #arcanechats{
+            #arcanechats-1{
+                display: none;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    #featured{
+        #dijkstra_trace{
+            .package-info{
+                left: 0;
+            }
+        }
+        #arcanechats{
+            #arcanechats-1{
+                right: 48%;
             }
         }
     }

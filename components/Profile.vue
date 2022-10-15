@@ -217,6 +217,7 @@ export default defineNuxtComponent({
     .codewars{
         height: 32px;
         margin: 10px auto;
+        transform: translateX(8%);
 
         .cls-1 {
             fill: #40514e;
@@ -230,7 +231,7 @@ export default defineNuxtComponent({
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
     #profile{
         height: 88vh;
         padding: 47% 15% 55%;
@@ -285,6 +286,54 @@ export default defineNuxtComponent({
 
         .light{
             display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 992px){
+    #profile{
+        padding: 30% 18% 35%;
+        .greetings{
+            font-size: 1.3rem;
+        }
+        .name{
+            font-size: 3.2rem;
+            margin: 35px auto 28px;
+        }
+        .job{
+            font-size: 1.7rem;
+        }
+        .vertical-line{
+            width: 3px;
+            &#social-media-line{
+                height: 12rem;
+                left: 3rem;
+                .icons{
+                    bottom: 12.5rem;
+                }
+            }
+            &#email-line{
+                height: 10rem;
+                right: 3rem;
+                .mail-id{
+                    bottom: 10rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        #chair {
+            width: 180px;
+            bottom: -1%;
+            left: 12%;
+        }
+        #lamp {
+            width: 20px;
+            bottom: -1%;
+            right: 10%;
+        }
+        .light{
+            bottom: 145px;
+            right: 9.2%;
         }
     }
 }

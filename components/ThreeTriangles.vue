@@ -53,12 +53,19 @@ export default defineNuxtComponent({
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
     #triangles-svg{
         left: initial;
         top: 500px;
         right: 10%;
         width: 20%;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 992px){
+    #triangles-svg{
+        left: 30%;
+        top: 18%;
     }
 }
 </style>
