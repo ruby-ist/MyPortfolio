@@ -14,6 +14,7 @@ export default defineNuxtConfig({
             meta: [
                 {charset: 'utf-8'},
                 {name: "viewport", content: "width=device-width, initial-scale=1"},
+                {name: "description", content: "My name is Sriram V. I design and build things for the Web. I would still like to consider myself as just a beginner. Aside from programming, I am a huge cinephile and I used to fold origami as a hobby. I even had an Instagram page solely for that and designed some new origami models myself."}
             ],
             link: [
                 {
