@@ -7,20 +7,21 @@
             <div class="skills-gradient"></div>
             <SkillSet v-for="skills in skillSets" :skills="skills"/>
         </div>
-        <div id="about" class="about-header">ABOUT <br/><br />ME</div>
+        <div id="about" class="about-header">ABOUT <br/><br/>ME</div>
         <div class="about-info">
             <div>
                 My name is Sriram V. I design and build things for the Web. I am currently in the third year of my CSE
-                degree at Bannari Amman Institute of Technology, Tamil Nadu, India. I’ve always enjoyed problem solving
-                and am geek enough to code for fun. I went on to explore various programming languages and finally settled
-                on Ruby. Even though they say language doesn't matter, I loved Ruby enough to base my career on that. So
-                eventually I started learning Ruby on Rails, entering the world of web development.
+                degree at Bannari Amman Institute of Technology, Tamil Nadu, India. I like problem solving since school
+                days and once I learned how amazing coding could be, I got passionate about it. So I went on to explore
+                various programming languages and settled on Ruby. Even though they say language doesn't matter, I love
+                Ruby enough to base my career on that. So eventually I started learning Ruby on Rails, entering the
+                world of Web development.
             </div>
             <div>
-                I dabbled in various things in Web development, from database design to SVG animations, and
-                inevitably, I learned a JavaScript framework, Vue JS. Aside from programming, I am a huge cinephile
-                and I used to fold origami as a hobby. I even had an Instagram page solely for that and designed some new
-                origami models myself.
+                I dabbled in various things in Web development, from database design to SVG animations. But I would still
+                like to consider myself as just a beginner. Aside from programming, I am a huge cinephile and I used to
+                fold origami as a hobby. I even had an Instagram page solely for that and designed some new origami
+                models myself.
             </div>
             <div>
                 Check out my pins if you are interested:
