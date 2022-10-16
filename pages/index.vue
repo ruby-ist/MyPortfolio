@@ -14,7 +14,7 @@
 import { defineNuxtComponent } from '#app'
 export default defineNuxtComponent({
     mounted(){
-        if(screen.width > 480){
+        if(screen.width > 576){
             window.onresize = function(){ location.reload(); }
         }
         document.documentElement.scrollTop = 0;

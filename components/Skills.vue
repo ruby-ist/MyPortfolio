@@ -24,7 +24,7 @@
                 models myself.
             </div>
             <div>
-                Check out my pins if you are interested:
+                Check out my pages if you are interested:
                 <a href="https://www.instagram.com/quiet.mate/?theme=dark"><i class="large instagram link icon"></i></a>
                 <a href="https://in.pinterest.com/sriram2520/pins/"><i class="large pinterest link icon"></i></a>
             </div>
