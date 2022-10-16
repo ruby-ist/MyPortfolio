@@ -1,7 +1,7 @@
 <template>
     <div id="photos">
         <div class="frame" id="bg">
-            <img class="image" alt="face" src="/anime_bg.webp" />
+            <img class="image" alt="face" src="/word_cloud.webp" />
         </div>
 
         <div class="frame" id="face">
@@ -51,13 +51,13 @@ export default defineNuxtComponent({
         position: absolute;
 
         &#face{
-            height: 28vw;
-            width: 25vw;
+            height: 26vw;
+            width: 23vw;
             background: #1EE494;
             top: 23%;
             right: 18%;
             transform: rotateZ(10deg);
-            padding: 1.8vw;
+            padding: 1.5vw;
 
             img{
                 height: 90%;
@@ -69,10 +69,10 @@ export default defineNuxtComponent({
             height: 21vw;
             width: 18vw;
             background: #6ACAFC;
-            top: 18%;
-            right: 30%;
+            top: 15%;
+            right: 31%;
             transform: rotateZ(-15deg);
-            padding: 1.3vw;
+            padding: 1vw;
 
             img{
                 height: 90%;
