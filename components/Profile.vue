@@ -104,19 +104,20 @@ export default defineNuxtComponent({
 
 <style scoped lang="scss">
 #profile {
-    padding: 20% 21% 36%;
+    padding: 16.5% 19% 31.5%;
     position: relative;
+    max-height: 101vh;
 
     .greetings {
         font-family: 'Sen', sans-serif;
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .name {
         font-family: 'Ubuntu', sans-serif;
         font-weight: 500;
-        font-size: 5.5rem;
-        margin: 60px auto;
+        font-size: 5.2rem;
+        margin: 50px auto 55px;
     }
 
     .job {
@@ -131,7 +132,7 @@ export default defineNuxtComponent({
         position: absolute;
         width: 250px;
         bottom: -1%;
-        left: 12%;
+        left: 10%;
 
         .cls-1 {
             fill: #393e46;
@@ -166,7 +167,7 @@ export default defineNuxtComponent({
         position: absolute;
 
         &#social-media-line {
-            height: 23rem;
+            height: 16rem;
             bottom: 0;
             left: 4.5rem;
 
@@ -174,7 +175,7 @@ export default defineNuxtComponent({
                 position: absolute;
                 transform: translateX(-50%);
                 left: 50%;
-                bottom: 24rem;
+                bottom: 17rem;
 
                 i {
                     color: #40514E;
@@ -185,7 +186,7 @@ export default defineNuxtComponent({
         }
 
         &#email-line {
-            height: 24rem;
+            height: 18rem;
             bottom: 0;
             right: 4.5rem;
 
@@ -194,7 +195,7 @@ export default defineNuxtComponent({
                 font-size: 1.5rem;
                 font-family: 'Cutive Mono', monospace;
                 right: 50%;
-                bottom: 25rem;
+                bottom: 19rem;
 
                 a{
                     color: #40514E;

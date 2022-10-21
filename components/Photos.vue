@@ -29,7 +29,7 @@ export default defineNuxtComponent({
             xPercent: 20,
             yPercent: -90,
             rotation: 90,
-            duration: 1.2,
+            duration: 1,
         });
         gsap.from('.frame#bg',{
             scrollTrigger: {
@@ -40,7 +40,7 @@ export default defineNuxtComponent({
             xPercent: 40,
             yPercent: -120,
             rotation: -120,
-            duration: 1.2,
+            duration: 1,
         });
         gsap.from('.label',{
             scrollTrigger: {
@@ -67,13 +67,13 @@ export default defineNuxtComponent({
         }
 
         &#face{
-            height: 26vw;
-            width: 23vw;
+            min-height: 21vw;
+            width: 21vw;
             background: #1EE494;
-            top: 23%;
-            right: 18%;
+            top: 28%;
+            right: 20%;
             transform: rotateZ(10deg);
-            padding: 1.5vw;
+            padding: 1.3vw 1.3vw 2.6vw;
 
             .label{
                 bottom: -5.9%;
@@ -81,20 +81,20 @@ export default defineNuxtComponent({
             }
 
             img{
-                height: 90%;
+                height: 100%;
                 width: 100%;
                 background: #393e46;
             }
         }
 
         &#bg{
-            height: 21vw;
-            width: 18vw;
+            min-height: 16vw;
+            width: 16vw;
             background: #6ACAFC;
-            top: 15%;
+            top: 20%;
             right: 31%;
             transform: rotateZ(-15deg);
-            padding: 1vw;
+            padding: 1vw 1vw 2vw;
 
             .label{
                 top: -7%;
@@ -102,7 +102,7 @@ export default defineNuxtComponent({
             }
 
             img{
-                height: 90%;
+                height: 100%;
                 width: 100%;
             }
         }
@@ -113,5 +113,23 @@ export default defineNuxtComponent({
     #photos{
         display: none;
     }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 992px){
+  #photos{
+    .frame{
+      &#face{
+        .label{
+          bottom: -20px;
+        }
+      }
+      &#bg{
+        .label{
+          top: -18px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
 }
 </style>
