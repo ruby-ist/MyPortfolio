@@ -30,17 +30,20 @@ import {gsap} from "gsap";
 
 export default defineNuxtComponent({
     mounted() {
-        gsap.to('.radient', {
-            background: 'linear-gradient(-10deg, #4586ff, #007750)',
-            duration: 1,
-            delay: 0.5
-        });
-        gsap.from('.radient', {
-            opacity: 0.1,
-            scale: 0,
-            transformOrigin: 'bottom',
-            duration: 1.5
-        });
+        gsap.fromTo('.radient', {
+                opacity: 0.1,
+                scale: 0,
+                duration: 1.5
+            },
+            {
+                background: 'linear-gradient(0deg, #4586ff, #4586ff, #1EE494, #007750)',
+                opacity: 1,
+                scale: 1,
+                transformOrigin: 'bottom',
+                duration: 1,
+                delay: 0.5
+            });
+
     }
 })
 </script>
@@ -59,12 +62,12 @@ export default defineNuxtComponent({
     .radient {
         height: 80vh;
         width: 80vh;
-        background: linear-gradient(-190deg, #4586ff, #007750);
+        background: linear-gradient(-190deg, #4586ff, #4586ff , #1EE494, #007750, #007750);
     }
 
     svg {
-        width: 80vh;
-        height: 80vh;
+        width: 82vh;
+        height: 82vh;
         position: absolute;
         left: 50%;
         top: 50%;

@@ -128,7 +128,7 @@ export default defineNuxtComponent({
             scrollTrigger: {
                 trigger: '#footer',
                 toggleActions: 'restart none reverse none',
-                start: '-550% 80%',
+                start: '-350% 80%',
              },
             xPercent: 650,
             yPercent: -23,
@@ -139,7 +139,7 @@ export default defineNuxtComponent({
             scrollTrigger: {
                 trigger: '#footer',
                 toggleActions: 'restart none reverse none',
-                start: '-550% 80%',
+                start: '-350% 80%',
             },
             xPercent: 650,
             yPercent: -23,

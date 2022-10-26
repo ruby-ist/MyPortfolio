@@ -141,7 +141,7 @@ export default defineNuxtComponent({
                 scrollTrigger: {
                     trigger: '#arcanechats',
                     toggleActions: 'restart none reverse none',
-                    start: "-135% top",
+                    start: "-75% top",
                 },
                 opacity: 1,
                 scaleX: 1,
@@ -159,7 +159,7 @@ export default defineNuxtComponent({
                 scrollTrigger: {
                     trigger: '#arcanechats',
                     toggleActions: 'restart none reverse none',
-                    start: "-135% top",
+                    start: "-75% top",
                 },
                 opacity: 1,
                 scaleX: 1,
@@ -172,7 +172,7 @@ export default defineNuxtComponent({
             scrollTrigger: {
                 trigger: '#arcanechats',
                 toggleActions: 'restart none reverse none',
-                start: "-135% top",
+                start: "-75% top",
             },
             opacity: 0,
             scaleY: 0,
@@ -184,7 +184,7 @@ export default defineNuxtComponent({
             scrollTrigger: {
                 trigger: '#arcanechats',
                 toggleActions: 'restart none reverse none',
-                start: "-135% top",
+                start: "-75% top",
             },
             opacity: 0,
             scale: 0,
@@ -196,7 +196,7 @@ export default defineNuxtComponent({
             scrollTrigger: {
                 trigger: '#arcanechats',
                 toggleActions: 'restart none reverse none',
-                start: "-135% top",
+                start: "-75% top",
             },
             xPercent: -50,
             duration: 1
@@ -206,7 +206,7 @@ export default defineNuxtComponent({
             scrollTrigger: {
                 trigger: '#arcanechats',
                 toggleActions: 'restart none reverse none',
-                start: "-135% top",
+                start: "-75% top",
             },
             yPercent: 50,
             duration: 1
@@ -216,7 +216,7 @@ export default defineNuxtComponent({
             scrollTrigger: {
                 trigger: '#arcanechats',
                 toggleActions: 'restart none reverse none',
-                start: "-135% top",
+                start: "-75% top",
             },
             xPercent: 50,
             duration: 1
