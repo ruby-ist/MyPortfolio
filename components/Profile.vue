@@ -1,8 +1,14 @@
 <template>
     <div id="profile">
-        <div class="greetings">Hi, I'm</div>
-        <div class="name">Sriram V</div>
-        <div @click="typeIt" class="job"><span id="role"></span> Developer</div>
+        <div class="words">
+            <div class="greetings">Hi, I'm</div>
+            <div class="name">Sriram V</div>
+            <div @click="typeIt" class="job"><span id="role"></span> Developer</div>
+            <a href="/Sriram-V-Resume.pdf" class="resume" download>
+                <i class="download icon"></i>
+                Resume
+            </a>
+        </div>
         <img id="chair" alt="chair" src="~/assets/background/chair.svg"/>
         <img id="lamp" alt="lamp" src="~/assets/background/street-light.svg"/>
         <div class="light"></div>
@@ -50,15 +56,15 @@ export default defineNuxtComponent({
         started: false
     }),
     methods: {
-        lightOn(){
+        lightOn() {
             $('.light').css('opacity', '1');
         },
-        lightOff(){
+        lightOff() {
             $('.light').css('opacity', '0');
         },
-        typeIt(){
+        typeIt() {
             $('#role')[0].innerHTML = "";
-            if(!this.started){
+            if (!this.started) {
                 this.started = true;
                 let typed = new Typed('#role', {
                     strings: ['Front-end', 'Back-end', 'Web'],
@@ -108,6 +114,10 @@ export default defineNuxtComponent({
     position: relative;
     max-height: 101vh;
 
+    .words{
+        position: relative;
+    }
+
     .greetings {
         font-family: 'Sen', sans-serif;
         font-size: 2rem;
@@ -128,6 +138,24 @@ export default defineNuxtComponent({
         color: #6BCB77;
     }
 
+    .resume{
+        font-size: 1.3rem;
+        color: inherit;
+        background:  linear-gradient(140deg, #1EE494 45%, #6ACAFC);
+        border: 0.01em solid black;
+        padding: 16px 21px;
+        position: absolute;
+        top: 135%;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover{
+            background:  linear-gradient(140deg, #1EE494 45%, #4586FF);
+            box-shadow: 0 0 5px -1px #00000067;
+            color: black;
+        }
+    }
+
     #chair {
         position: absolute;
         width: 250px;
@@ -146,7 +174,7 @@ export default defineNuxtComponent({
         right: 8%;
     }
 
-    .light{
+    .light {
         height: 30px;
         width: 30px;
         position: absolute;
@@ -197,10 +225,10 @@ export default defineNuxtComponent({
                 right: 50%;
                 bottom: 19rem;
 
-                a{
+                a {
                     color: #40514E;
 
-                    &:hover{
+                    &:hover {
                         color: #0094eb;
                     }
                 }
@@ -208,23 +236,23 @@ export default defineNuxtComponent({
         }
     }
 
-    .link.icon{
+    .link.icon {
         opacity: 1 !important;
     }
 
-    .linkedin:hover{
+    .linkedin:hover {
         color: #0a66c2 !important;
     }
 
-    .github:hover{
+    .github:hover {
         color: #161b22 !important;;
     }
 
-    .hackerrank:hover{
+    .hackerrank:hover {
         color: #1ba94c !important;
     }
 
-    .codewars{
+    .codewars {
         height: 32px;
         margin: 10px auto;
         transform: translateX(8%);
@@ -233,7 +261,7 @@ export default defineNuxtComponent({
             fill: #40514e;
         }
 
-        &:hover{
+        &:hover {
             .cls-1 {
                 fill: #b1361e;
             }
@@ -242,17 +270,18 @@ export default defineNuxtComponent({
 }
 
 @media only screen and (max-width: 576px) {
-    #profile{
+    #profile {
         height: 88vh;
         padding: 47% 15% 55%;
 
-        .vertical-line{
+        .vertical-line {
             width: 3px;
-            &#email-line{
+
+            &#email-line {
                 display: none;
             }
 
-            &#social-media-line{
+            &#social-media-line {
                 left: initial;
                 right: 10%;
                 height: 16rem;
@@ -281,6 +310,10 @@ export default defineNuxtComponent({
             font-size: 1.7rem;
         }
 
+        .resume{
+            top: 125%;
+        }
+
         #chair {
             width: 150px;
             bottom: -1%;
@@ -294,54 +327,65 @@ export default defineNuxtComponent({
             left: 8%;
         }
 
-        .light{
+        .light {
             display: none;
         }
     }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 992px){
-    #profile{
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+    #profile {
         padding: 30% 18% 35%;
-        .greetings{
+
+        .greetings {
             font-size: 1.3rem;
         }
-        .name{
+
+        .name {
             font-size: 3.2rem;
             margin: 35px auto 28px;
         }
-        .job{
+
+        .job {
             font-size: 1.7rem;
         }
-        .vertical-line{
+
+        .vertical-line {
             width: 3px;
-            &#social-media-line{
+
+            &#social-media-line {
                 height: 12rem;
                 left: 3rem;
-                .icons{
+
+                .icons {
                     bottom: 12.5rem;
                 }
             }
-            &#email-line{
+
+            &#email-line {
                 height: 10rem;
                 right: 3rem;
-                .mail-id{
+
+                .mail-id {
                     bottom: 10rem;
                     font-size: 1.2rem;
                 }
             }
         }
+
         #chair {
             width: 180px;
             bottom: -1%;
             left: 12%;
         }
+
         #lamp {
             width: 20px;
             bottom: -1%;
             right: 10%;
         }
-        .light{
+
+        .light {
             bottom: 145px;
             right: 9.2%;
         }

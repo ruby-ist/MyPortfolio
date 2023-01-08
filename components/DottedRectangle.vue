@@ -18,9 +18,9 @@ export default defineNuxtComponent({
 
         gsap.from('.dot', {
             scrollTrigger: {
-                trigger: ".about-header",
+                trigger: ".dots",
                 toggleActions: "restart none restart none",
-                start: "top 30%",
+                start: () => "top 70%"
             },
             stagger: {
                 grid: [11, 5],

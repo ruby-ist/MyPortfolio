@@ -74,9 +74,10 @@ export default defineNuxtComponent({
             right: 20%;
             transform: rotateZ(10deg);
             padding: 1.3vw 1.3vw 2.6vw;
+            box-shadow: 5px 5px 15px 1px grey;
 
             .label{
-                bottom: -5.9%;
+                top: -6%;
                 right: 0;
             }
 
@@ -95,6 +96,7 @@ export default defineNuxtComponent({
             right: 31%;
             transform: rotateZ(-15deg);
             padding: 1vw 1vw 2vw;
+            box-shadow: 5px 5px 10px 1px grey;
 
             .label{
                 top: -7%;

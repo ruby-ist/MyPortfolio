@@ -83,6 +83,7 @@ export default defineNuxtComponent({
         display: flex;
         flex-flow: row nowrap;
         overflow: hidden;
+        background: black;
 
         img {
             width: 100%;

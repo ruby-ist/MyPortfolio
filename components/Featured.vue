@@ -35,7 +35,7 @@
                 developed.
                 <div class="grey other-icons">
                     <a href="https://rubygems.org/gems/dijkstra_trace"><i class="large github link icon"></i></a>
-                    <a href="https://arcanechats.herokuapp.com"><i class="large linkify link icon"></i></a>
+                    <a href="https://arcanechats.onrender.com"><i class="large linkify link icon"></i></a>
                 </div>
             </div>
         </div>

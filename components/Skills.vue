@@ -10,18 +10,15 @@
         <div id="about" class="about-header">ABOUT <br/><br/>ME</div>
         <div class="about-info">
             <div>
-                My name is Sriram V. I design and build things for the Web. I am currently in the third year of my CSE
-                degree at Bannari Amman Institute of Technology, Tamil Nadu, India. I like problem solving since school
-                days and once I learned how amazing coding could be, I got passionate about it. So I went on to explore
-                various programming languages and settled on Ruby. Even though they say language doesn't matter, I love
-                Ruby enough to base my career on that. So eventually I started learning Ruby on Rails, entering the
+                My name is Sriram V. I design and build things for the Web. I'm currently in my third year of CSE
+                degree at Bannari Amman Institute of Technology, Tamil Nadu, India. I have a huge passion for programming and problem-solving.
+                Upon trying various programming languages, I finally found my <i>ikigai</i>, Ruby. Eventually I started learning Ruby on Rails, entering the
                 world of Web development.
             </div>
             <div>
                 I dabbled in various things in Web development, from database design to SVG animations. But I would still
-                like to consider myself as just a beginner. Aside from programming, I am a huge cinephile and I used to
-                fold origami as a hobby. I even had an Instagram page solely for that and designed some new origami
-                models myself.
+                like to consider that there are still many worlds in the web to explore. Aside from programming, I am a huge cinephile
+                and I used to fold origami for a hobby. I had an Instagram page solely for that and designed some new origami models myself.
             </div>
             <div>
                 Check out my pages if you are interested:
@@ -69,13 +66,14 @@ export default defineNuxtComponent({
         gsap.from('.skill-icon', {
             scrollTrigger: {
                 trigger: '.skill-icons',
-                toggleActions: "restart none restart none"
+                toggleActions: "restart none restart none",
+                start: () => "top 85%"
             },
             scale: 0.1,
             yPercent: 25,
             transformOrigin: 'center',
             ease: "power1.inOut",
-            duration: 0.5,
+            duration: 0.75,
             stagger: {
                 grid: [5, 5],
                 from: "end",
@@ -109,6 +107,7 @@ export default defineNuxtComponent({
             scrollTrigger: {
                 trigger: '.image-holder',
                 toggleActions: 'restart none restart none',
+                start: ()=> "top 80%"
             },
             scale: 0,
             duration: 1

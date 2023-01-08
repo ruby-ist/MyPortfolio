@@ -52,7 +52,7 @@ export default defineNuxtComponent({
     }),
     methods: {
         scrollToProject(num: number) {
-            document.documentElement.scrollTop = $('.boxes').offset().top + (window.innerHeight * 5) * num + ((5 - num) * 100);
+            document.documentElement.scrollTop = $('.boxes').offset().top + (window.innerHeight * 5) * num + ((5 - num) * 100) - window.innerHeight;
         },
 
         scrollFurther(event) {

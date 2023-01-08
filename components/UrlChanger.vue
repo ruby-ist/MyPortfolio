@@ -23,10 +23,10 @@ export default defineNuxtComponent({
     data: (): dataGroup => ({
         URLArray: [
             'https://geobits.onrender.com',
-            'https://pingcoders.herokuapp.com',
+            'https://pingcoders.onrender.com',
             'https://rubyonwasm.onrender.com',
-            'https://narrate-it.herokuapp.com',
-            'https://burningheart.herokuapp.com'
+            'https://narrate-it.onrender.com',
+            'https://flames.onrender.com'
         ]
     }),
     mounted() {
