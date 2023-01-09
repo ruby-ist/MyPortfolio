@@ -3,7 +3,7 @@
         <img alt="mountain" id="mountain" src="~/assets/background/mountain.svg"/>
         <div class="ui huge orange centered header">Mini Projects</div>
         <div id="dijkstra_trace">
-            <div class="ui huge orange header">Dijkstra Trace</div>
+            <div id="gem-header" class="ui huge orange header">Dijkstra Trace</div>
             <div class="ui indigo header">A ruby gem package</div>
             <div id="dijkstra_icons" class="orange other-icons">
                 <a href="https://github.com/ruby-ist/dijkstra_trace/packages/1558735"><i class="big github link icon"></i></a>
@@ -56,25 +56,25 @@ export default defineNuxtComponent({
             {opacity: 0},
             {
                 scrollTrigger: {
-                    trigger: '#dijkstra_trace',
+                    trigger: '.centered.header',
                     toggleActions: 'restart none none none',
-                    start: "-150% top",
+                    start: "top 90%",
                 },
                 opacity: 1,
                 duration: 1
             }
         )
 
-        gsap.fromTo('.huge.orange.header',
+        gsap.fromTo('#gem-header',
             {
                 opacity: 0,
                 scaleX: 0,
             },
             {
                 scrollTrigger: {
-                    trigger: '#dijkstra_trace',
+                    trigger: '.huge.orange.header',
                     toggleActions: 'restart none none none',
-                    start: "-150% top",
+                    start: "top 70%",
                 },
                 opacity: 1,
                 scaleX: 1,
@@ -90,9 +90,9 @@ export default defineNuxtComponent({
             },
             {
                 scrollTrigger: {
-                    trigger: '#dijkstra_trace',
+                    trigger: '.huge.orange.header',
                     toggleActions: 'restart none none none',
-                    start: "-150% top",
+                    start: "top 70%",
                 },
                 opacity: 1,
                 scaleX: 1,
@@ -103,9 +103,9 @@ export default defineNuxtComponent({
 
         gsap.from('.package-info', {
                 scrollTrigger: {
-                    trigger: '#dijkstra_trace',
+                    trigger: '.huge.orange.header',
                     toggleActions: 'restart none none none',
-                    start: "-150% top",
+                    start: "top 55%",
                 },
                 xPercent: -40,
                 duration: 1
@@ -113,9 +113,9 @@ export default defineNuxtComponent({
 
         gsap.from('#rubygems', {
                 scrollTrigger: {
-                    trigger: '#dijkstra_trace',
+                    trigger: '.huge.orange.header',
                     toggleActions: 'restart none none none',
-                    start: "-150% top",
+                    start: "top 55%",
                 },
                 opacity: 0,
                 xPercent: 20,
@@ -124,9 +124,9 @@ export default defineNuxtComponent({
 
         gsap.from('#dijkstra_icons', {
             scrollTrigger: {
-                trigger: '#dijkstra_trace',
+                trigger: '.huge.orange.header',
                 toggleActions: 'restart none none none',
-                start: "-150% top",
+                start: "top 60%",
             },
             yPercent: -100,
             duration: 1
