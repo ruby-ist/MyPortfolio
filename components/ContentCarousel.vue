@@ -4,68 +4,69 @@
         <div id="actual-contents">
         <div id="geobits-content">
             <div class="content-info">
-                GeoBITS is an online map made for navigating and finding classes inside the
-                Bannari Amman Institute of Technology college campus. The special thing about this
-                project, it is made without using any pre-existing Map APIs.
+                GeoBITS is a web mapping platform exclusively made for navigating and finding classes inside the
+                Bannari Amman Institute of Technology college campus. This project was created without
+                using any pre-existing Map APIs.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                This map has navigation feature, the routes are displayed dynamically with help of
-                svg animations and the dijkstra algorithm to find the shortest path in the map. There are
-                two modes of paths, vehicle and pedestrian paths.
+                This map has a navigation feature. The routes are displayed dynamically with the help of
+                SVG animations and the Dijkstra algorithm to find the shortest path on the map. There are
+                two types of paths: vehicle paths and pedestrian paths.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                It has both light mode and dark mode, and have details about each classes and
-                labs in every building in the campus. You could also has pin and share an location, or find
-                the route for any pinned location.
+                It supports both light mode and dark mode and has details about each class and lab in
+                every building on campus. You could also pin and share a location or find the route for
+                any pinned location.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                The map has two different layers, satellite and svg. The SVG layer map are drawn with
-                Illustrator marking each and every building, playgrounds, path ways and roads.
+                The map has two different layers: satellite and SVG. The SVG layer map is drawn with
+                Illustrator, marking each and every building, playground, path, and road.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                You can also view your current location inside the campus, GeoBITs matches your device's latitude
-                and longitude along with the map's corners lat and long, and shows the location of your device, which
-                will be keep updating itself while navigating around the campus.
+                You can also view your current location inside the campus. GeoBITs matches your device's
+                latitude and longitude with the map's corners and shows the location of your device
+                relative to the map, which will keep updating itself while you navigate around the campus.
             </div>
             <div class="content-info"></div>
         </div>
         <div id="pingcoders-content">
             <div class="content-info">
-                Pingcoders is an inter college programmer profile showcase and community. The app has two
+                Pingcoders is an intra-college programmers profile showcase and community. The app has two
                 different OAuths, google and github and only the user with college mail id can create an account.
-                It has an email verification system made with devise gem.
+                It has an email verification system made with Devise.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                The colors of the each languages are taken from the github's programming language's color system. The
-                suggestions are created dynamically by interacting with github and stackoverflow APIs.
+                The colours of each language are taken from Github's programming language's colour system. The
+                suggestions are created dynamically by interacting with the GitHub and StackOverflow APIs.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                The user can add their projects, languages, skills and contact information and they can also view
+                The user can add their projects, experiences, skills and contact information and they can also view
                 other user's projects and skill sets. The user can add any number of projects as an repo belonging to
-                their github account. It also has language used in the repo as github does.
+                their github account. It also has an in-app chatting feature with web sockets support.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                You can also add other social media links and your profile photo. If the user already provided the github name,
-                they can also use their github avatar directly with the link. If the user was signed in with Github OAuth,
-                their github username will be automatically detected.
+                You can also add other social media links and profile photo. You can also directly fetch your profile pic
+                from your Github account. Once the user sign in with Github OAuth, their github username will be automatically
+                detected. You can also recruit other people for your project ideas by posting a job. It also supports markdown formatting.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                The main idea of this project was to find the fellow coders or programmers inside the college by the language
-                you are currently using in your project. You can search the other user with a name, language or particular skill.
+                The user can also showcase submit their certificates in achievements section. The main goal of this project was to
+                locate other coders and programmers within the college based on the language you are currently using in your project.
+                You can search the other user with a name, language or particular skill.
             </div>
             <div class="content-info"></div>
         </div>
         <div id="rubyonwasm-content">
             <div class="content-info">
-                RubyOnWasm is a static online Ruby language interpreter. It runs the code completely on
+                RubyOnWasm is a static page that serves as an online Ruby language interpreter. It runs the code completely on
                 browser using WebAssembly without any backend server.
             </div>
             <div class="content-info"></div>
@@ -80,8 +81,9 @@
             </div>
             <div class="content-info"></div>
             <div class="content-info">
-                Since it runs completely on browser, it runs any code within a second. It also has shortcut
-                keys to run the code.
+                Because it is entirely browser-based, it almost always runs any code in a relatively short
+                period of time, considering that no HTTP request is sent to run the code and obtain the output.
+                It also has shortcut keyboard keys to run the code.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
@@ -117,7 +119,7 @@
         </div>
         <div id="flames-content">
             <div class="content-info">
-                Flames is a find-a-match kinda app, created as fun project that turned out well.
+                Flames is a find-a-match kinda app, created as fun project that turned out well responsive.
             </div>
             <div class="content-info"></div>
             <div class="content-info">
@@ -132,7 +134,7 @@
             <div class="content-info"></div>
             <div class="content-info">
                 This app is created with Sinatra, Ruby's micro framework for web development and a minimal
-                Ui with vanilla javascript and css.
+                UI with vanilla javascript and css.
             </div>
             <div class="content-info"></div>
             <div class="content-info">

@@ -1,6 +1,25 @@
 <template>
     <section id="projects-mobile">
         <h3 class="ui header">My Projects</h3>
+        <div class="menu">
+            <div id="mini-menu" class="ui secondary menu">
+                <a class="active item" @click="switchTo(0)">
+                    <img src="/logos/geobits-mini.svg" alt="mini"/>
+                </a>
+                <a class="item" @click="switchTo(1)">
+                    <img src="/logos/pingcoders-mini.svg" alt="mini"/>
+                </a>
+                <a class="item" @click="switchTo(2)">
+                    <img src="/logos/rubyonwasm-mini.svg" alt="mini"/>
+                </a>
+                <a class="item" @click="switchTo(3)">
+                    <img src="/logos/narrateit-mini.svg" alt="mini"/>
+                </a>
+                <a class="item" @click="switchTo(4)">
+                    <img src="/logos/flames-mini.svg" alt="mini"/>
+                </a>
+            </div>
+        </div>
         <div class="logo">
             <img :src="'/logos/' + projects[index]['logo']" alt="logo">
         </div>
@@ -33,25 +52,6 @@
                          class="stack-icon"
                          :src="'/icons/' + icon + '.svg'"/>
                 </div>
-            </div>
-        </div>
-        <div class="menu">
-            <div id="mini-menu" class="ui secondary menu">
-                <a class="active item" @click="switchTo(0)">
-                    <img src="/logos/geobits-mini.svg" alt="mini"/>
-                </a>
-                <a class="item" @click="switchTo(1)">
-                    <img src="/logos/pingcoders-mini.svg" alt="mini"/>
-                </a>
-                <a class="item" @click="switchTo(2)">
-                    <img src="/logos/rubyonwasm-mini.svg" alt="mini"/>
-                </a>
-                <a class="item" @click="switchTo(3)">
-                    <img src="/logos/narrateit-mini.svg" alt="mini"/>
-                </a>
-                <a class="item" @click="switchTo(4)">
-                    <img src="/logos/flames-mini.svg" alt="mini"/>
-                </a>
             </div>
         </div>
     </section>
@@ -156,12 +156,12 @@ export default defineNuxtComponent({
 <style scoped lang="scss">
 #projects-mobile {
     display: none;
-    padding: 6rem 3rem 200px;
+    padding: 6rem 3rem 150px;
     font-family: 'Sen', sans-serif;
 
     h3 {
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         font-family: "Alegreya Sans", sans-serif;
         color: #606470;
     }
@@ -273,7 +273,7 @@ export default defineNuxtComponent({
     }
 
     .menu {
-        margin: 40px auto 10px;
+        margin: 0 auto 40px;
 
         .ui.secondary.menu {
             background: #e6e7e8;

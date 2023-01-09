@@ -6,7 +6,7 @@
         </div>
 
         <div class="frame" id="face">
-            <div class="label">_ Updated: 16-Oct-2022</div>
+            <div class="label">_ Updated: 09-Jan-2023</div>
             <img class="image" alt="face" src="/face.png" />
         </div>
     </div>
@@ -78,7 +78,7 @@ export default defineNuxtComponent({
 
             .label{
                 top: -6%;
-                right: 0;
+                right: 1%;
             }
 
             img{

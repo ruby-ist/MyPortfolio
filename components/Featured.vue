@@ -258,7 +258,7 @@ export default defineNuxtComponent({
 
     #dijkstra_trace {
         position: relative;
-        min-height: 90vh;
+        min-height: 95vh;
 
         .indigo {
             color: #2F3A8F !important;
