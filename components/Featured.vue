@@ -6,7 +6,6 @@
             <div id="gem-header" class="ui huge orange header">Dijkstra Trace</div>
             <div class="ui indigo header">A ruby gem package</div>
             <div id="dijkstra_icons" class="orange other-icons">
-                https://rubygems.org/gems/dijkstra_trace
                 <a href="https://github.com/ruby-ist/dijkstra_trace/packages/1558735" target="_blank"><i class="big github link icon"></i></a>
                 <a href="https://rubygems.org/gems/dijkstra_trace" target="_blank"><i class="big sketch link icon"></i></a>
             </div>
