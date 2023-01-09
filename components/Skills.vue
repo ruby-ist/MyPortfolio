@@ -22,8 +22,8 @@
             </div>
             <div>
                 Check out my pages if you are interested:
-                <a href="https://www.instagram.com/quiet.mate/?theme=dark"><i class="large instagram link icon"></i></a>
-                <a href="https://in.pinterest.com/sriram2520/pins/"><i class="large pinterest link icon"></i></a>
+                <a href="https://www.instagram.com/quiet.mate/?theme=dark" target="_blank"><i class="large instagram link icon"></i></a>
+                <a href="https://in.pinterest.com/sriram2520/pins/" target="_blank"><i class="large pinterest link icon"></i></a>
             </div>
             <div class="image-holder">
                 <img alt="figures" src="/origami/me-and-her.webp" />
@@ -57,8 +57,8 @@ export default defineNuxtComponent({
             ['ruby', 'rails', 'rspec', 'vue', 'nuxt'],
             ['sinatra', 'turbo', 'stimulus', 'semantic-ui', 'scss'],
             ['jquery', 'svg', 'gsap', 'illustrator', 'figma'],
-            ['mysql', 'rest', 'render', 'heroku', 'docker'],
-            ['c', 'c++', 'typescript', 'javascript', 'python'],
+            ['cockroach-db', 'mysql', 'rest', 'render', 'heroku'],
+            ['c', 'c++', 'html', 'css', 'javascript'],
         ]
     }),
     mounted() {

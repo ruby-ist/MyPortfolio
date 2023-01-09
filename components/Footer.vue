@@ -104,10 +104,10 @@
             </g>
         </svg>
         <div class="contact-icons">
-            <a href="https://www.instagram.com/_srira.me/"><i class="big instagram link icon"></i></a>
-            <a href="https://wa.me/918344000240"><i class="big whatsapp link icon"></i></a>
-            <a href="https://t.me/sriram2520"><i class="big telegram plane link icon"></i></a>
-            <a href="https://www.linkedin.com/in/srira-venkat/"><i class="big linkedin in link icon"></i></a>
+            <a href="https://www.instagram.com/_srira.me/" target="_blank"><i class="big instagram link icon"></i></a>
+            <a href="https://wa.me/918344000240" target="_blank"><i class="big whatsapp link icon"></i></a>
+            <a href="https://t.me/sriram2520" target="_blank"><i class="big telegram plane link icon"></i></a>
+            <a href="https://www.linkedin.com/in/srira-venkat/" target="_blank"><i class="big linkedin in link icon"></i></a>
         </div>
         <div class="credit">
             Designed and developed by © Sriram V 2022

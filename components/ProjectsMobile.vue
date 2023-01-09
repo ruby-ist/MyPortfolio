@@ -35,7 +35,7 @@
         </div>
         <div class="url-holder">
             <span class="label">Url:</span>
-            <a id="url-link" :href="projects[index]['url']">
+            <a id="url-link" :href="projects[index]['url']" target="_blank">
                 <span id="url">{{ projects[index]['url'] }}</span>
                 <i class="external link icon"></i>
             </a>

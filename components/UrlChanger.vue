@@ -1,7 +1,7 @@
 <template>
     <div class="site-url">
         <span class="label">Url:</span>
-        <a id="url-link" href="https://geobits.onrender.com">
+        <a id="url-link" target="_blank" href="https://geobits.onrender.com">
             <span id="url-holder"></span>
             <i class="external link icon"></i>
         </a>

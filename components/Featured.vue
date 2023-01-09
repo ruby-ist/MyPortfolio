@@ -6,8 +6,9 @@
             <div id="gem-header" class="ui huge orange header">Dijkstra Trace</div>
             <div class="ui indigo header">A ruby gem package</div>
             <div id="dijkstra_icons" class="orange other-icons">
-                <a href="https://github.com/ruby-ist/dijkstra_trace/packages/1558735"><i class="big github link icon"></i></a>
-                <a href="https://github.com/ruby-ist/ArcaneChats"><i class="big sketch link icon"></i></a>
+                https://rubygems.org/gems/dijkstra_trace
+                <a href="https://github.com/ruby-ist/dijkstra_trace/packages/1558735" target="_blank"><i class="big github link icon"></i></a>
+                <a href="https://rubygems.org/gems/dijkstra_trace" target="_blank"><i class="big sketch link icon"></i></a>
             </div>
             <div id="rubygems"></div>
             <div class="package-info">
@@ -34,8 +35,8 @@
                 with ajax calls for message updates. Since the app is created only as an hobby, only mobile view is
                 developed.
                 <div class="grey other-icons">
-                    <a href="https://rubygems.org/gems/dijkstra_trace"><i class="large github link icon"></i></a>
-                    <a href="https://arcanechats.onrender.com"><i class="large linkify link icon"></i></a>
+                    <a href="https://github.com/ruby-ist/ArcaneChats" target="_blank"><i class="large github link icon"></i></a>
+                    <a href="https://arcanechats.onrender.com" target="_blank"><i class="large linkify link icon"></i></a>
                 </div>
             </div>
         </div>
