@@ -4,7 +4,7 @@
             <div class="greetings">Hi, I'm</div>
             <div class="name">Sriram V</div>
             <div @click="typeIt" class="job"><span id="role"></span> Developer</div>
-            <a href="/Sriram-V-Resume.pdf" class="resume" download>
+            <a href="/Sriram-V-Resume.pdf" class="resume" target="new">
                 <i class="download icon"></i>
                 Resume
             </a>
