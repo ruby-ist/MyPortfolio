@@ -94,7 +94,7 @@ export default defineNuxtComponent({
                 stacks: ['rails', 'rest', 'turbo', 'stimulus', 'semantic-ui', 'jquery'],
                 macImage: 'pingcoders-2.webp',
                 phoneImage: 'pingcoders-4.webp',
-                url: "https://pingcoders.herokuapp.com",
+                url: "https://pingcoders.onrender.com",
                 content: `Pingcoders is an inter college programmer profile showcase and community. The app has two
                 different OAuths, google and github and only the user with college mail id can create an account.
                 It has an email verification system made with devise gem.The colors of the each languages are taken
@@ -118,7 +118,7 @@ export default defineNuxtComponent({
                 stacks: ['rails', 'turbo', 'semantic-ui', 'jquery', 'scss'],
                 macImage: 'narrateit-2.webp',
                 phoneImage: 'narrateit-4.webp',
-                url: "https://narrate-it.herokuapp.com",
+                url: "https://narrate-it.onrender.com",
                 content: `Narrate-it is an blogging website, the first web app I developed with Rails framework. It
                 was create as a part of the odin project tutorial. The user can use markdown format to edit the
                 content of their post. Each post have its comment section also. Each user have their own profile page,
@@ -130,7 +130,7 @@ export default defineNuxtComponent({
                 stacks: ['ruby', 'sinatra', 'html', 'css', 'jquery'],
                 macImage: 'flames-3.webp',
                 phoneImage: 'flames-2.webp',
-                url: "https://burningheart.herokuapp.com",
+                url: "https://flames.onrender.com",
                 content: `Flames is a find-a-match kinda app, created as fun project that turned out well.
                 It's just a game of predicting relationship status from two names. The result might be one of
                 Friend, Love, Affection, Marriage, Enemy & Sibling. The result also comes with a quote which is
