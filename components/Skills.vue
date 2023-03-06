@@ -57,8 +57,8 @@ export default defineNuxtComponent({
             ['ruby', 'rails', 'rspec', 'vue', 'nuxt'],
             ['sinatra', 'turbo', 'stimulus', 'semantic-ui', 'scss'],
             ['jquery', 'svg', 'gsap', 'illustrator', 'figma'],
-            ['cockroach-db', 'mysql', 'rest', 'render', 'heroku'],
-            ['c', 'c++', 'html', 'css', 'javascript'],
+            ['cockroach-db', 'postgres', 'rest', 'graphql', 'apollo'],
+            ['render', 'heroku', 'c', 'c++', 'javascript'],
         ]
     }),
     mounted() {

@@ -111,6 +111,19 @@ export default defineNuxtComponent({
     width: 33px;
 }
 
+#heroku{
+    width: 28px;
+}
+
+#cockroach-db{
+    width: 28px;
+}
+
+#postgres{
+    width: 48px;
+    margin: 0 8px;
+}
+
 @media only screen and (max-width: 576px){
     .skill-icon {
         height: 28px;
