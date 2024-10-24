@@ -17,7 +17,7 @@
 
         <div class="vertical-line" id="social-media-line">
             <div class="icons">
-                <a href="https://www.linkedin.com/in/srira-venkat/" target="_blank"><i class="linkedin link icon"></i></a>
+                <a href="https://www.linkedin.com/in/sriravenkat/" target="_blank"><i class="linkedin link icon"></i></a>
                 <a href="https://github.com/ruby-ist" target="_blank"><i class="github link icon"></i></a>
                 <a href="https://www.hackerrank.com/srira" target="_blank"><i class="hackerrank link icon"></i></a>
                 <a href="https://www.codewars.com/users/Sriram2311" target="_blank">
